@@ -1,0 +1,13 @@
+remote: sscub-public-explorer
+tables:
+  - name: Covid Victims
+    project: dabble
+    namespace: covid_patients
+    table: covid_victim
+    env: complete
+  - name: Scimago Journals
+    project: dabble
+    namespace: scimagojr
+    table: journal
+    env: complete
+
