@@ -7,10 +7,14 @@ chapters:
 
 - file: homes/covid-victims
   sections:
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid-victims-profile.html
+    title: Table Profile
   - glob: tables/covid-victims/*
 
 - file: homes/scimago-journals
   sections:
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago-journals-profile.html
+    title: Table Profile
   - glob: tables/scimago-journals/*
 
 # - file: mermaid
