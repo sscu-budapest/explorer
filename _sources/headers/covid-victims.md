@@ -1,5 +1,5 @@
 
-# Covid Victims Table
+# Covid Victims
 
 ````{panels} :column: col-4
 

@@ -1,5 +1,5 @@
 
-# Scimago Journals Table
+# Scimago Journals
 
 ````{panels} :column: col-4
 

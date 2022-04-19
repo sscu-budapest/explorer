@@ -1,5 +1,5 @@
 
-# Pypi Downloads Table
+# Pypi Downloads
 
 ````{panels} :column: col-4
 
