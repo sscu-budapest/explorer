@@ -10,4 +10,8 @@ tables:
     namespace: scimagojr
     table: journal
     env: complete
-
+  - name: Pypi Downloads
+    project: softwaredata
+    namespace: pypi
+    table: download
+    env: complete

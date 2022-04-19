@@ -17,4 +17,10 @@ chapters:
     title: Table Profile
   - glob: tables/scimago-journals/*
 
+- file: homes/pypi-downloads
+  sections:
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi-downloads-profile.html
+    title: Table Profile
+  - glob: tables/pypi-downloads/*
+
 # - file: mermaid
