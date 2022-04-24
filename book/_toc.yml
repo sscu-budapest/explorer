@@ -5,22 +5,48 @@ format: jb-book
 root: index
 chapters:
 
-- file: homes/covid-victims
+- file: dataset-pages/covid_victims
   sections:
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid-victims-profile.html
-    title: Table Profile
-  - glob: tables/covid-victims/*
 
-- file: homes/scimago-journals
-  sections:
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago-journals-profile.html
-    title: Table Profile
-  - glob: tables/scimago-journals/*
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html
+    title: Covid Victim Table Profile
 
-- file: homes/pypi-downloads
+  - glob: datasets/covid_victims/*
+
+- file: dataset-pages/scimago_journals
   sections:
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi-downloads-profile.html
-    title: Table Profile
-  - glob: tables/pypi-downloads/*
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html
+    title: Journal Table Profile
+
+  - glob: datasets/scimago_journals/*
+
+- file: dataset-pages/pypi_downloads
+  sections:
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html
+    title: Download Table Profile
+
+  - glob: datasets/pypi_downloads/*
+
+- file: dataset-pages/repec_via_nep
+  sections:
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html
+    title: Paper Table Profile
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html
+    title: Nep Table Profile
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html
+    title: Nep Inclusion Table Profile
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html
+    title: Nep Issue Table Profile
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html
+    title: Authorship Table Profile
+
+  - glob: datasets/repec_via_nep/*
 
 # - file: mermaid

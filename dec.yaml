@@ -3,15 +3,29 @@ tables:
   - name: Covid Victims
     project: dabble
     namespace: covid_patients
-    table: covid_victim
+    tables: 
+      - covid_victim
     env: complete
   - name: Scimago Journals
     project: dabble
     namespace: scimagojr
-    table: journal
+    tables: 
+      - journal
     env: complete
   - name: Pypi Downloads
     project: softwaredata
     namespace: pypi
-    table: download
+    tables: 
+      - download
     env: complete
+  - name: RePEc via NEP
+    project: articles
+    namespace: repec
+    env: minimal
+    minimal: true
+    tables: 
+      - paper
+      - nep
+      - nep_inclusion
+      - nep_issue
+      - authorship
