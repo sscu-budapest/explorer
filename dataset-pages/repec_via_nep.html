@@ -316,7 +316,41 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="repec-via-nep">
 <h1>RePEc via NEP<a class="headerlink" href="#repec-via-nep" title="Permalink to this headline">¶</a></h1>
 <p>A dataset of 5 tables.</p>
-<hr class="docutils" />
+<p>Related this way:</p>
+<div class="mermaid">
+            erDiagram
+  articles__repec__authorship {    
+    VARCHAR paper__pid FK &quot;in index: _articles__repec__authorship_i&quot;    
+    VARCHAR author__aid FK &quot;in index: _articles__repec__authorship_i&quot;
+  }
+  articles__repec__paper {    
+    VARCHAR link      
+    FLOAT year      
+    VARCHAR abstract      
+    VARCHAR title      
+    VARCHAR institution      
+    VARCHAR pid  &quot;in index: _articles__repec__paper_i&quot;
+  }
+  articles__repec__nep {    
+    VARCHAR title      
+    VARCHAR info      
+    VARCHAR nid  &quot;in index: _articles__repec__nep_i&quot;
+  }
+  articles__repec__nep_inclusion {    
+    VARCHAR paper__pid FK     
+    INTEGER ind  &quot;in index: _articles__repec__nep_inclusion_i&quot;    
+    VARCHAR issue__neid FK &quot;in index: _articles__repec__nep_inclusion_i&quot;
+  }
+  articles__repec__nep_issue {    
+    VARCHAR nep__nid FK     
+    DATETIME published      
+    VARCHAR neid  &quot;in index: _articles__repec__nep_issue_i&quot;
+  }
+  articles__repec__authorship ||--|{ articles__repec__paper : &quot;paper__pid&quot;
+  articles__repec__nep_inclusion ||--|{ articles__repec__paper : &quot;paper__pid&quot;
+  articles__repec__nep_inclusion ||--|{ articles__repec__nep_issue : &quot;issue__neid&quot;
+  articles__repec__nep_issue ||--|{ articles__repec__nep : &quot;nep__nid&quot;
+        </div><hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-12 docutils">
@@ -334,10 +368,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 380106 × 5</p>
+<p class="card-text"><strong>size</strong>: 380483 × 5</p>
 </div>
 <div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-01 15:14</p>
+<p class="card-text"><strong>updated</strong>: 2022-05-04 23:32</p>
 </div>
 <div class="col-4 docutils">
 <p class="card-text"><strong>subject</strong>: Paper</p>
@@ -396,10 +430,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 1064781 × 1</p>
+<p class="card-text"><strong>size</strong>: 1065733 × 1</p>
 </div>
 <div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-01 15:14</p>
+<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
 </div>
 <div class="col-4 docutils">
 <p class="card-text"><strong>subject</strong>: Nep Inclusion</p>
@@ -427,10 +461,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 81068 × 2</p>
+<p class="card-text"><strong>size</strong>: 81127 × 2</p>
 </div>
 <div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-01 15:14</p>
+<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
 </div>
 <div class="col-4 docutils">
 <p class="card-text"><strong>subject</strong>: Nep Issue</p>
@@ -458,10 +492,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 757500 × 0</p>
+<p class="card-text"><strong>size</strong>: 758424 × 0</p>
 </div>
 <div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-01 15:15</p>
+<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
 </div>
 <div class="col-4 docutils">
 <p class="card-text"><strong>subject</strong>: Authorship</p>
