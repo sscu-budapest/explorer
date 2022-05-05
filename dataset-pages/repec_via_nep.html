@@ -320,8 +320,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="mermaid">
             erDiagram
   articles__repec__authorship {    
-    VARCHAR paper__pid FK &quot;in index: _articles__repec__authorship_i&quot;    
-    VARCHAR author__aid FK &quot;in index: _articles__repec__authorship_i&quot;
+    VARCHAR paper__pid FK   
+    VARCHAR author__aid FK
   }
   articles__repec__paper {    
     VARCHAR link      
@@ -329,22 +329,22 @@ const thebe_selector_output = ".output, .cell_output"
     VARCHAR abstract      
     VARCHAR title      
     VARCHAR institution      
-    VARCHAR pid  &quot;in index: _articles__repec__paper_i&quot;
+    VARCHAR pid PK
   }
   articles__repec__nep {    
     VARCHAR title      
     VARCHAR info      
-    VARCHAR nid  &quot;in index: _articles__repec__nep_i&quot;
+    VARCHAR nid  PK
   }
   articles__repec__nep_inclusion {    
     VARCHAR paper__pid FK     
-    INTEGER ind  &quot;in index: _articles__repec__nep_inclusion_i&quot;    
-    VARCHAR issue__neid FK &quot;in index: _articles__repec__nep_inclusion_i&quot;
+    INTEGER ind
+    VARCHAR issue__neid FK
   }
   articles__repec__nep_issue {    
     VARCHAR nep__nid FK     
     DATETIME published      
-    VARCHAR neid  &quot;in index: _articles__repec__nep_issue_i&quot;
+    VARCHAR neid  PK
   }
   articles__repec__authorship ||--|{ articles__repec__paper : &quot;paper__pid&quot;
   articles__repec__nep_inclusion ||--|{ articles__repec__paper : &quot;paper__pid&quot;

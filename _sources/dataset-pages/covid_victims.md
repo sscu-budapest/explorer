@@ -29,7 +29,7 @@
 ```
 
 ```{div} col-4
-**updated**: 2022-05-04 23:29
+**updated**: 2022-05-05 00:16
 ```
 
 ```{div} col-4
@@ -48,6 +48,11 @@
 ## Sources
 
 - project url: https://github.com/sscu-budapest/dabble
+- data downloaded from
+  - https://koronavirus.gov.hu/elhunytak
+  - https://covid.ourworldindata.org
+  - https://www.worldometers.info/coronavirus/country/hungary/
+
 
 
 ## Exploration
