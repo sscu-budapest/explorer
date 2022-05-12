@@ -34,7 +34,7 @@
 
 ```{div} col-4
 
-**subject**: Journal
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 

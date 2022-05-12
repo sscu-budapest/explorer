@@ -34,7 +34,7 @@
 
 ```{div} col-4
 
-**subject**: Download
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 

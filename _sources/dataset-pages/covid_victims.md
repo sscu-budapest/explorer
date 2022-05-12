@@ -29,12 +29,12 @@
 ```
 
 ```{div} col-4
-**updated**: 2022-05-11 15:11
+**updated**: 2022-05-12 15:11
 ```
 
 ```{div} col-4
 
-**subject**: Covid Victim
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 

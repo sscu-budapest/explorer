@@ -34,7 +34,7 @@
 
 ```{div} col-4
 
-**subject**: Paper
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 
@@ -71,7 +71,7 @@
 
 ```{div} col-4
 
-**subject**: Nep
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 
@@ -108,7 +108,7 @@
 
 ```{div} col-4
 
-**subject**: Nep Inclusion
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 
@@ -145,7 +145,7 @@
 
 ```{div} col-4
 
-**subject**: Nep Issue
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 
@@ -182,7 +182,7 @@
 
 ```{div} col-4
 
-**subject**: Authorship
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">{badge}`table description,badge-primary`</a>
 
 ```
 
