@@ -1,5 +1,5 @@
 remote: sscub-public-explorer
-tables:
+datasets:
   - name: Covid Victims
     project: dabble
     namespace: covid_patients
@@ -16,7 +16,7 @@ tables:
     project: softwaredata
     namespace: pypi
     tables: 
-      - download
+      - package_download
     env: complete
   - name: RePEc via NEP
     project: articles

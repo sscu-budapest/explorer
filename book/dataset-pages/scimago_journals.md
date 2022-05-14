@@ -3,7 +3,41 @@
 ```{include} ../homes/scimago_journals.md
 ```
 
----
+## ERD
+
+```{mermaid}
+erDiagram
+  journal {    
+    INTEGER rank      
+    FLOAT journal_rating      
+    VARCHAR title      
+    VARCHAR type      
+    VARCHAR issn      
+    INTEGER h_index      
+    INTEGER total_docs_2021      
+    FLOAT ref_per_doc      
+    VARCHAR sjr_best_quartile      
+    INTEGER total_docs_3years      
+    INTEGER total_refs      
+    INTEGER total_cites_3years      
+    INTEGER citable_docs_3years      
+    VARCHAR country      
+    VARCHAR region      
+    VARCHAR publisher      
+    VARCHAR coverage      
+    VARCHAR categories      
+    INTEGER sourceid PK 
+  }
+```
+
+
+## Exploration / Analysis
+
+
+
+## Tables
+
+> There is 1 table
 
 
 
@@ -12,12 +46,12 @@
 
 ::::{div} row
 
-```{div} col-8
+```{div} col-9
 **Journal Table**
 ```
 
-```{div} col-4
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv">{badge}`download csv,badge-primary`</a>
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv">{badge}`Download CSV,badge-primary`</a>
 ```
 ::::
 
@@ -25,16 +59,16 @@
 ::::{div} row
 
 ```{div} col-4
-**size**: 32952 × 18
+**Size**: 34664 × 20 (8.45 MB)
 ```
 
-```{div} col-4
-**updated**: 2022-04-24 20:29
+```{div} col-5
+**Last Changed**: 2022-05-14 23:44
 ```
 
-```{div} col-4
+```{div} col-3
 
-**subject**: Journal
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`Open Table Profile,badge-success`</a>
 
 ```
 
@@ -48,9 +82,3 @@
 ## Sources
 
 - project url: https://github.com/sscu-budapest/dabble
-
-
-## Exploration
-
-```{tableofcontents}
-```

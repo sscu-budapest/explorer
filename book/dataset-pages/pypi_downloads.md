@@ -3,7 +3,37 @@
 ```{include} ../homes/pypi_downloads.md
 ```
 
----
+## ERD
+
+```{mermaid}
+erDiagram
+  package_download {    
+    DATETIME timestamp      
+    VARCHAR country_code      
+    VARCHAR project_name      
+    VARCHAR package_version      
+    VARCHAR distribution_type      
+    VARCHAR installer_name      
+    VARCHAR installer_version      
+    VARCHAR python_implementation_name      
+    VARCHAR python_implementation_version      
+    VARCHAR sys_name      
+    VARCHAR sys_distro_name      
+    VARCHAR sys_distro_version      
+    VARCHAR cpu      
+    VARCHAR openssl_version      
+    VARCHAR setuptools_version  
+  }
+```
+
+
+## Exploration / Analysis
+
+
+
+## Tables
+
+> There is 1 table
 
 
 
@@ -12,12 +42,12 @@
 
 ::::{div} row
 
-```{div} col-8
-**Download Table**
+```{div} col-9
+**Package Download Table**
 ```
 
-```{div} col-4
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download.csv">{badge}`download csv,badge-primary`</a>
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download.csv">{badge}`Download CSV,badge-primary`</a>
 ```
 ::::
 
@@ -25,16 +55,16 @@
 ::::{div} row
 
 ```{div} col-4
-**size**: 69586 × 15
+**Size**: 69586 × 15 (9.22 MB)
 ```
 
-```{div} col-4
-**updated**: 2022-04-24 20:30
+```{div} col-5
+**Last Changed**: 2022-05-14 23:44
 ```
 
-```{div} col-4
+```{div} col-3
 
-**subject**: Download
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">{badge}`Open Table Profile,badge-success`</a>
 
 ```
 
@@ -48,9 +78,3 @@
 ## Sources
 
 - project url: https://github.com/sscu-budapest/softwaredata
-
-
-## Exploration
-
-```{tableofcontents}
-```

@@ -24,19 +24,16 @@ chapters:
 - file: dataset-pages/pypi_downloads
   sections:
 
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html
-    title: Download Table Profile
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html
+    title: Package Download Table Profile
 
   - glob: datasets/pypi_downloads/*
 
 - file: dataset-pages/repec_via_nep
   sections:
 
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html
-    title: Paper Table Profile
-
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html
-    title: Nep Table Profile
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html
+    title: Authorship Table Profile
 
   - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html
     title: Nep Inclusion Table Profile
@@ -44,8 +41,11 @@ chapters:
   - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html
     title: Nep Issue Table Profile
 
-  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html
-    title: Authorship Table Profile
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html
+    title: Nep Table Profile
+
+  - url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html
+    title: Paper Table Profile
 
   - glob: datasets/repec_via_nep/*
 
