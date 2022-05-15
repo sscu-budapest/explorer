@@ -143,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">
-     Download Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
+     Package Download Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,13 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
+     Authorship Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -185,8 +180,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
+     Nep Table Profile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
+     Paper Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -317,14 +317,11 @@ const thebe_selector_output = ".output, .cell_output"
         scimago_journals([Scimago Journals]) --- scimago_journals_journal[Journal]
         click scimago_journals_journal href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html&quot; &quot;Profile&quot;
         
-        pypi_downloads([Pypi Downloads]) --- pypi_downloads_download[Download]
-        click pypi_downloads_download href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html&quot; &quot;Profile&quot;
+        pypi_downloads([Pypi Downloads]) --- pypi_downloads_package_download[Package Download]
+        click pypi_downloads_package_download href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html&quot; &quot;Profile&quot;
         
-        repec_via_nep([RePEc via NEP]) --- repec_via_nep_paper[Paper]
-        click repec_via_nep_paper href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html&quot; &quot;Profile&quot;
-        
-        repec_via_nep([RePEc via NEP]) --- repec_via_nep_nep[Nep]
-        click repec_via_nep_nep href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html&quot; &quot;Profile&quot;
+        repec_via_nep([RePEc via NEP]) --- repec_via_nep_authorship[Authorship]
+        click repec_via_nep_authorship href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html&quot; &quot;Profile&quot;
         
         repec_via_nep([RePEc via NEP]) --- repec_via_nep_nep_inclusion[Nep Inclusion]
         click repec_via_nep_nep_inclusion href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html&quot; &quot;Profile&quot;
@@ -332,37 +329,20 @@ const thebe_selector_output = ".output, .cell_output"
         repec_via_nep([RePEc via NEP]) --- repec_via_nep_nep_issue[Nep Issue]
         click repec_via_nep_nep_issue href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html&quot; &quot;Profile&quot;
         
-        repec_via_nep([RePEc via NEP]) --- repec_via_nep_authorship[Authorship]
-        click repec_via_nep_authorship href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html&quot; &quot;Profile&quot;
+        repec_via_nep([RePEc via NEP]) --- repec_via_nep_nep[Nep]
+        click repec_via_nep_nep href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html&quot; &quot;Profile&quot;
+        
+        repec_via_nep([RePEc via NEP]) --- repec_via_nep_paper[Paper]
+        click repec_via_nep_paper href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html&quot; &quot;Profile&quot;
         
         </div><div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/covid_victims.html">Covid Victims</a><ul>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">Covid Victim Table Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/covid_victims/intro.html">Explore Waves and Conditions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/scimago_journals.html">Scimago Journals</a><ul>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">Journal Table Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/scimago_journals/intro.html">Check Basics</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/pypi_downloads.html">Pypi Downloads</a><ul>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">Download Table Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/pypi_downloads/intro.html">Usage Analysis</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/repec_via_nep.html">RePEc via NEP</a><ul>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">Paper Table Profile</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">Nep Table Profile</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">Nep Inclusion Table Profile</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">Nep Issue Table Profile</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">Authorship Table Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/repec_via_nep/intro.html">Check Head</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/covid_victims.html">Covid Victims</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/scimago_journals.html">Scimago Journals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/pypi_downloads.html">Pypi Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/repec_via_nep.html">RePEc via NEP</a></li>
 </ul>
 </div>
 </div>

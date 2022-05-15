@@ -142,8 +142,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">
-     Download Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
+     Package Download Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -164,13 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
+     Authorship Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -184,8 +179,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
+     Nep Table Profile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
+     Paper Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -292,41 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <p>A dataset of 5 tables.</p>
-<p>Related this way:</p>
-<div class="mermaid">
-            erDiagram
-  articles__repec__authorship {    
-    VARCHAR paper__pid FK   
-    VARCHAR author__aid FK
-  }
-  articles__repec__paper {    
-    VARCHAR link      
-    FLOAT year      
-    VARCHAR abstract      
-    VARCHAR title      
-    VARCHAR institution      
-    VARCHAR pid PK
-  }
-  articles__repec__nep {    
-    VARCHAR title      
-    VARCHAR info      
-    VARCHAR nid  PK
-  }
-  articles__repec__nep_inclusion {    
-    VARCHAR paper__pid FK     
-    INTEGER ind
-    VARCHAR issue__neid FK
-  }
-  articles__repec__nep_issue {    
-    VARCHAR nep__nid FK     
-    DATETIME published      
-    VARCHAR neid  PK
-  }
-  articles__repec__authorship ||--|{ articles__repec__paper : &quot;paper__pid&quot;
-  articles__repec__nep_inclusion ||--|{ articles__repec__paper : &quot;paper__pid&quot;
-  articles__repec__nep_inclusion ||--|{ articles__repec__nep_issue : &quot;issue__neid&quot;
-  articles__repec__nep_issue ||--|{ articles__repec__nep : &quot;nep__nid&quot;
-        </div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,

@@ -144,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">
-     Download Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
+     Package Download Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -166,13 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
+     Authorship Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -186,8 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
+     Nep Table Profile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
+     Paper Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -265,13 +265,23 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -295,13 +305,23 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -316,31 +336,61 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="covid-victims">
 <h1>Covid Victims<a class="headerlink" href="#covid-victims" title="Permalink to this headline">¶</a></h1>
 <p>A dataset of 1 table.</p>
-<hr class="docutils" />
+<div class="section" id="erd">
+<h2>ERD<a class="headerlink" href="#erd" title="Permalink to this headline">¶</a></h2>
+<div class="mermaid">
+            erDiagram
+  covid_victim {    
+    INTEGER age      
+    DATETIME estimated_date      
+    BOOLEAN is_male      
+    VARCHAR raw_conditions      
+    BOOLEAN condition__lungs      
+    BOOLEAN condition__heart      
+    BOOLEAN condition__blood_pressure      
+    BOOLEAN condition__diabetes      
+    BOOLEAN condition__obesity      
+    FLOAT positive_rate      
+    INTEGER total_vaccinations      
+    INTEGER people_vaccinated      
+    INTEGER people_fully_vaccinated      
+    INTEGER total_boosters      
+    INTEGER serial PK 
+  }
+        </div></div>
+<div class="section" id="exploration-analysis">
+<h2>Exploration / Analysis<a class="headerlink" href="#exploration-analysis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>There is 1 table and the <a class="reference external" href="#sources">sources</a> are <strong>checked for updates at 04:00 pm</strong></p>
+</div></blockquote>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-12 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <div class="row docutils">
-<div class="col-8 docutils">
+<div class="col-9 docutils">
 <p class="card-text"><strong>Covid Victim Table</strong></p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
 </div>
 </div>
 </div>
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 46266 × 14</p>
+<p class="card-text"><strong>Size</strong>: 46266 × 15 (6.14 MB)</p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-14 15:10</p>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:43</p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -361,14 +411,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </div>
-<div class="section" id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">Covid Victim Table Profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/covid_victims/intro.html">Explore Waves and Conditions</a></li>
-</ul>
-</div>
 </div>
 </div>
 

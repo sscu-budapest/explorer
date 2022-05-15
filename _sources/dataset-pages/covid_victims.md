@@ -3,7 +3,37 @@
 ```{include} ../homes/covid_victims.md
 ```
 
----
+## ERD
+
+```{mermaid}
+erDiagram
+  covid_victim {    
+    INTEGER age      
+    DATETIME estimated_date      
+    BOOLEAN is_male      
+    VARCHAR raw_conditions      
+    BOOLEAN condition__lungs      
+    BOOLEAN condition__heart      
+    BOOLEAN condition__blood_pressure      
+    BOOLEAN condition__diabetes      
+    BOOLEAN condition__obesity      
+    FLOAT positive_rate      
+    INTEGER total_vaccinations      
+    INTEGER people_vaccinated      
+    INTEGER people_fully_vaccinated      
+    INTEGER total_boosters      
+    INTEGER serial PK 
+  }
+```
+
+
+## Exploration / Analysis
+
+
+
+## Tables
+
+> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm** 
 
 
 
@@ -12,12 +42,12 @@
 
 ::::{div} row
 
-```{div} col-8
+```{div} col-9
 **Covid Victim Table**
 ```
 
-```{div} col-4
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv">{badge}`download csv,badge-primary`</a>
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv">{badge}`Download CSV,badge-primary`</a>
 ```
 ::::
 
@@ -25,16 +55,16 @@
 ::::{div} row
 
 ```{div} col-4
-**size**: 46266 × 14
+**Size**: 46266 × 15 (6.14 MB)
 ```
 
-```{div} col-4
-**updated**: 2022-05-14 15:10
+```{div} col-5
+**Last Changed**: 2022-05-14 23:43
 ```
 
-```{div} col-4
+```{div} col-3
 
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`table description,badge-primary`</a>
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`Open Table Profile,badge-success`</a>
 
 ```
 
@@ -53,9 +83,3 @@
   - https://covid.ourworldindata.org
   - https://www.worldometers.info/coronavirus/country/hungary/
 
-
-
-## Exploration
-
-```{tableofcontents}
-```

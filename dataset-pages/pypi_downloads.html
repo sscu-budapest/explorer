@@ -144,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">
-     Download Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
+     Package Download Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -166,13 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
+     Authorship Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -186,8 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
+     Nep Table Profile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
+     Paper Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -265,13 +265,23 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -295,13 +305,23 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -316,31 +336,61 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="pypi-downloads">
 <h1>Pypi Downloads<a class="headerlink" href="#pypi-downloads" title="Permalink to this headline">¶</a></h1>
 <p>Downloaded from the python package index, that is described as a source <a href="https://sscu-budapest.github.io/reports/41">here</a>.</p>
-<hr class="docutils" />
+<div class="section" id="erd">
+<h2>ERD<a class="headerlink" href="#erd" title="Permalink to this headline">¶</a></h2>
+<div class="mermaid">
+            erDiagram
+  package_download {    
+    DATETIME timestamp      
+    VARCHAR country_code      
+    VARCHAR project_name      
+    VARCHAR package_version      
+    VARCHAR distribution_type      
+    VARCHAR installer_name      
+    VARCHAR installer_version      
+    VARCHAR python_implementation_name      
+    VARCHAR python_implementation_version      
+    VARCHAR sys_name      
+    VARCHAR sys_distro_name      
+    VARCHAR sys_distro_version      
+    VARCHAR cpu      
+    VARCHAR openssl_version      
+    VARCHAR setuptools_version  
+  }
+        </div></div>
+<div class="section" id="exploration-analysis">
+<h2>Exploration / Analysis<a class="headerlink" href="#exploration-analysis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>There is 1 table</p>
+</div></blockquote>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-12 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <div class="row docutils">
-<div class="col-8 docutils">
-<p class="card-text"><strong>Download Table</strong></p>
+<div class="col-9 docutils">
+<p class="card-text"><strong>Package Download Table</strong></p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
 </div>
 </div>
 </div>
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 69586 × 15</p>
+<p class="card-text"><strong>Size</strong>: 69586 × 15 (9.22 MB)</p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-04-24 20:30</p>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:44</p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -354,14 +404,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>project url: <a class="reference external" href="https://github.com/sscu-budapest/softwaredata">https://github.com/sscu-budapest/softwaredata</a></p></li>
 </ul>
 </div>
-<div class="section" id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">Download Table Profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/pypi_downloads/intro.html">Usage Analysis</a></li>
-</ul>
-</div>
 </div>
 </div>
 

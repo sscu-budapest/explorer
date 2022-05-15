@@ -144,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/download-profile.html">
-     Download Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
+     Package Download Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -166,13 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
+     Authorship Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -186,8 +181,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
+     Nep Table Profile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
+     Paper Table Profile
     </a>
    </li>
    <li class="toctree-l2">
@@ -265,13 +265,23 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -295,13 +305,23 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sources">
-   Sources
+  <a class="reference internal nav-link" href="#erd">
+   ERD
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration">
-   Exploration
+  <a class="reference internal nav-link" href="#exploration-analysis">
+   Exploration / Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
   </a>
  </li>
 </ul>
@@ -316,189 +336,199 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="repec-via-nep">
 <h1>RePEc via NEP<a class="headerlink" href="#repec-via-nep" title="Permalink to this headline">¶</a></h1>
 <p>A dataset of 5 tables.</p>
-<p>Related this way:</p>
+<div class="section" id="erd">
+<h2>ERD<a class="headerlink" href="#erd" title="Permalink to this headline">¶</a></h2>
 <div class="mermaid">
             erDiagram
-  articles__repec__authorship {    
-    VARCHAR paper__pid FK   
-    VARCHAR author__aid FK
+  authorship {    
+    VARCHAR paper__pid PK     
+    VARCHAR author__aid PK 
   }
-  articles__repec__paper {    
+  paper {    
     VARCHAR link      
     FLOAT year      
     VARCHAR abstract      
     VARCHAR title      
     VARCHAR institution      
-    VARCHAR pid PK
+    VARCHAR pid PK 
   }
-  articles__repec__nep {    
+  nep {    
     VARCHAR title      
     VARCHAR info      
-    VARCHAR nid  PK
+    VARCHAR nid PK 
   }
-  articles__repec__nep_inclusion {    
+  nep_inclusion {    
     VARCHAR paper__pid FK     
-    INTEGER ind
-    VARCHAR issue__neid FK
+    INTEGER ind PK     
+    VARCHAR issue__neid PK 
   }
-  articles__repec__nep_issue {    
+  nep_issue {    
     VARCHAR nep__nid FK     
     DATETIME published      
-    VARCHAR neid  PK
+    VARCHAR neid PK 
   }
-  articles__repec__authorship ||--|{ articles__repec__paper : &quot;paper__pid&quot;
-  articles__repec__nep_inclusion ||--|{ articles__repec__paper : &quot;paper__pid&quot;
-  articles__repec__nep_inclusion ||--|{ articles__repec__nep_issue : &quot;issue__neid&quot;
-  articles__repec__nep_issue ||--|{ articles__repec__nep : &quot;nep__nid&quot;
-        </div><hr class="docutils" />
+  authorship ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
+  nep_inclusion ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
+  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
+  nep_issue ||--|{ nep : &quot;nep__nid -&gt; nid&quot;
+        </div></div>
+<div class="section" id="exploration-analysis">
+<h2>Exploration / Analysis<a class="headerlink" href="#exploration-analysis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>There are 5 tables and the <a class="reference external" href="#sources">sources</a> are <strong>checked for updates at 00:00 am, on day 1 of the month</strong></p>
+</div></blockquote>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-12 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <div class="row docutils">
-<div class="col-8 docutils">
-<p class="card-text"><strong>Paper Table</strong></p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
-</div>
-</div>
-</div>
-<div class="card-body docutils">
-<div class="row docutils">
-<div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 380483 × 5</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-04 23:32</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-12 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<div class="row docutils">
-<div class="col-8 docutils">
-<p class="card-text"><strong>Nep Table</strong></p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
-</div>
-</div>
-</div>
-<div class="card-body docutils">
-<div class="row docutils">
-<div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 97 × 2</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-04-24 21:41</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-12 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<div class="row docutils">
-<div class="col-8 docutils">
-<p class="card-text"><strong>Nep Inclusion Table</strong></p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
-</div>
-</div>
-</div>
-<div class="card-body docutils">
-<div class="row docutils">
-<div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 1065733 × 1</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-12 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<div class="row docutils">
-<div class="col-8 docutils">
-<p class="card-text"><strong>Nep Issue Table</strong></p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
-</div>
-</div>
-</div>
-<div class="card-body docutils">
-<div class="row docutils">
-<div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 81127 × 2</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
-</div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-12 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<div class="row docutils">
-<div class="col-8 docutils">
+<div class="col-9 docutils">
 <p class="card-text"><strong>Authorship Table</strong></p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship.csv"><span class="sphinx-bs badge badge-primary">download csv</span></a></p>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
 </div>
 </div>
 </div>
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>size</strong>: 758424 × 0</p>
+<p class="card-text"><strong>Size</strong>: 759888 × 2 (24.03 MB)</p>
 </div>
-<div class="col-4 docutils">
-<p class="card-text"><strong>updated</strong>: 2022-05-04 23:33</p>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:45</p>
 </div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Nep Inclusion Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html"><span class="sphinx-bs badge badge-primary">table description</span></a></p>
+<p class="card-text"><strong>Size</strong>: 1067753 × 3 (39.69 MB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:45</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Nep Issue Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 81252 × 3 (2.94 MB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:45</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Nep Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 97 × 3 (8.37 kB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-04-24 21:41</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Paper Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 381196 × 6 (116.25 MB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:46</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -519,18 +549,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </div>
-<div class="section" id="exploration">
-<h2>Exploration<a class="headerlink" href="#exploration" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">Paper Table Profile</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">Nep Table Profile</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">Nep Inclusion Table Profile</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">Nep Issue Table Profile</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">Authorship Table Profile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/repec_via_nep/intro.html">Check Head</a></li>
-</ul>
-</div>
 </div>
 </div>
 
