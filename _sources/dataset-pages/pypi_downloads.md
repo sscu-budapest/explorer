@@ -8,21 +8,21 @@
 ```{mermaid}
 erDiagram
   package_download {    
-    DATETIME timestamp      
     VARCHAR country_code      
-    VARCHAR project_name      
-    VARCHAR package_version      
+    VARCHAR cpu      
     VARCHAR distribution_type      
     VARCHAR installer_name      
     VARCHAR installer_version      
+    VARCHAR openssl_version      
+    VARCHAR package_version      
+    VARCHAR project_name      
     VARCHAR python_implementation_name      
     VARCHAR python_implementation_version      
-    VARCHAR sys_name      
+    VARCHAR setuptools_version      
     VARCHAR sys_distro_name      
     VARCHAR sys_distro_version      
-    VARCHAR cpu      
-    VARCHAR openssl_version      
-    VARCHAR setuptools_version  
+    VARCHAR sys_name      
+    DATETIME timestamp  
   }
 ```
 

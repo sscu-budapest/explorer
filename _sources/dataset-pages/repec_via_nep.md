@@ -8,20 +8,20 @@
 ```{mermaid}
 erDiagram
   authorship {    
-    VARCHAR paper__pid PK     
-    VARCHAR author__aid PK 
+    VARCHAR author__aid PK     
+    VARCHAR paper__pid PK 
   }
   paper {    
-    VARCHAR link      
-    FLOAT year      
     VARCHAR abstract      
-    VARCHAR title      
     VARCHAR institution      
+    VARCHAR link      
+    VARCHAR title      
+    FLOAT year      
     VARCHAR pid PK 
   }
   nep {    
-    VARCHAR title      
     VARCHAR info      
+    VARCHAR title      
     VARCHAR nid PK 
   }
   nep_inclusion {    

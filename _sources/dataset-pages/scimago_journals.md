@@ -8,24 +8,24 @@
 ```{mermaid}
 erDiagram
   journal {    
-    INTEGER rank      
-    FLOAT journal_rating      
-    VARCHAR title      
-    VARCHAR type      
-    VARCHAR issn      
-    INTEGER h_index      
-    INTEGER total_docs_2021      
-    FLOAT ref_per_doc      
-    VARCHAR sjr_best_quartile      
-    INTEGER total_docs_3years      
-    INTEGER total_refs      
-    INTEGER total_cites_3years      
+    VARCHAR categories      
     INTEGER citable_docs_3years      
     VARCHAR country      
-    VARCHAR region      
-    VARCHAR publisher      
     VARCHAR coverage      
-    VARCHAR categories      
+    INTEGER h_index      
+    VARCHAR issn      
+    FLOAT journal_rating      
+    VARCHAR publisher      
+    INTEGER rank      
+    FLOAT ref_per_doc      
+    VARCHAR region      
+    VARCHAR sjr_best_quartile      
+    VARCHAR title      
+    INTEGER total_cites_3years      
+    INTEGER total_docs_2021      
+    INTEGER total_docs_3years      
+    INTEGER total_refs      
+    VARCHAR type      
     INTEGER sourceid PK 
   }
 ```

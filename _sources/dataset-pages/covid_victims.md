@@ -9,19 +9,19 @@
 erDiagram
   covid_victim {    
     INTEGER age      
-    DATETIME estimated_date      
-    BOOLEAN is_male      
-    VARCHAR raw_conditions      
-    BOOLEAN condition__lungs      
-    BOOLEAN condition__heart      
     BOOLEAN condition__blood_pressure      
     BOOLEAN condition__diabetes      
+    BOOLEAN condition__heart      
+    BOOLEAN condition__lungs      
     BOOLEAN condition__obesity      
-    FLOAT positive_rate      
-    INTEGER total_vaccinations      
-    INTEGER people_vaccinated      
+    DATETIME estimated_date      
+    BOOLEAN is_male      
     INTEGER people_fully_vaccinated      
+    INTEGER people_vaccinated      
+    FLOAT positive_rate      
+    VARCHAR raw_conditions      
     INTEGER total_boosters      
+    INTEGER total_vaccinations      
     INTEGER serial PK 
   }
 ```
@@ -59,7 +59,7 @@ erDiagram
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-05-19 15:13
+**Last Changed**: 2022-05-20 15:10
 ```
 
 ```{div} col-3
