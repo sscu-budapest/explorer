@@ -41,7 +41,6 @@ datasets:
       - election_precinct
       - geographical_unit
       - district_hierarchy
-      - election
     col_renamer:
       party__pid: party
       org__nid: organization
