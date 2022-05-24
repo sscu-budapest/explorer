@@ -29,3 +29,32 @@ datasets:
       - nep_inclusion
       - nep_issue
       - authorship
+  - name: Hungarian Elections
+    project: elections
+    namespace: hungarian
+    minimal: true
+    tables:
+      - election
+      - affiliation
+      - nominating_organization
+      - vote_record
+      - election_precinct
+      - geographical_unit
+      - district_hierarchy
+      - election
+    col_renamer:
+      party__pid: party
+      org__nid: organization
+      precinct__pid: precinct_id
+      geographical_unit:
+        gid: unit_id
+      district_hierarchy:
+        parent__gid: parent
+        child__gid: child
+      election_precinct:
+        geo_parent__gid: geo_unit_id
+        pid: precinct_id
+        election__eid: election_id
+      election:
+        eid: election_id
+    env: complete

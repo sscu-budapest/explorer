@@ -1,0 +1,543 @@
+cookiecutter:
+  slug: book
+datasets:
+  datasets:
+  - erd_mermaid: "erDiagram\n  covid_victim {    \n    INTEGER age      \n    BOOLEAN\
+      \ condition__blood_pressure      \n    BOOLEAN condition__diabetes      \n \
+      \   BOOLEAN condition__heart      \n    BOOLEAN condition__lungs      \n   \
+      \ BOOLEAN condition__obesity      \n    DATETIME estimated_date      \n    BOOLEAN\
+      \ is_male      \n    INTEGER people_fully_vaccinated      \n    INTEGER people_vaccinated\
+      \      \n    FLOAT positive_rate      \n    VARCHAR raw_conditions      \n \
+      \   INTEGER total_boosters      \n    INTEGER total_vaccinations      \n   \
+      \ INTEGER serial PK \n  }"
+    n_tables: 1
+    name: Covid Victims
+    notebooks: []
+    project_url: https://github.com/sscu-budapest/dabble
+    slug: covid_victims
+    source_urls:
+    - https://koronavirus.gov.hu/elhunytak
+    - https://covid.ourworldindata.org
+    - https://www.worldometers.info/coronavirus/country/hungary/
+    tables:
+    - csv_filesize: 6.14 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>serial</th>\n      <th>age</th>\n      <th>condition__blood_pressure</th>\n\
+        \      <th>condition__diabetes</th>\n      <th>condition__heart</th>\n   \
+        \   <th>condition__lungs</th>\n      <th>condition__obesity</th>\n      <th>estimated_date</th>\n\
+        \      <th>is_male</th>\n      <th>people_fully_vaccinated</th>\n      <th>people_vaccinated</th>\n\
+        \      <th>positive_rate</th>\n      <th>raw_conditions</th>\n      <th>total_boosters</th>\n\
+        \      <th>total_vaccinations</th>\n    </tr>\n  </thead>\n  <tbody>\n   \
+        \ <tr>\n      <th>0</th>\n      <td>1</td>\n      <td>76</td>\n      <td>False</td>\n\
+        \      <td>False</td>\n      <td>True</td>\n      <td>False</td>\n      <td>False</td>\n\
+        \      <td>2020-03-20</td>\n      <td>False</td>\n      <td>0</td>\n     \
+        \ <td>0</td>\n      <td>0.0307</td>\n      <td>sz\xEDv \xE9s \xE9rrendszeri</td>\n\
+        \      <td>0</td>\n      <td>0</td>\n    </tr>\n    <tr>\n      <th>1</th>\n\
+        \      <td>2</td>\n      <td>65</td>\n      <td>False</td>\n      <td>False</td>\n\
+        \      <td>False</td>\n      <td>False</td>\n      <td>False</td>\n      <td>2020-03-20</td>\n\
+        \      <td>False</td>\n      <td>0</td>\n      <td>0</td>\n      <td>0.0307</td>\n\
+        \      <td>rosszindulat\xFA daganat</td>\n      <td>0</td>\n      <td>0</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>3</td>\n      <td>74</td>\n\
+        \      <td>False</td>\n      <td>False</td>\n      <td>True</td>\n      <td>False</td>\n\
+        \      <td>False</td>\n      <td>2020-03-20</td>\n      <td>True</td>\n  \
+        \    <td>0</td>\n      <td>0</td>\n      <td>0.0307</td>\n      <td>sz\xED\
+        v \xE9s \xE9rrendszeri</td>\n      <td>0</td>\n      <td>0</td>\n    </tr>\n\
+        \    <tr>\n      <th>3</th>\n      <td>4</td>\n      <td>79</td>\n      <td>False</td>\n\
+        \      <td>False</td>\n      <td>True</td>\n      <td>False</td>\n      <td>False</td>\n\
+        \      <td>2020-03-22</td>\n      <td>True</td>\n      <td>0</td>\n      <td>0</td>\n\
+        \      <td>0.0309</td>\n      <td>sz\xEDv \xE9s \xE9rrendszeri</td>\n    \
+        \  <td>0</td>\n      <td>0</td>\n    </tr>\n    <tr>\n      <th>4</th>\n \
+        \     <td>5</td>\n      <td>68</td>\n      <td>False</td>\n      <td>False</td>\n\
+        \      <td>True</td>\n      <td>False</td>\n      <td>False</td>\n      <td>2020-03-22</td>\n\
+        \      <td>True</td>\n      <td>0</td>\n      <td>0</td>\n      <td>0.0309</td>\n\
+        \      <td>sz\xEDv \xE9s \xE9rrendszeri</td>\n      <td>0</td>\n      <td>0</td>\n\
+        \    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 15
+      n_rows: 46266
+      name: Covid Victim
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html
+      slug: covid_victim
+      update_date: 2022-05-24 22:30
+    update_str: at 04:00 pm
+  - erd_mermaid: "erDiagram\n  journal {    \n    VARCHAR categories      \n    INTEGER\
+      \ citable_docs_3years      \n    VARCHAR country      \n    VARCHAR coverage\
+      \      \n    INTEGER h_index      \n    VARCHAR issn      \n    FLOAT journal_rating\
+      \      \n    VARCHAR publisher      \n    INTEGER rank      \n    FLOAT ref_per_doc\
+      \      \n    VARCHAR region      \n    VARCHAR sjr_best_quartile      \n   \
+      \ VARCHAR title      \n    INTEGER total_cites_3years      \n    INTEGER total_docs_2021\
+      \      \n    INTEGER total_docs_3years      \n    INTEGER total_refs      \n\
+      \    VARCHAR type      \n    INTEGER sourceid PK \n  }"
+    n_tables: 1
+    name: Scimago Journals
+    notebooks: []
+    project_url: https://github.com/sscu-budapest/dabble
+    slug: scimago_journals
+    source_urls: []
+    tables:
+    - csv_filesize: 8.45 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>sourceid</th>\n      <th>rank</th>\n      <th>title</th>\n      <th>type</th>\n\
+        \      <th>issn</th>\n      <th>h_index</th>\n      <th>total_docs_2020</th>\n\
+        \      <th>ref_per_doc</th>\n      <th>sjr_best_quartile</th>\n      <th>total_docs_3years</th>\n\
+        \      <th>total_refs</th>\n      <th>total_cites_3years</th>\n      <th>citable_docs_3years</th>\n\
+        \      <th>country</th>\n      <th>region</th>\n      <th>publisher</th>\n\
+        \      <th>coverage</th>\n      <th>journal_rating</th>\n      <th>categories</th>\n\
+        \      <th>total_docs_2021</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n\
+        \      <th>0</th>\n      <td>21100939709</td>\n      <td>392</td>\n      <td>Proceedings\
+        \ of the 8th USENIX Symposium on Ope...</td>\n      <td>conference and proceedings</td>\n\
+        \      <td>-</td>\n      <td>4</td>\n      <td>0.0</td>\n      <td>0.0</td>\n\
+        \      <td>-</td>\n      <td>6</td>\n      <td>0</td>\n      <td>224</td>\n\
+        \      <td>5</td>\n      <td>United States</td>\n      <td>Northern America</td>\n\
+        \      <td>None</td>\n      <td>2019</td>\n      <td>3.972</td>\n      <td>Computer\
+        \ Networks and Communications; Hardware...</td>\n      <td>NaN</td>\n    </tr>\n\
+        \    <tr>\n      <th>1</th>\n      <td>21100842169</td>\n      <td>659</td>\n\
+        \      <td>AISec 2017 - Proceedings of the 10th ACM Works...</td>\n      <td>conference\
+        \ and proceedings</td>\n      <td>-</td>\n      <td>9</td>\n      <td>0.0</td>\n\
+        \      <td>0.0</td>\n      <td>-</td>\n      <td>16</td>\n      <td>0</td>\n\
+        \      <td>745</td>\n      <td>14</td>\n      <td>United States</td>\n   \
+        \   <td>Northern America</td>\n      <td>None</td>\n      <td>2017</td>\n\
+        \      <td>2.953</td>\n      <td>Artificial Intelligence</td>\n      <td>NaN</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>22882</td>\n      <td>661</td>\n\
+        \      <td>Proceedings - Annual IEEE Symposium on Foundat...</td>\n      <td>conference\
+        \ and proceedings</td>\n      <td>02725428</td>\n      <td>97</td>\n     \
+        \ <td>0.0</td>\n      <td>0.0</td>\n      <td>-</td>\n      <td>92</td>\n\
+        \      <td>0</td>\n      <td>1005</td>\n      <td>90</td>\n      <td>United\
+        \ States</td>\n      <td>Northern America</td>\n      <td>None</td>\n    \
+        \  <td>1982, 1983, 1984, 1985, 1986, 1987, 1988, 1991...</td>\n      <td>2.949</td>\n\
+        \      <td>Computer Science (miscellaneous); Hardware and...</td>\n      <td>NaN</td>\n\
+        \    </tr>\n    <tr>\n      <th>3</th>\n      <td>21100830485</td>\n     \
+        \ <td>799</td>\n      <td>SIGCOMM 2017 -  Proceedings of the 2017 Confer...</td>\n\
+        \      <td>conference and proceedings</td>\n      <td>-</td>\n      <td>27</td>\n\
+        \      <td>0.0</td>\n      <td>0.0</td>\n      <td>-</td>\n      <td>37</td>\n\
+        \      <td>0</td>\n      <td>931</td>\n      <td>35</td>\n      <td>United\
+        \ States</td>\n      <td>Northern America</td>\n      <td>None</td>\n    \
+        \  <td>2017</td>\n      <td>2.668</td>\n      <td>Communication; Computer\
+        \ Networks and Communica...</td>\n      <td>NaN</td>\n    </tr>\n    <tr>\n\
+        \      <th>4</th>\n      <td>13244</td>\n      <td>854</td>\n      <td>Evidence-Based\
+        \ Medicine</td>\n      <td>journal</td>\n      <td>14736810, 13565524</td>\n\
+        \      <td>28</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>Q1</td>\n\
+        \      <td>145</td>\n      <td>0</td>\n      <td>320</td>\n      <td>32</td>\n\
+        \      <td>United Kingdom</td>\n      <td>Western Europe</td>\n      <td>BMJ\
+        \ Publishing Group</td>\n      <td>1996-2018</td>\n      <td>2.587</td>\n\
+        \      <td>Medicine (miscellaneous) (Q1)</td>\n      <td>NaN</td>\n    </tr>\n\
+        \  </tbody>\n</table>\n</div>"
+      n_cols: 20
+      n_rows: 34664
+      name: Journal
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html
+      slug: journal
+      update_date: 2022-05-14 23:44
+    update_str: ''
+  - erd_mermaid: "erDiagram\n  package_download {    \n    VARCHAR country_code  \
+      \    \n    VARCHAR cpu      \n    VARCHAR distribution_type      \n    VARCHAR\
+      \ installer_name      \n    VARCHAR installer_version      \n    VARCHAR openssl_version\
+      \      \n    VARCHAR package_version      \n    VARCHAR project_name      \n\
+      \    VARCHAR python_implementation_name      \n    VARCHAR python_implementation_version\
+      \      \n    VARCHAR setuptools_version      \n    VARCHAR sys_distro_name \
+      \     \n    VARCHAR sys_distro_version      \n    VARCHAR sys_name      \n \
+      \   DATETIME timestamp  \n  }"
+    n_tables: 1
+    name: Pypi Downloads
+    notebooks: []
+    project_url: https://github.com/sscu-budapest/softwaredata
+    slug: pypi_downloads
+    source_urls: []
+    tables:
+    - csv_filesize: 9.22 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>timestamp</th>\n      <th>country_code</th>\n      <th>project_name</th>\n\
+        \      <th>package_version</th>\n      <th>distribution_type</th>\n      <th>installer_name</th>\n\
+        \      <th>installer_version</th>\n      <th>python_implementation_name</th>\n\
+        \      <th>python_implementation_version</th>\n      <th>sys_name</th>\n \
+        \     <th>sys_distro_name</th>\n      <th>sys_distro_version</th>\n      <th>cpu</th>\n\
+        \      <th>openssl_version</th>\n      <th>setuptools_version</th>\n    </tr>\n\
+        \  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>2021-11-11 03:01:34</td>\n\
+        \      <td>CN</td>\n      <td>scikit-mobility</td>\n      <td>1.2.2</td>\n\
+        \      <td>sdist</td>\n      <td>Browser</td>\n      <td>None</td>\n     \
+        \ <td>None</td>\n      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n\
+        \      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n\
+        \    </tr>\n    <tr>\n      <th>1</th>\n      <td>2021-11-11 08:25:11</td>\n\
+        \      <td>CN</td>\n      <td>scikit-mobility</td>\n      <td>1.2.2</td>\n\
+        \      <td>sdist</td>\n      <td>Browser</td>\n      <td>None</td>\n     \
+        \ <td>None</td>\n      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n\
+        \      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n      <td>None</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>2021-11-11 20:10:37</td>\n\
+        \      <td>CA</td>\n      <td>scikit-mobility</td>\n      <td>1.2.2</td>\n\
+        \      <td>sdist</td>\n      <td>pip</td>\n      <td>21.3.1</td>\n      <td>CPython</td>\n\
+        \      <td>3.9.7</td>\n      <td>Darwin</td>\n      <td>macOS</td>\n     \
+        \ <td>12.0.1</td>\n      <td>arm64</td>\n      <td>OpenSSL 1.1.1l  24 Aug\
+        \ 2021</td>\n      <td>57.4.0</td>\n    </tr>\n    <tr>\n      <th>3</th>\n\
+        \      <td>2021-11-11 15:08:19</td>\n      <td>US</td>\n      <td>scikit-mobility</td>\n\
+        \      <td>1.1.2</td>\n      <td>bdist_wheel</td>\n      <td>pip</td>\n  \
+        \    <td>20.1.1</td>\n      <td>CPython</td>\n      <td>3.7.10</td>\n    \
+        \  <td>Linux</td>\n      <td>Ubuntu</td>\n      <td>20.04</td>\n      <td>x86_64</td>\n\
+        \      <td>OpenSSL 1.1.1l  24 Aug 2021</td>\n      <td>47.3.1.post20200616</td>\n\
+        \    </tr>\n    <tr>\n      <th>4</th>\n      <td>2021-11-11 14:57:51</td>\n\
+        \      <td>US</td>\n      <td>scikit-mobility</td>\n      <td>1.1.2</td>\n\
+        \      <td>bdist_wheel</td>\n      <td>pip</td>\n      <td>20.1.1</td>\n \
+        \     <td>CPython</td>\n      <td>3.7.10</td>\n      <td>Linux</td>\n    \
+        \  <td>Ubuntu</td>\n      <td>20.04</td>\n      <td>x86_64</td>\n      <td>OpenSSL\
+        \ 1.1.1l  24 Aug 2021</td>\n      <td>47.3.1.post20200616</td>\n    </tr>\n\
+        \  </tbody>\n</table>\n</div>"
+      n_cols: 15
+      n_rows: 69586
+      name: Package Download
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html
+      slug: package_download
+      update_date: 2022-05-14 23:44
+    update_str: ''
+  - erd_mermaid: "erDiagram\n  authorship {    \n    VARCHAR author__aid PK     \n\
+      \    VARCHAR paper__pid PK \n  }\n  paper {    \n    VARCHAR abstract      \n\
+      \    VARCHAR institution      \n    VARCHAR link      \n    VARCHAR title  \
+      \    \n    FLOAT year      \n    VARCHAR pid PK \n  }\n  nep {    \n    VARCHAR\
+      \ info      \n    VARCHAR title      \n    VARCHAR nid PK \n  }\n  nep_inclusion\
+      \ {    \n    VARCHAR paper__pid FK     \n    INTEGER ind PK     \n    VARCHAR\
+      \ issue__neid PK \n  }\n  nep_issue {    \n    VARCHAR nep__nid FK     \n  \
+      \  DATETIME published      \n    VARCHAR neid PK \n  }\n  authorship ||--|{\
+      \ paper : \"paper__pid -> pid\"\n  nep_inclusion ||--|{ paper : \"paper__pid\
+      \ -> pid\"\n  nep_inclusion ||--|{ nep_issue : \"issue__neid -> neid\"\n  nep_issue\
+      \ ||--|{ nep : \"nep__nid -> nid\""
+    n_tables: 5
+    name: RePEc via NEP
+    notebooks: []
+    project_url: https://github.com/sscu-budapest/articledata
+    slug: repec_via_nep
+    source_urls:
+    - https://econpapers.repec.org
+    - http://nep.repec.org/
+    - https://logec.repec.org
+    tables:
+    - csv_filesize: 24.03 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>paper__pid</th>\n      <th>author__aid</th>\n    </tr>\n  </thead>\n\
+        \  <tbody>\n    <tr>\n      <th>0</th>\n      <td>arxpapers/2202.03874</td>\n\
+        \      <td>zhao:yu</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>arxpapers/2202.04146</td>\n\
+        \      <td>coulombe:philippe goulet</td>\n    </tr>\n    <tr>\n      <th>2</th>\n\
+        \      <td>arxpapers/2202.04218</td>\n      <td>harding:matthew</td>\n   \
+        \ </tr>\n    <tr>\n      <th>3</th>\n      <td>nbrnberwo/29767</td>\n    \
+        \  <td>goldfarb:avi</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>haljournl/hal-03331114</td>\n\
+        \      <td>dumitrescu:elena ivona</td>\n    </tr>\n  </tbody>\n</table>\n\
+        </div>"
+      n_cols: 2
+      n_rows: 759888
+      name: Authorship
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html
+      slug: authorship
+      update_date: 2022-05-14 23:45
+    - csv_filesize: 39.69 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>ind</th>\n      <th>issue__neid</th>\n      <th>paper__pid</th>\n\
+        \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>1</td>\n\
+        \      <td>nep-big-2022-03-21</td>\n      <td>arxpapers/2202.03874</td>\n\
+        \    </tr>\n    <tr>\n      <th>1</th>\n      <td>2</td>\n      <td>nep-big-2022-03-21</td>\n\
+        \      <td>arxpapers/2202.04146</td>\n    </tr>\n    <tr>\n      <th>2</th>\n\
+        \      <td>3</td>\n      <td>nep-big-2022-03-21</td>\n      <td>arxpapers/2202.04218</td>\n\
+        \    </tr>\n    <tr>\n      <th>3</th>\n      <td>4</td>\n      <td>nep-big-2022-03-21</td>\n\
+        \      <td>nbrnberwo/29767</td>\n    </tr>\n    <tr>\n      <th>4</th>\n \
+        \     <td>5</td>\n      <td>nep-big-2022-03-21</td>\n      <td>haljournl/hal-03250484</td>\n\
+        \    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 3
+      n_rows: 1067753
+      name: Nep Inclusion
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html
+      slug: nep_inclusion
+      update_date: 2022-05-14 23:45
+    - csv_filesize: 2.94 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>neid</th>\n      <th>nep__nid</th>\n      <th>published</th>\n   \
+        \ </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>nep-big-2022-03-21</td>\n\
+        \      <td>nep-big</td>\n      <td>2022-03-21</td>\n    </tr>\n    <tr>\n\
+        \      <th>1</th>\n      <td>nep-big-2022-03-14</td>\n      <td>nep-big</td>\n\
+        \      <td>2022-03-14</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>nep-big-2022-03-07</td>\n\
+        \      <td>nep-big</td>\n      <td>2022-03-07</td>\n    </tr>\n    <tr>\n\
+        \      <th>3</th>\n      <td>nep-big-2022-02-28</td>\n      <td>nep-big</td>\n\
+        \      <td>2022-02-28</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>nep-big-2022-02-21</td>\n\
+        \      <td>nep-big</td>\n      <td>2022-02-21</td>\n    </tr>\n  </tbody>\n\
+        </table>\n</div>"
+      n_cols: 3
+      n_rows: 81252
+      name: Nep Issue
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html
+      slug: nep_issue
+      update_date: 2022-05-14 23:45
+    - csv_filesize: 8.37 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>nid</th>\n      <th>title</th>\n      <th>info</th>\n    </tr>\n \
+        \ </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>nep-acc</td>\n\
+        \      <td>Accounting and Auditing</td>\n      <td>Alexander Harin, Modern\
+        \ University for the Hum...</td>\n    </tr>\n    <tr>\n      <th>1</th>\n\
+        \      <td>nep-afr</td>\n      <td>Africa</td>\n      <td>Sam Sarpong, Xiamen\
+        \ University Malaysia Campus...</td>\n    </tr>\n    <tr>\n      <th>2</th>\n\
+        \      <td>nep-age</td>\n      <td>Economics of Ageing</td>\n      <td>Claudia\
+        \ Villosio, LABORatorio R. Revelli, Italy</td>\n    </tr>\n    <tr>\n    \
+        \  <th>3</th>\n      <td>nep-agr</td>\n      <td>Agricultural Economics</td>\n\
+        \      <td>Angelo Zago, Universit\xE0 degli Studi di Verona,...</td>\n   \
+        \ </tr>\n    <tr>\n      <th>4</th>\n      <td>nep-ara</td>\n      <td>MENA\
+        \ - Middle East and North Africa [blog]</td>\n      <td>Paul Makdissi, Universit\xE9\
+        \ d\u2019Ottawa, Canada</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 3
+      n_rows: 97
+      name: Nep
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html
+      slug: nep
+      update_date: 2022-04-24 21:41
+    - csv_filesize: 116.25 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>pid</th>\n      <th>link</th>\n      <th>year</th>\n      <th>abstract</th>\n\
+        \      <th>title</th>\n      <th>institution</th>\n    </tr>\n  </thead>\n\
+        \  <tbody>\n    <tr>\n      <th>0</th>\n      <td>arxpapers/2202.03874</td>\n\
+        \      <td>/paper/arxpapers/2202.03874.htm</td>\n      <td>2022.0</td>\n \
+        \     <td>Bankruptcy risk prediction for Small and Mediu...</td>\n      <td>Bankruptcy\
+        \ Prediction via Mixing Intra-Risk an...</td>\n      <td>arXiv.org</td>\n\
+        \    </tr>\n    <tr>\n      <th>1</th>\n      <td>arxpapers/2202.04146</td>\n\
+        \      <td>/paper/arxpapers/2202.04146.htm</td>\n      <td>2022.0</td>\n \
+        \     <td>Many problems plague the estimation of Phillip...</td>\n      <td>A\
+        \ Neural Phillips Curve and a Deep Output Gap</td>\n      <td>arXiv.org</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>arxpapers/2202.04218</td>\n\
+        \      <td>/paper/arxpapers/2202.04218.htm</td>\n      <td>2022.0</td>\n \
+        \     <td>We use machine learning techniques to investig...</td>\n      <td>Managers\
+        \ versus Machines: Do Algorithms Replic...</td>\n      <td>arXiv.org</td>\n\
+        \    </tr>\n    <tr>\n      <th>3</th>\n      <td>nbrnberwo/29767</td>\n \
+        \     <td>/paper/nbrnberwo/29767.htm</td>\n      <td>2022.0</td>\n      <td>General\
+        \ purpose technologies (GPTs) push out t...</td>\n      <td>Could Machine\
+        \ Learning be a General Purpose Te...</td>\n      <td>National Bureau of Economic\
+        \ Research, Inc</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>haljournl/hal-03331114</td>\n\
+        \      <td>/paper/haljournl/hal-03331114.htm</td>\n      <td>2022.0</td>\n\
+        \      <td>In the context of credit scoring, ensemble met...</td>\n      <td>Machine\
+        \ Learning for Credit Scoring: Improving...</td>\n      <td>HAL</td>\n   \
+        \ </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 6
+      n_rows: 381196
+      name: Paper
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html
+      slug: paper
+      update_date: 2022-05-14 23:46
+    update_str: at 00:00 am, on day 1 of the month
+  - erd_mermaid: "erDiagram\n  affiliation {    \n    VARCHAR organization FK    \
+      \ \n    VARCHAR party  \n  }\n  nominating_organization {    \n    VARCHAR nid\
+      \ PK \n  }\n  district_hierarchy {    \n    VARCHAR child FK     \n    VARCHAR\
+      \ parent FK \n  }\n  geographical_unit {    \n    VARCHAR level_info      \n\
+      \    VARCHAR name      \n    VARCHAR unit_id PK \n  }\n  election {    \n  \
+      \  BOOLEAN is_individual      \n    DATETIME start_date      \n    VARCHAR election_id\
+      \ PK \n  }\n  election_precinct {    \n    VARCHAR election_id FK     \n   \
+      \ FLOAT eligible_voters      \n    BOOLEAN external_votes      \n    VARCHAR\
+      \ geo_info      \n    VARCHAR geo_unit_id FK     \n    VARCHAR name      \n\
+      \    VARCHAR precinct_id PK \n  }\n  vote_record {    \n    VARCHAR organization\
+      \ FK     \n    VARCHAR precinct_id FK     \n    INTEGER vote_count      \n \
+      \   VARCHAR vid PK \n  }\n  affiliation ||--|{ nominating_organization : \"\
+      organization -> nid\"\n  district_hierarchy ||--|{ geographical_unit : \"parent\
+      \ -> unit_id; child -> unit_id\"\n  election_precinct ||--|{ election : \"election_id\
+      \ -> election_id\"\n  election_precinct ||--|{ geographical_unit : \"geo_unit_id\
+      \ -> unit_id\"\n  vote_record ||--|{ nominating_organization : \"organization\
+      \ -> nid\"\n  vote_record ||--|{ election_precinct : \"precinct_id -> precinct_id\""
+    n_tables: 7
+    name: Hungarian Elections
+    notebooks: []
+    project_url: https://github.com/sscu-budapest/electiondata
+    slug: hungarian_elections
+    source_urls:
+    - https://valtor.valasztas.hu
+    - https://valtor.valasztas.hu/valtort/jsp/tmd1.jsp?TIP=2
+    tables:
+    - csv_filesize: 6.92 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/affiliation.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>party</th>\n      <th>organization</th>\n    </tr>\n  </thead>\n \
+        \ <tbody>\n    <tr>\n      <th>0</th>\n      <td>MSZDP</td>\n      <td>MSZDP</td>\n\
+        \    </tr>\n    <tr>\n      <th>1</th>\n      <td>MSZP</td>\n      <td>MSZP</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>SZDSZ</td>\n      <td>SZDSZ</td>\n\
+        \    </tr>\n    <tr>\n      <th>3</th>\n      <td>F\xDCGGETLEN</td>\n    \
+        \  <td>F\xDCGGETLEN</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>MDF</td>\n\
+        \      <td>MDF</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 2
+      n_rows: 257
+      name: Affiliation
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/affiliation-profile.html
+      slug: affiliation
+      update_date: 2022-05-24 22:32
+    - csv_filesize: 3.07 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/nominating_organization.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>nid</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n\
+        \      <td>MSZDP</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>MSZP</td>\n\
+        \    </tr>\n    <tr>\n      <th>2</th>\n      <td>SZDSZ</td>\n    </tr>\n\
+        \    <tr>\n      <th>3</th>\n      <td>F\xDCGGETLEN</td>\n    </tr>\n    <tr>\n\
+        \      <th>4</th>\n      <td>MDF</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 1
+      n_rows: 219
+      name: Nominating Organization
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/nominating_organization-profile.html
+      slug: nominating_organization
+      update_date: 2022-05-24 22:32
+    - csv_filesize: 0.95 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>election_id</th>\n      <th>is_individual</th>\n      <th>start_date</th>\n\
+        \    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>hun-1990-indiv-1</td>\n\
+        \      <td>True</td>\n      <td>1990-03-25</td>\n    </tr>\n    <tr>\n   \
+        \   <th>1</th>\n      <td>hun-1990-party-1</td>\n      <td>False</td>\n  \
+        \    <td>1990-03-25</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>hun-1990-indiv-2</td>\n\
+        \      <td>True</td>\n      <td>1990-04-08</td>\n    </tr>\n    <tr>\n   \
+        \   <th>3</th>\n      <td>hun-1990-party-2</td>\n      <td>False</td>\n  \
+        \    <td>1990-04-08</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>hun-1994-indiv-1</td>\n\
+        \      <td>True</td>\n      <td>1994-05-08</td>\n    </tr>\n  </tbody>\n</table>\n\
+        </div>"
+      n_cols: 3
+      n_rows: 28
+      name: Election
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election-profile.html
+      slug: election
+      update_date: 2022-05-24 22:32
+    - csv_filesize: 125.95 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/district_hierarchy.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>parent</th>\n      <th>child</th>\n    </tr>\n  </thead>\n  <tbody>\n\
+        \    <tr>\n      <th>0</th>\n      <td>hun-region313509025f</td>\n      <td>hun-main4f04c03969</td>\n\
+        \    </tr>\n    <tr>\n      <th>1</th>\n      <td>hun-region313509025f</td>\n\
+        \      <td>hun-main7a10a1d71e</td>\n    </tr>\n    <tr>\n      <th>2</th>\n\
+        \      <td>hun-region313509025f</td>\n      <td>hun-maince30d532ee</td>\n\
+        \    </tr>\n    <tr>\n      <th>3</th>\n      <td>hun-region313509025f</td>\n\
+        \      <td>hun-mainc6e666f370</td>\n    </tr>\n    <tr>\n      <th>4</th>\n\
+        \      <td>hun-region313509025f</td>\n      <td>hun-mainb399cbef78</td>\n\
+        \    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 2
+      n_rows: 3224
+      name: District Hierarchy
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/district_hierarchy-profile.html
+      slug: district_hierarchy
+      update_date: 2022-05-24 22:32
+    - csv_filesize: 128.04 kB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/geographical_unit.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>unit_id</th>\n      <th>name</th>\n      <th>level_info</th>\n   \
+        \ </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>hun-region313509025f</td>\n\
+        \      <td>BUDAPEST</td>\n      <td>settlement</td>\n    </tr>\n    <tr>\n\
+        \      <th>1</th>\n      <td>hun-regionb1bd8046e2</td>\n      <td>FEJ\xC9\
+        R</td>\n      <td>county</td>\n    </tr>\n    <tr>\n      <th>2</th>\n   \
+        \   <td>hun-regiond54715d396</td>\n      <td>J\xC1SZ-NAGYKUN-SZOLNOK</td>\n\
+        \      <td>county</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>hun-region93e2b0688c</td>\n\
+        \      <td>BARANYA</td>\n      <td>county</td>\n    </tr>\n    <tr>\n    \
+        \  <th>4</th>\n      <td>hun-regionfe72b78f8e</td>\n      <td>HEVES</td>\n\
+        \      <td>county</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 3
+      n_rows: 3229
+      name: Geographical Unit
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/geographical_unit-profile.html
+      slug: geographical_unit
+      update_date: 2022-05-24 22:32
+    - csv_filesize: 25.87 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election_precinct.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n   \
+        \   <th>precinct_id</th>\n      <th>name</th>\n      <th>geo_info</th>\n \
+        \     <th>eligible_voters</th>\n      <th>external_votes</th>\n      <th>geo_unit_id</th>\n\
+        \      <th>election_id</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n\
+        \      <th>0</th>\n      <td>1031</td>\n      <td>BUDAPEST I-001</td>\n  \
+        \    <td>BUDAPEST          01</td>\n      <td>806.0</td>\n      <td>False</td>\n\
+        \      <td>hun-main4f04c03969</td>\n      <td>hun-1990-indiv-1</td>\n    </tr>\n\
+        \    <tr>\n      <th>1</th>\n      <td>137128</td>\n      <td>BUDAPEST I-001</td>\n\
+        \      <td>BUDAPEST          01</td>\n      <td>811.0</td>\n      <td>False</td>\n\
+        \      <td>hun-main4f04c03969</td>\n      <td>hun-1990-party-1</td>\n    </tr>\n\
+        \    <tr>\n      <th>2</th>\n      <td>1032</td>\n      <td>BUDAPEST I-002</td>\n\
+        \      <td>BUDAPEST          01</td>\n      <td>814.0</td>\n      <td>False</td>\n\
+        \      <td>hun-main4f04c03969</td>\n      <td>hun-1990-indiv-1</td>\n    </tr>\n\
+        \    <tr>\n      <th>3</th>\n      <td>137129</td>\n      <td>BUDAPEST I-002</td>\n\
+        \      <td>BUDAPEST          01</td>\n      <td>820.0</td>\n      <td>False</td>\n\
+        \      <td>hun-main4f04c03969</td>\n      <td>hun-1990-party-1</td>\n    </tr>\n\
+        \    <tr>\n      <th>4</th>\n      <td>1033</td>\n      <td>BUDAPEST I-003</td>\n\
+        \      <td>BUDAPEST          01</td>\n      <td>632.0</td>\n      <td>False</td>\n\
+        \      <td>hun-main4f04c03969</td>\n      <td>hun-1990-indiv-1</td>\n    </tr>\n\
+        \  </tbody>\n</table>\n</div>"
+      n_cols: 7
+      n_rows: 272194
+      name: Election Precinct
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election_precinct-profile.html
+      slug: election_precinct
+      update_date: 2022-05-24 22:33
+    - csv_filesize: 49.57 MB
+      csv_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record.csv
+      head_html: "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n\
+        \        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n\
+        \        vertical-align: top;\n    }\n\n    .dataframe thead th {\n      \
+        \  text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\"\
+        >\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th>variable</th>\n\
+        \      <th>vid</th>\n      <th>vote_count</th>\n      <th>organization</th>\n\
+        \      <th>precinct_id</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n\
+        \      <th>0</th>\n      <td>0</td>\n      <td>19</td>\n      <td>MSZDP</td>\n\
+        \      <td>0</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>1</td>\n\
+        \      <td>45</td>\n      <td>MSZP</td>\n      <td>0</td>\n    </tr>\n   \
+        \ <tr>\n      <th>2</th>\n      <td>2</td>\n      <td>163</td>\n      <td>SZDSZ</td>\n\
+        \      <td>0</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>3</td>\n\
+        \      <td>28</td>\n      <td>F\xDCGGETLEN</td>\n      <td>0</td>\n    </tr>\n\
+        \    <tr>\n      <th>4</th>\n      <td>4</td>\n      <td>201</td>\n      <td>MDF</td>\n\
+        \      <td>0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      n_cols: 4
+      n_rows: 1996280
+      name: Vote Record
+      profile_url: https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record-profile.html
+      slug: vote_record
+      update_date: 2022-05-24 22:33
+    update_str: ''

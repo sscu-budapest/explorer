@@ -14,13 +14,13 @@ jobs:
       with:
         python-version: 3.x
     - name: Install dependencies
-      run: python -m pip install --upgrade pip; pip install -r book/requirements.txt
+      run: python -m pip install --upgrade pip; pip install -r requirements.txt
     - name: Setup Git
       run: git config --global init.defaultBranch main;git config --global user.email
         "leo@dumbartonserum.com";git config --global user.name "Leo Dumbarton";git
         pull --tags
     - name: Build the book
-      run: datazimmer load-explorer-data && jupyter-book build book
+      run: dz load-explorer-data && dz build-explorer
       env:
         ZIMMER_FULL_AUTH: ${{ secrets.ZIMMER_FULL_AUTH }}
         GIT_HTTPS_TOKEN: ${{ secrets.GIT_HTTPS_TOKEN }}

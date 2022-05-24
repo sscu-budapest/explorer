@@ -1,7 +1,4 @@
 jupyter-book
 matplotlib
-pandas
-seaborn
 sphinxcontrib-mermaid
 datazimmer
-aswan
