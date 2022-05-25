@@ -64,7 +64,7 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row
 
 ```{div} col-4
-**Intro**
+**Check Basics**
 ```
 
 ```{div} col-5
