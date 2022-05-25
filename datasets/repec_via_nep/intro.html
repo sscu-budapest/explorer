@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -55,6 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Hungarian Elections" href="../../dataset-pages/hungarian_elections.html" />
     <link rel="prev" title="RePEc via NEP" href="../../dataset-pages/repec_via_nep.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -99,11 +101,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">
-     Covid Victim Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../covid_victims/intro.html">
      Explore Waves and Conditions
     </a>
@@ -120,11 +117,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">
-     Journal Table Profile
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../scimago_journals/intro.html">
      Check Basics
@@ -143,11 +135,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
-     Package Download Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../pypi_downloads/intro.html">
      Usage Analysis
     </a>
@@ -164,34 +151,26 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">
-     Nep Inclusion Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">
-     Nep Issue Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Check Head
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../dataset-pages/hungarian_elections.html">
+   Hungarian Elections
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../hungarian_elections/intro.html">
+     WIP: Create some more analysis here
     </a>
    </li>
   </ul>
@@ -305,6 +284,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_paper</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;paper.csv&quot;</span><span class="p">)</span>
+<span class="n">df_nep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep.csv&quot;</span><span class="p">)</span>
+<span class="n">df_nep_inclusion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_inclusion.csv&quot;</span><span class="p">)</span>
+<span class="n">df_nep_issue</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_issue.csv&quot;</span><span class="p">)</span>
+<span class="n">df_authorship</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;authorship.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -314,355 +297,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_paper</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>pid</th>
-      <td>arxpapers/2202.03874</td>
-      <td>arxpapers/2202.04146</td>
-      <td>arxpapers/2202.04218</td>
-      <td>nbrnberwo/29767</td>
-      <td>haljournl/hal-03331114</td>
-    </tr>
-    <tr>
-      <th>link</th>
-      <td>/paper/arxpapers/2202.03874.htm</td>
-      <td>/paper/arxpapers/2202.04146.htm</td>
-      <td>/paper/arxpapers/2202.04218.htm</td>
-      <td>/paper/nbrnberwo/29767.htm</td>
-      <td>/paper/haljournl/hal-03331114.htm</td>
-    </tr>
-    <tr>
-      <th>year</th>
-      <td>2022.0</td>
-      <td>2022.0</td>
-      <td>2022.0</td>
-      <td>2022.0</td>
-      <td>2022.0</td>
-    </tr>
-    <tr>
-      <th>abstract</th>
-      <td>Bankruptcy risk prediction for Small and Mediu...</td>
-      <td>Many problems plague the estimation of Phillip...</td>
-      <td>We use machine learning techniques to investig...</td>
-      <td>General purpose technologies (GPTs) push out t...</td>
-      <td>In the context of credit scoring, ensemble met...</td>
-    </tr>
-    <tr>
-      <th>title</th>
-      <td>Bankruptcy Prediction via Mixing Intra-Risk an...</td>
-      <td>A Neural Phillips Curve and a Deep Output Gap</td>
-      <td>Managers versus Machines: Do Algorithms Replic...</td>
-      <td>Could Machine Learning be a General Purpose Te...</td>
-      <td>Machine Learning for Credit Scoring: Improving...</td>
-    </tr>
-    <tr>
-      <th>institution</th>
-      <td>arXiv.org</td>
-      <td>arXiv.org</td>
-      <td>arXiv.org</td>
-      <td>National Bureau of Economic Research, Inc</td>
-      <td>HAL</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>nid</th>
-      <td>nep-acc</td>
-      <td>nep-afr</td>
-      <td>nep-age</td>
-      <td>nep-agr</td>
-      <td>nep-ara</td>
-    </tr>
-    <tr>
-      <th>title</th>
-      <td>Accounting and Auditing</td>
-      <td>Africa</td>
-      <td>Economics of Ageing</td>
-      <td>Agricultural Economics</td>
-      <td>MENA - Middle East and North Africa [blog]</td>
-    </tr>
-    <tr>
-      <th>info</th>
-      <td>Alexander Harin, Modern University for the Hum...</td>
-      <td>Sam Sarpong, Xiamen University Malaysia Campus...</td>
-      <td>Claudia Villosio, LABORatorio R. Revelli, Italy</td>
-      <td>Angelo Zago, Università degli Studi di Verona,...</td>
-      <td>Paul Makdissi, Université d’Ottawa, Canada</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep_inclusion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_inclusion.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep_inclusion</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ind</th>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>issue__neid</th>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big-2022-03-21</td>
-    </tr>
-    <tr>
-      <th>paper__pid</th>
-      <td>arxpapers/2202.03874</td>
-      <td>arxpapers/2202.04146</td>
-      <td>arxpapers/2202.04218</td>
-      <td>nbrnberwo/29767</td>
-      <td>haljournl/hal-03250484</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep_issue</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_issue.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nep_issue</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>neid</th>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big-2022-03-14</td>
-      <td>nep-big-2022-03-07</td>
-      <td>nep-big-2022-02-28</td>
-      <td>nep-big-2022-02-21</td>
-    </tr>
-    <tr>
-      <th>nep__nid</th>
-      <td>nep-big</td>
-      <td>nep-big</td>
-      <td>nep-big</td>
-      <td>nep-big</td>
-      <td>nep-big</td>
-    </tr>
-    <tr>
-      <th>published</th>
-      <td>2022-03-21</td>
-      <td>2022-03-14</td>
-      <td>2022-03-07</td>
-      <td>2022-02-28</td>
-      <td>2022-02-21</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_authorship</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;authorship.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_authorship</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>paper__pid</th>
-      <td>arxpapers/2202.03874</td>
-      <td>arxpapers/2202.04146</td>
-      <td>arxpapers/2202.04218</td>
-      <td>nbrnberwo/29767</td>
-      <td>haljournl/hal-03331114</td>
-    </tr>
-    <tr>
-      <th>author__aid</th>
-      <td>zhao:yu</td>
-      <td>coulombe:philippe goulet</td>
-      <td>harding:matthew</td>
-      <td>goldfarb:avi</td>
-      <td>dumitrescu:elena ivona</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 
@@ -697,6 +331,13 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">RePEc via NEP</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../dataset-pages/hungarian_elections.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hungarian Elections</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

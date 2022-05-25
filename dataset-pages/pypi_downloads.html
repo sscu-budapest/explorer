@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -100,11 +101,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">
-     Covid Victim Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../datasets/covid_victims/intro.html">
      Explore Waves and Conditions
     </a>
@@ -121,11 +117,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">
-     Journal Table Profile
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../datasets/scimago_journals/intro.html">
      Check Basics
@@ -144,11 +135,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
-     Package Download Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../datasets/pypi_downloads/intro.html">
      Usage Analysis
     </a>
@@ -166,33 +152,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">
-     Nep Inclusion Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">
-     Nep Issue Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../datasets/repec_via_nep/intro.html">
      Check Head
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="hungarian_elections.html">
+   Hungarian Elections
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../datasets/hungarian_elections/intro.html">
+     WIP: Create some more analysis here
     </a>
    </li>
   </ul>
@@ -265,13 +243,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#erd">
-   ERD
+  <a class="reference internal nav-link" href="#entity-relationship-diagram-erd">
+   Entity Relationship Diagram (ERD)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration-analysis">
-   Exploration / Analysis
+  <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
+   Exploratory Data Analysis (EDA)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -305,13 +283,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#erd">
-   ERD
+  <a class="reference internal nav-link" href="#entity-relationship-diagram-erd">
+   Entity Relationship Diagram (ERD)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploration-analysis">
-   Exploration / Analysis
+  <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
+   Exploratory Data Analysis (EDA)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -336,8 +314,19 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="pypi-downloads">
 <h1>Pypi Downloads<a class="headerlink" href="#pypi-downloads" title="Permalink to this headline">¶</a></h1>
 <p>Downloaded from the python package index, that is described as a source <a href="https://sscu-budapest.github.io/reports/41">here</a>.</p>
-<div class="section" id="erd">
-<h2>ERD<a class="headerlink" href="#erd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entity-relationship-diagram-erd">
+<h2>Entity Relationship Diagram (ERD)<a class="headerlink" href="#entity-relationship-diagram-erd" title="Permalink to this headline">¶</a></h2>
+<div class="dropdown admonition">
+<p class="admonition-title">What is an Entity Relationship Diagram (ERD)?</p>
+<p>An <strong>entity relationship diagram (ERD)</strong> shows the relationships of entity sets stored in a database. An entity in this context is an object, a component of data, for example a variable. An entity set is a collection of similar entities. These entities can have attributes that define their properties.</p>
+<p>By defining the entities, and their attributes, and showing the relationships between them, an ER diagram illustrates the logical structure of databases.</p>
+<p>Each table demonstrates an entity set, where the rows represent the entities. Each entity set contains a <strong>primary key (PK)</strong> which is unique in the table. A primary key can be one entity, for example, a tax number or a set of entities like longitude and latitude in spatial data.</p>
+<p>An entity set may have got a <strong>foreign key (FK)</strong>. It means that the table is connected to another table’s primary key. This <strong>relationship</strong> can be represented by a line with a <strong>sign</strong> on its every ending. The sign specifies how many instances of an entity relate to one instance of another entity:</p>
+<ul class="simple">
+<li><p>double lines (one)</p></li>
+<li><p>branching line (more)</p></li>
+</ul>
+</div>
 <div class="mermaid">
             erDiagram
   package_download {    
@@ -358,11 +347,27 @@ const thebe_selector_output = ".output, .cell_output"
     DATETIME timestamp  
   }
         </div></div>
-<div class="section" id="exploration-analysis">
-<h2>Exploration / Analysis<a class="headerlink" href="#exploration-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exploratory-data-analysis-eda">
+<h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h2>
+<div class="dropdown admonition">
+<p class="admonition-title">What does exploratory data analysis contain?</p>
+<p>These are some summaries of the initial analyses we conducted on the tables of the dataset. They are based on our ideas that we think can be <strong>further explored in a research project</strong>.</p>
+<p>The exploration notebooks can be checked by clicking on the <span class="sphinx-bs badge badge-success">Open Notebook</span> button. If you just want to see the output figures of the analysis, then open them with the <span class="sphinx-bs badge badge-success">Figures</span> button.</p>
+</div>
+<p><strong>Notebooks here</strong></p>
 </div>
 <div class="section" id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<div class="dropdown admonition">
+<p class="admonition-title">How should I use this?</p>
+<p><strong>Table information</strong></p>
+<p>Each table has a Table Profile, generated by <a class="reference external" href="https://github.com/ydataai/pandas-profiling">pandas-profiling</a>. This includes descriptive statistics based on the table data and metadata, which can <strong>save significant time during the pre-analysis</strong>. Each profiling contains descriptives of the variables and additionally may show interactions, correlations, missing data information, and samples of the data. To see the profiling click on <span class="sphinx-bs badge badge-success">Open Table Profile</span>.</p>
+<p>Furthermore, you can check the first 5 rows of the tables by clicking on the <span class="sphinx-bs badge badge-success">First 5 rows</span> button.</p>
+<p><strong>Download links</strong></p>
+<p>The table data can be downloaded in CSV format with <span class="sphinx-bs badge badge-primary">Download CSV</span> button. Before this step, we recommend checking the table profile!</p>
+<p><strong>Updating information</strong></p>
+<p>Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.</p>
+</div>
 <blockquote>
 <div><p>There is 1 table</p>
 </div></blockquote>

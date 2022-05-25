@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -99,11 +100,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">
-     Covid Victim Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="datasets/covid_victims/intro.html">
      Explore Waves and Conditions
     </a>
@@ -120,11 +116,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">
-     Journal Table Profile
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="datasets/scimago_journals/intro.html">
      Check Basics
@@ -143,11 +134,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">
-     Package Download Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="datasets/pypi_downloads/intro.html">
      Usage Analysis
     </a>
@@ -165,33 +151,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">
-     Authorship Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">
-     Nep Inclusion Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">
-     Nep Issue Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">
-     Nep Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference external" href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">
-     Paper Table Profile
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="datasets/repec_via_nep/intro.html">
      Check Head
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="dataset-pages/hungarian_elections.html">
+   Hungarian Elections
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="datasets/hungarian_elections/intro.html">
+     WIP: Create some more analysis here
     </a>
    </li>
   </ul>
@@ -304,10 +282,11 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-exploration-catalog">
 <h1>Data Exploration Catalog<a class="headerlink" href="#data-exploration-catalog" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><p>A set of simple datasets for exploratory data analysis to share ideas and inspire research.</p>
-</div></blockquote>
-<p>The main point is not reproducibility, but exploration. The tables usually update periodically, they can be downloaded in csv format.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">How this catalog works?</p>
+<p>This site refreshes regularly and is intended to help researchers engage with a more diverse dataset collection. The main point is not reproducibility, but exploration. The tables usually update periodically, they can be downloaded in CSV format.</p>
+<p>The diagram below presents the datasets contained in the catalog, with the tables within each dataset. You can see the basic explorative analysis of the tables by clicking on them.</p>
+</div>
 <div class="mermaid">
                 flowchart TD
         
@@ -335,6 +314,27 @@ const thebe_selector_output = ".output, .cell_output"
         repec_via_nep([RePEc via NEP]) --- repec_via_nep_paper[Paper]
         click repec_via_nep_paper href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html&quot; &quot;Profile&quot;
         
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_affiliation[Affiliation]
+        click hungarian_elections_affiliation href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/affiliation-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_nominating_organization[Nominating Organization]
+        click hungarian_elections_nominating_organization href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/nominating_organization-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_election[Election]
+        click hungarian_elections_election href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_district_hierarchy[District Hierarchy]
+        click hungarian_elections_district_hierarchy href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/district_hierarchy-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_geographical_unit[Geographical Unit]
+        click hungarian_elections_geographical_unit href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/geographical_unit-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_election_precinct[Election Precinct]
+        click hungarian_elections_election_precinct href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election_precinct-profile.html&quot; &quot;Profile&quot;
+        
+        hungarian_elections([Hungarian Elections]) --- hungarian_elections_vote_record[Vote Record]
+        click hungarian_elections_vote_record href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record-profile.html&quot; &quot;Profile&quot;
+        
         </div><div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -343,6 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="dataset-pages/scimago_journals.html">Scimago Journals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset-pages/pypi_downloads.html">Pypi Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataset-pages/repec_via_nep.html">RePEc via NEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/hungarian_elections.html">Hungarian Elections</a></li>
 </ul>
 </div>
 </div>

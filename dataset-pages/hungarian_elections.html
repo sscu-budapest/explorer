@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scimago Journals &#8212; Data Catalog</title>
+    <title>Hungarian Elections &#8212; Data Catalog</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Check Basics" href="../datasets/scimago_journals/intro.html" />
-    <link rel="prev" title="Explore Waves and Conditions" href="../datasets/covid_victims/intro.html" />
+    <link rel="next" title="WIP: Create some more analysis here" href="../datasets/hungarian_elections/intro.html" />
+    <link rel="prev" title="Check Head" href="../datasets/repec_via_nep/intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -107,11 +107,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="scimago_journals.html">
    Scimago Journals
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -158,11 +158,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="hungarian_elections.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Hungarian Elections
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
@@ -212,7 +212,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/dataset-pages/scimago_journals.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/dataset-pages/hungarian_elections.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -243,6 +243,11 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-this-is-created">
+   How This is Created
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#entity-relationship-diagram-erd">
    Entity Relationship Diagram (ERD)
   </a>
@@ -272,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Scimago Journals</h1>
+                <h1>Hungarian Elections</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -282,6 +287,11 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-this-is-created">
+   How This is Created
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#entity-relationship-diagram-erd">
    Entity Relationship Diagram (ERD)
@@ -311,9 +321,17 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="scimago-journals">
-<h1>Scimago Journals<a class="headerlink" href="#scimago-journals" title="Permalink to this headline">¶</a></h1>
-<p>A dataset of 1 table</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="hungarian-elections">
+<h1>Hungarian Elections<a class="headerlink" href="#hungarian-elections" title="Permalink to this headline">¶</a></h1>
+<p>A dataset of 7 tables. 7 tables are many, so here, the first thing to look at is probably the <a class="reference external" href="#ERD">ERD</a></p>
+<div class="section" id="how-this-is-created">
+<h2>How This is Created<a class="headerlink" href="#how-this-is-created" title="Permalink to this headline">¶</a></h2>
+<p>This dataset was done without any request from any researchers. Sometimes we just make these if we find an interesting source or have some ideas we would like to test.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a larger dataset, so the table profiles are more minimal here.</p>
+</div>
+</div>
 <div class="section" id="entity-relationship-diagram-erd">
 <h2>Entity Relationship Diagram (ERD)<a class="headerlink" href="#entity-relationship-diagram-erd" title="Permalink to this headline">¶</a></h2>
 <div class="dropdown admonition">
@@ -329,27 +347,48 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="mermaid">
             erDiagram
-  journal {    
-    VARCHAR categories      
-    INTEGER citable_docs_3years      
-    VARCHAR country      
-    VARCHAR coverage      
-    INTEGER h_index      
-    VARCHAR issn      
-    FLOAT journal_rating      
-    VARCHAR publisher      
-    INTEGER rank      
-    FLOAT ref_per_doc      
-    VARCHAR region      
-    VARCHAR sjr_best_quartile      
-    VARCHAR title      
-    INTEGER total_cites_3years      
-    INTEGER total_docs_2021      
-    INTEGER total_docs_3years      
-    INTEGER total_refs      
-    VARCHAR type      
-    INTEGER sourceid PK 
+  affiliation {    
+    VARCHAR organization FK     
+    VARCHAR party  
   }
+  nominating_organization {    
+    VARCHAR nid PK 
+  }
+  district_hierarchy {    
+    VARCHAR child FK     
+    VARCHAR parent FK 
+  }
+  geographical_unit {    
+    VARCHAR level_info      
+    VARCHAR name      
+    VARCHAR unit_id PK 
+  }
+  election {    
+    BOOLEAN is_individual      
+    DATETIME start_date      
+    VARCHAR election_id PK 
+  }
+  election_precinct {    
+    VARCHAR election_id FK     
+    FLOAT eligible_voters      
+    BOOLEAN external_votes      
+    VARCHAR geo_info      
+    VARCHAR geo_unit_id FK     
+    VARCHAR name      
+    VARCHAR precinct_id PK 
+  }
+  vote_record {    
+    VARCHAR organization FK     
+    VARCHAR precinct_id FK     
+    INTEGER vote_count      
+    VARCHAR vid PK 
+  }
+  affiliation ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
+  district_hierarchy ||--|{ geographical_unit : &quot;child -&gt; unit_id; parent -&gt; unit_id&quot;
+  election_precinct ||--|{ election : &quot;election_id -&gt; election_id&quot;
+  election_precinct ||--|{ geographical_unit : &quot;geo_unit_id -&gt; unit_id&quot;
+  vote_record ||--|{ election_precinct : &quot;precinct_id -&gt; precinct_id&quot;
+  vote_record ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
         </div></div>
 <div class="section" id="exploratory-data-analysis-eda">
 <h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h2>
@@ -373,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.</p>
 </div>
 <blockquote>
-<div><p>There is 1 table</p>
+<div><p>There are 7 tables</p>
 </div></blockquote>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -382,23 +421,209 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-header docutils">
 <div class="row docutils">
 <div class="col-9 docutils">
-<p class="card-text"><strong>Journal Table</strong></p>
+<p class="card-text"><strong>Affiliation Table</strong></p>
 </div>
 <div class="col-3 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/affiliation.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
 </div>
 </div>
 </div>
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 34664 × 20 (8.45 MB)</p>
+<p class="card-text"><strong>Size</strong>: 257 × 2 (6.92 kB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-05-14 23:44</p>
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:32</p>
 </div>
 <div class="col-3 docutils">
-<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/affiliation-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Nominating Organization Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/nominating_organization.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 219 × 1 (3.07 kB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:32</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/nominating_organization-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Election Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 28 × 3 (0.95 kB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:32</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>District Hierarchy Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/district_hierarchy.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 3224 × 2 (125.95 kB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:32</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/district_hierarchy-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Geographical Unit Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/geographical_unit.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 3229 × 3 (128.04 kB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:32</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/geographical_unit-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Election Precinct Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election_precinct.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 272194 × 7 (25.87 MB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:33</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/election_precinct-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<div class="row docutils">
+<div class="col-9 docutils">
+<p class="card-text"><strong>Vote Record Table</strong></p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record.csv"><span class="sphinx-bs badge badge-primary">Download CSV</span></a></p>
+</div>
+</div>
+</div>
+<div class="card-body docutils">
+<div class="row docutils">
+<div class="col-4 docutils">
+<p class="card-text"><strong>Size</strong>: 1996280 × 4 (49.57 MB)</p>
+</div>
+<div class="col-5 docutils">
+<p class="card-text"><strong>Last Changed</strong>: 2022-05-24 22:33</p>
+</div>
+<div class="col-3 docutils">
+<p class="card-text"><a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record-profile.html"><span class="sphinx-bs badge badge-success">Open Table Profile</span></a></p>
 </div>
 </div>
 </div>
@@ -410,7 +635,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="sources">
 <h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>project url: <a class="reference external" href="https://github.com/sscu-budapest/dabble">https://github.com/sscu-budapest/dabble</a></p></li>
+<li><p>project url: <a class="reference external" href="https://github.com/sscu-budapest/electiondata">https://github.com/sscu-budapest/electiondata</a></p></li>
+<li><p>data downloaded from</p>
+<ul>
+<li><p><a class="reference external" href="https://valtor.valasztas.hu">https://valtor.valasztas.hu</a></p></li>
+<li><p><a class="reference external" href="https://valtor.valasztas.hu/valtort/jsp/tmd1.jsp?TIP=2">https://valtor.valasztas.hu/valtort/jsp/tmd1.jsp?TIP=2</a></p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -442,17 +673,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../datasets/covid_victims/intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../datasets/repec_via_nep/intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Explore Waves and Conditions</p>
+            <p class="prev-next-title">Check Head</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../datasets/scimago_journals/intro.html" title="next page">
+    <a class='right-next' id="next-link" href="../datasets/hungarian_elections/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Check Basics</p>
+        <p class="prev-next-title">WIP: Create some more analysis here</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
