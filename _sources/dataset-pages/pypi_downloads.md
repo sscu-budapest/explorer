@@ -50,7 +50,89 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 ```
 
-**Notebooks here**
+
+
+
+:::::{panels} 
+    :body: bg-warning
+    :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Intro**
+```
+
+```{div} col-5
+ <a href="../datasets/pypi_downloads/intro.html">{badge}`Open Notebook,badge-success`</a>
+```
+
+
+    
+    
+
+
+
+```{div} col-3
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" >Figures</button>
+
+```
+::::
+:::::
+
+::::::{div} slideshow start-dis
+:::::{panels}
+:container: container-lg
+:column: col-12
+
+::::{div} row 
+
+
+```{image} ../datasets/pypi_downloads/intro/assets/out-11.png
+:class: myslides start-dis 
+:align: center
+```
+
+```{image} ../datasets/pypi_downloads/intro/assets/out-15.png
+:class: myslides start-dis 
+:align: center
+```
+
+```{image} ../datasets/pypi_downloads/intro/assets/out-21.png
+:class: myslides start-dis 
+:align: center
+```
+
+```{image} ../datasets/pypi_downloads/intro/assets/out-25.png
+:class: myslides start-dis 
+:align: center
+```
+
+
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/pypi_downloads/intro/assets/out-17.html
+```
+:::
+
+
+::::
+
+^^^
+::::{div} row
+
+<div class = "col-6 docutils" align = "right">
+<button  onclick="slideImage(0, -1)">&#10094;</button>
+</div>
+
+<div class = "col-6 docutils" align = "left">
+<button  onclick="slideImage(0, 1)">&#10095;</button>
+</div>
+
+::::
+
+:::::
+::::::
 
 
 ## Tables
@@ -82,13 +164,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Package Download Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -103,18 +190,145 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/pypi_downloads/package_download-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 0)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>timestamp</th>
+      <th>country_code</th>
+      <th>project_name</th>
+      <th>package_version</th>
+      <th>distribution_type</th>
+      <th>installer_name</th>
+      <th>installer_version</th>
+      <th>python_implementation_name</th>
+      <th>python_implementation_version</th>
+      <th>sys_name</th>
+      <th>sys_distro_name</th>
+      <th>sys_distro_version</th>
+      <th>cpu</th>
+      <th>openssl_version</th>
+      <th>setuptools_version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2021-11-11 03:01:34</td>
+      <td>CN</td>
+      <td>scikit-mobility</td>
+      <td>1.2.2</td>
+      <td>sdist</td>
+      <td>Browser</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2021-11-11 08:25:11</td>
+      <td>CN</td>
+      <td>scikit-mobility</td>
+      <td>1.2.2</td>
+      <td>sdist</td>
+      <td>Browser</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2021-11-11 20:10:37</td>
+      <td>CA</td>
+      <td>scikit-mobility</td>
+      <td>1.2.2</td>
+      <td>sdist</td>
+      <td>pip</td>
+      <td>21.3.1</td>
+      <td>CPython</td>
+      <td>3.9.7</td>
+      <td>Darwin</td>
+      <td>macOS</td>
+      <td>12.0.1</td>
+      <td>arm64</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>57.4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2021-11-11 15:08:19</td>
+      <td>US</td>
+      <td>scikit-mobility</td>
+      <td>1.1.2</td>
+      <td>bdist_wheel</td>
+      <td>pip</td>
+      <td>20.1.1</td>
+      <td>CPython</td>
+      <td>3.7.10</td>
+      <td>Linux</td>
+      <td>Ubuntu</td>
+      <td>20.04</td>
+      <td>x86_64</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>47.3.1.post20200616</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2021-11-11 14:57:51</td>
+      <td>US</td>
+      <td>scikit-mobility</td>
+      <td>1.1.2</td>
+      <td>bdist_wheel</td>
+      <td>pip</td>
+      <td>20.1.1</td>
+      <td>CPython</td>
+      <td>3.7.10</td>
+      <td>Linux</td>
+      <td>Ubuntu</td>
+      <td>20.04</td>
+      <td>x86_64</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>47.3.1.post20200616</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 ## Sources
 
 - project url: https://github.com/sscu-budapest/softwaredata
+

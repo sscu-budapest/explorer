@@ -64,7 +64,64 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 ```
 
-**Notebooks here**
+
+
+
+:::::{panels} 
+    :body: bg-warning
+    :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Intro**
+```
+
+```{div} col-5
+ <a href="../datasets/repec_via_nep/intro.html">{badge}`Open Notebook,badge-success`</a>
+```
+
+
+    
+    
+
+
+
+```{div} col-3
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" disabled>No Figures</button>
+
+```
+::::
+:::::
+
+::::::{div} slideshow start-dis
+:::::{panels}
+:container: container-lg
+:column: col-12
+
+::::{div} row 
+
+
+
+
+
+::::
+
+^^^
+::::{div} row
+
+<div class = "col-6 docutils" align = "right">
+<button  onclick="slideImage(0, -1)">&#10094;</button>
+</div>
+
+<div class = "col-6 docutils" align = "left">
+<button  onclick="slideImage(0, 1)">&#10095;</button>
+</div>
+
+::::
+
+:::::
+::::::
 
 
 ## Tables
@@ -96,13 +153,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Authorship Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -117,15 +179,64 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/authorship-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 0)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>author__aid</th>
+      <th>paper__pid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>zhao:yu</td>
+      <td>arxpapers/2202.03874</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>coulombe:philippe goulet</td>
+      <td>arxpapers/2202.04146</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>harding:matthew</td>
+      <td>arxpapers/2202.04218</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>goldfarb:avi</td>
+      <td>nbrnberwo/29767</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>dumitrescu:elena ivona</td>
+      <td>haljournl/hal-03331114</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 
@@ -133,13 +244,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Nep Inclusion Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -154,15 +270,70 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_inclusion-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 1)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ind</th>
+      <th>issue__neid</th>
+      <th>paper__pid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>nep-big-2022-03-21</td>
+      <td>arxpapers/2202.03874</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>nep-big-2022-03-21</td>
+      <td>arxpapers/2202.04146</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>nep-big-2022-03-21</td>
+      <td>arxpapers/2202.04218</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>nep-big-2022-03-21</td>
+      <td>nbrnberwo/29767</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>nep-big-2022-03-21</td>
+      <td>haljournl/hal-03250484</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 
@@ -170,13 +341,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Nep Issue Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -191,15 +367,70 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep_issue-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 2)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neid</th>
+      <th>nep__nid</th>
+      <th>published</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>nep-big-2022-03-21</td>
+      <td>nep-big</td>
+      <td>2022-03-21</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>nep-big-2022-03-14</td>
+      <td>nep-big</td>
+      <td>2022-03-14</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>nep-big-2022-03-07</td>
+      <td>nep-big</td>
+      <td>2022-03-07</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>nep-big-2022-02-28</td>
+      <td>nep-big</td>
+      <td>2022-02-28</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>nep-big-2022-02-21</td>
+      <td>nep-big</td>
+      <td>2022-02-21</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 
@@ -207,13 +438,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Nep Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -228,15 +464,70 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/nep-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 3)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nid</th>
+      <th>info</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>nep-acc</td>
+      <td>Alexander Harin, Modern University for the Hum...</td>
+      <td>Accounting and Auditing</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>nep-afr</td>
+      <td>Sam Sarpong, Xiamen University Malaysia Campus...</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>nep-age</td>
+      <td>Claudia Villosio, LABORatorio R. Revelli, Italy</td>
+      <td>Economics of Ageing</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>nep-agr</td>
+      <td>Angelo Zago, Università degli Studi di Verona,...</td>
+      <td>Agricultural Economics</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>nep-ara</td>
+      <td>Paul Makdissi, Université d’Ottawa, Canada</td>
+      <td>MENA - Middle East and North Africa [blog]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 
@@ -244,13 +535,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Paper Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -265,16 +561,88 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/repec_via_nep/paper-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 4)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pid</th>
+      <th>abstract</th>
+      <th>institution</th>
+      <th>link</th>
+      <th>title</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>arxpapers/2202.03874</td>
+      <td>Bankruptcy risk prediction for Small and Mediu...</td>
+      <td>arXiv.org</td>
+      <td>/paper/arxpapers/2202.03874.htm</td>
+      <td>Bankruptcy Prediction via Mixing Intra-Risk an...</td>
+      <td>2022.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>arxpapers/2202.04146</td>
+      <td>Many problems plague the estimation of Phillip...</td>
+      <td>arXiv.org</td>
+      <td>/paper/arxpapers/2202.04146.htm</td>
+      <td>A Neural Phillips Curve and a Deep Output Gap</td>
+      <td>2022.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>arxpapers/2202.04218</td>
+      <td>We use machine learning techniques to investig...</td>
+      <td>arXiv.org</td>
+      <td>/paper/arxpapers/2202.04218.htm</td>
+      <td>Managers versus Machines: Do Algorithms Replic...</td>
+      <td>2022.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>nbrnberwo/29767</td>
+      <td>General purpose technologies (GPTs) push out t...</td>
+      <td>National Bureau of Economic Research, Inc</td>
+      <td>/paper/nbrnberwo/29767.htm</td>
+      <td>Could Machine Learning be a General Purpose Te...</td>
+      <td>2022.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>haljournl/hal-03331114</td>
+      <td>In the context of credit scoring, ensemble met...</td>
+      <td>HAL</td>
+      <td>/paper/haljournl/hal-03331114.htm</td>
+      <td>Machine Learning for Credit Scoring: Improving...</td>
+      <td>2022.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 ## Sources
@@ -284,4 +652,5 @@ Some datasets are updated periodically. In this case, you can check the updating
   - https://econpapers.repec.org
   - http://nep.repec.org/
   - https://logec.repec.org
+
 

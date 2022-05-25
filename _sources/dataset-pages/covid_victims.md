@@ -50,7 +50,84 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 ```
 
-**Notebooks here**
+
+
+
+:::::{panels} 
+    :body: bg-warning
+    :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Intro**
+```
+
+```{div} col-5
+ <a href="../datasets/covid_victims/intro.html">{badge}`Open Notebook,badge-success`</a>
+```
+
+
+    
+    
+
+
+
+```{div} col-3
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" >Figures</button>
+
+```
+::::
+:::::
+
+::::::{div} slideshow start-dis
+:::::{panels}
+:container: container-lg
+:column: col-12
+
+::::{div} row 
+
+
+```{image} ../datasets/covid_victims/intro/assets/out-7.png
+:class: myslides start-dis 
+:align: center
+```
+
+```{image} ../datasets/covid_victims/intro/assets/out-10.png
+:class: myslides start-dis 
+:align: center
+```
+
+
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/covid_victims/intro/assets/out-4.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/covid_victims/intro/assets/out-9.html
+```
+:::
+
+
+::::
+
+^^^
+::::{div} row
+
+<div class = "col-6 docutils" align = "right">
+<button  onclick="slideImage(0, -1)">&#10094;</button>
+</div>
+
+<div class = "col-6 docutils" align = "left">
+<button  onclick="slideImage(0, 1)">&#10095;</button>
+</div>
+
+::::
+
+:::::
+::::::
 
 
 ## Tables
@@ -82,13 +159,18 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Covid Victim Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
@@ -99,20 +181,146 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-05-24 22:30
+**Last Changed**: 2022-05-25 16:51
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 0)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>serial</th>
+      <th>age</th>
+      <th>condition__blood_pressure</th>
+      <th>condition__diabetes</th>
+      <th>condition__heart</th>
+      <th>condition__lungs</th>
+      <th>condition__obesity</th>
+      <th>estimated_date</th>
+      <th>is_male</th>
+      <th>people_fully_vaccinated</th>
+      <th>people_vaccinated</th>
+      <th>positive_rate</th>
+      <th>raw_conditions</th>
+      <th>total_boosters</th>
+      <th>total_vaccinations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>76</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>2020-03-20</td>
+      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0307</td>
+      <td>szív és érrendszeri</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>65</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>2020-03-20</td>
+      <td>False</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0307</td>
+      <td>rosszindulatú daganat</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>74</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>2020-03-20</td>
+      <td>True</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0307</td>
+      <td>szív és érrendszeri</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>79</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>2020-03-22</td>
+      <td>True</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0309</td>
+      <td>szív és érrendszeri</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>68</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>2020-03-22</td>
+      <td>True</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0309</td>
+      <td>szív és érrendszeri</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 ## Sources
@@ -122,4 +330,5 @@ Some datasets are updated periodically. In this case, you can check the updating
   - https://koronavirus.gov.hu/elhunytak
   - https://covid.ourworldindata.org
   - https://www.worldometers.info/coronavirus/country/hungary/
+
 

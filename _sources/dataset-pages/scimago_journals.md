@@ -54,7 +54,84 @@ These are some summaries of the initial analyses we conducted on the tables of t
 The exploration notebooks can be checked by clicking on the {badge}`Open Notebook,badge-success` button. If you just want to see the output figures of the analysis, then open them with the {badge}`Figures,badge-success` button.
 ```
 
-**Notebooks here**
+
+
+
+:::::{panels} 
+    :body: bg-warning
+    :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Intro**
+```
+
+```{div} col-5
+ <a href="../datasets/scimago_journals/intro.html">{badge}`Open Notebook,badge-success`</a>
+```
+
+
+    
+    
+
+
+
+```{div} col-3
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" >Figures</button>
+
+```
+::::
+:::::
+
+::::::{div} slideshow start-dis
+:::::{panels}
+:container: container-lg
+:column: col-12
+
+::::{div} row 
+
+
+
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/scimago_journals/intro/assets/out-3.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/scimago_journals/intro/assets/out-6.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/scimago_journals/intro/assets/out-8.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/scimago_journals/intro/assets/out-11.html
+```
+:::
+
+
+::::
+
+^^^
+::::{div} row
+
+<div class = "col-6 docutils" align = "right">
+<button  onclick="slideImage(0, -1)">&#10094;</button>
+</div>
+
+<div class = "col-6 docutils" align = "left">
+<button  onclick="slideImage(0, 1)">&#10095;</button>
+</div>
+
+::::
+
+:::::
+::::::
 
 
 ## Tables
@@ -86,39 +163,201 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ::::{div} row
 
-```{div} col-9
+```{div} col-4
 **Journal Table**
 ```
 
-```{div} col-3
+```{div} col-5
  <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv">{badge}`Download CSV,badge-primary`</a>
 ```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
 ::::
 
 ^^^
 ::::{div} row
 
 ```{div} col-4
-**Size**: 34664 × 20 (8.45 MB)
+**Size**: 34664 × 20 (8.75 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-05-14 23:44
+**Last Changed**: 2022-05-25 16:51
 ```
 
 ```{div} col-3
-
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`Open Table Profile,badge-success`</a>
-
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 0)">First 5 rows</button>
 ```
-
 ::::
-
 :::::
 
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sourceid</th>
+      <th>rank</th>
+      <th>title</th>
+      <th>type</th>
+      <th>issn</th>
+      <th>h_index</th>
+      <th>total_docs_2020</th>
+      <th>ref_per_doc</th>
+      <th>sjr_best_quartile</th>
+      <th>total_docs_3years</th>
+      <th>total_refs</th>
+      <th>total_cites_3years</th>
+      <th>citable_docs_3years</th>
+      <th>country</th>
+      <th>region</th>
+      <th>publisher</th>
+      <th>coverage</th>
+      <th>journal_rating</th>
+      <th>categories</th>
+      <th>total_docs_2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>21100939709</td>
+      <td>392</td>
+      <td>Proceedings of the 8th USENIX Symposium on Ope...</td>
+      <td>conference and proceedings</td>
+      <td>-</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>6</td>
+      <td>0</td>
+      <td>224</td>
+      <td>5</td>
+      <td>United States</td>
+      <td>Northern America</td>
+      <td>None</td>
+      <td>2019</td>
+      <td>3.972</td>
+      <td>Computer Networks and Communications; Hardware...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>21100842169</td>
+      <td>659</td>
+      <td>AISec 2017 - Proceedings of the 10th ACM Works...</td>
+      <td>conference and proceedings</td>
+      <td>-</td>
+      <td>9</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>16</td>
+      <td>0</td>
+      <td>745</td>
+      <td>14</td>
+      <td>United States</td>
+      <td>Northern America</td>
+      <td>None</td>
+      <td>2017</td>
+      <td>2.953</td>
+      <td>Artificial Intelligence</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22882</td>
+      <td>661</td>
+      <td>Proceedings - Annual IEEE Symposium on Foundat...</td>
+      <td>conference and proceedings</td>
+      <td>02725428</td>
+      <td>97</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>92</td>
+      <td>0</td>
+      <td>1005</td>
+      <td>90</td>
+      <td>United States</td>
+      <td>Northern America</td>
+      <td>None</td>
+      <td>1982, 1983, 1984, 1985, 1986, 1987, 1988, 1991...</td>
+      <td>2.949</td>
+      <td>Computer Science (miscellaneous); Hardware and...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>21100830485</td>
+      <td>799</td>
+      <td>SIGCOMM 2017 -  Proceedings of the 2017 Confer...</td>
+      <td>conference and proceedings</td>
+      <td>-</td>
+      <td>27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>-</td>
+      <td>37</td>
+      <td>0</td>
+      <td>931</td>
+      <td>35</td>
+      <td>United States</td>
+      <td>Northern America</td>
+      <td>None</td>
+      <td>2017</td>
+      <td>2.668</td>
+      <td>Communication; Computer Networks and Communica...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>13244</td>
+      <td>854</td>
+      <td>Evidence-Based Medicine</td>
+      <td>journal</td>
+      <td>14736810, 13565524</td>
+      <td>28</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>Q1</td>
+      <td>145</td>
+      <td>0</td>
+      <td>320</td>
+      <td>32</td>
+      <td>United Kingdom</td>
+      <td>Western Europe</td>
+      <td>BMJ Publishing Group</td>
+      <td>1996-2018</td>
+      <td>2.587</td>
+      <td>Medicine (miscellaneous) (Q1)</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
 
 
 ## Sources
 
 - project url: https://github.com/sscu-budapest/dabble
+
