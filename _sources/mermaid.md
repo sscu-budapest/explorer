@@ -1,6 +1,6 @@
 ```{mermaid}
 
-    flowchart TD
+    flowchart LR
         
         covid_victims([Covid Victims]) --- covid_victims_covid_victim[Covid Victim]
         click covid_victims_covid_victim href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html" "Profile"

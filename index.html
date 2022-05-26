@@ -248,6 +248,11 @@ const thebe_selector_output = ".output, .cell_output"
    Datasets
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagram-of-tables">
+   Diagram of Tables
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -273,6 +278,11 @@ const thebe_selector_output = ".output, .cell_output"
    Datasets
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagram-of-tables">
+   Diagram of Tables
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -289,8 +299,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This site refreshes regularly and is intended to help researchers engage with a more diverse dataset collection. The main point is not reproducibility, but exploration. The tables usually update periodically, they can be downloaded in CSV format.</p>
 <p>The diagram below presents the datasets contained in the catalog, with the tables within each dataset. You can see the basic explorative analysis of the tables by clicking on them.</p>
 </div>
+<div class="section" id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/covid_victims.html">Covid Victims</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/scimago_journals.html">Scimago Journals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/pypi_downloads.html">Pypi Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/repec_via_nep.html">RePEc via NEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset-pages/hungarian_elections.html">Hungarian Elections</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="diagram-of-tables">
+<h2>Diagram of Tables<a class="headerlink" href="#diagram-of-tables" title="Permalink to this headline">¶</a></h2>
 <div class="mermaid">
-                flowchart TD
+                flowchart LR
         
         covid_victims([Covid Victims]) --- covid_victims_covid_victim[Covid Victim]
         click covid_victims_covid_victim href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html&quot; &quot;Profile&quot;
@@ -337,18 +361,7 @@ const thebe_selector_output = ".output, .cell_output"
         hungarian_elections([Hungarian Elections]) --- hungarian_elections_vote_record[Vote Record]
         click hungarian_elections_vote_record href &quot;https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record-profile.html&quot; &quot;Profile&quot;
         
-        </div><div class="section" id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/covid_victims.html">Covid Victims</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/scimago_journals.html">Scimago Journals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/pypi_downloads.html">Pypi Downloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/repec_via_nep.html">RePEc via NEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dataset-pages/hungarian_elections.html">Hungarian Elections</a></li>
-</ul>
-</div>
-</div>
+        </div></div>
 </div>
 
     <script type="text/x-thebe-config">
