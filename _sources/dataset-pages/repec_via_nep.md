@@ -49,8 +49,8 @@ erDiagram
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : "paper__pid -> pid"
-  nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
   nep_inclusion ||--|{ paper : "paper__pid -> pid"
+  nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
   nep_issue ||--|{ nep : "nep__nid -> nid"
 ```
 
@@ -74,7 +74,7 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row
 
 ```{div} col-4
-**Check Head**
+**Papers Analysis**
 ```
 
 ```{div} col-5
@@ -88,7 +88,7 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 
 
 ```{div} col-3
-<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" disabled>No Figures</button>
+<button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" >Figures</button>
 
 ```
 ::::
@@ -102,7 +102,32 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row 
 
 
+```{image} ../datasets/repec_via_nep/intro/assets/out-6.png
+:class: myslides start-dis 
+:align: center
+```
 
+```{image} ../datasets/repec_via_nep/intro/assets/out-11.png
+:class: myslides start-dis 
+:align: center
+```
+
+
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/repec_via_nep/intro/assets/out-7.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/repec_via_nep/intro/assets/out-9.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/repec_via_nep/intro/assets/out-12.html
+```
+:::
 
 
 ::::

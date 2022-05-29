@@ -88,12 +88,12 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row 
 
 
-```{image} ../datasets/covid_victims/intro/assets/out-7.png
+```{image} ../datasets/covid_victims/intro/assets/out-6.png
 :class: myslides start-dis 
 :align: center
 ```
 
-```{image} ../datasets/covid_victims/intro/assets/out-10.png
+```{image} ../datasets/covid_victims/intro/assets/out-9.png
 :class: myslides start-dis 
 :align: center
 ```
@@ -101,12 +101,12 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/covid_victims/intro/assets/out-4.html
+```{include} ../datasets/covid_victims/intro/assets/out-8.html
 ```
 :::
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/covid_victims/intro/assets/out-9.html
+```{include} ../datasets/covid_victims/intro/assets/out-11.html
 ```
 :::
 
@@ -181,7 +181,7 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-05-28 15:10
+**Last Changed**: 2022-05-29 11:46
 ```
 
 ```{div} col-3

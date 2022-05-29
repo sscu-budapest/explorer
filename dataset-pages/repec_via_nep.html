@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Check Head" href="../datasets/repec_via_nep/intro.html" />
+    <link rel="next" title="Papers Analysis" href="../datasets/repec_via_nep/intro.html" />
     <link rel="prev" title="Usage Analysis" href="../datasets/pypi_downloads/intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -121,7 +121,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../datasets/scimago_journals/intro.html">
-     Check Basics
+     Field Analysis
     </a>
    </li>
   </ul>
@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../datasets/repec_via_nep/intro.html">
-     Check Head
+     Papers Analysis
     </a>
    </li>
   </ul>
@@ -172,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../datasets/hungarian_elections/intro.html">
-     WIP: Create some more analysis here
+     Hungarian elections analysis
     </a>
    </li>
   </ul>
@@ -315,7 +315,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="repec-via-nep">
 <h1>RePEc via NEP<a class="headerlink" href="#repec-via-nep" title="Permalink to this headline">¶</a></h1>
-<p>A dataset of 5 tables</p>
+<p>A dataset of RePEc (Research Papers in Economics)</p>
 <div class="section" id="entity-relationship-diagram-erd">
 <h2>Entity Relationship Diagram (ERD)<a class="headerlink" href="#entity-relationship-diagram-erd" title="Permalink to this headline">¶</a></h2>
 <div class="dropdown admonition">
@@ -359,8 +359,8 @@ const thebe_selector_output = ".output, .cell_output"
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
-  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_inclusion ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
+  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_issue ||--|{ nep : &quot;nep__nid -&gt; nid&quot;
         </div></div>
 <div class="section" id="exploratory-data-analysis-eda">
@@ -377,13 +377,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body bg-warning docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Check Head</strong></p>
+<p class="card-text"><strong>Papers Analysis</strong></p>
 </div>
 <div class="col-5 docutils">
 <p class="card-text"><a href="../datasets/repec_via_nep/intro.html"><span class="sphinx-bs badge badge-success">Open Notebook</span></a></p>
 </div>
 <div class="col-3 docutils">
-<p class="card-text"><button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" disabled>No Figures</button></p>
+<p class="card-text"><button class="sphinx-bs badge badge-success" onclick="hideReveal('slideshow', 0, true)" >Figures</button></p>
 </div>
 </div>
 </div>
@@ -398,6 +398,185 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card w-100 shadow docutils">
 <div class="card-header docutils">
 <div class="row docutils">
+<img alt="../_images/out-61.png" class="myslides start-dis align-center" src="../_images/out-61.png" />
+<img alt="../_images/out-111.png" class="myslides start-dis align-center" src="../_images/out-111.png" />
+<div class="myslides start-dis col-12 slide-container docutils">
+<style type="text/css">
+</style>
+<table id="T_cabeb_">
+  <caption>Top 10 institutions by published papers</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >count</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >institution</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_cabeb_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
+      <td id="T_cabeb_row0_col0" class="data row0 col0" >30225</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
+      <td id="T_cabeb_row1_col0" class="data row1 col0" >19999</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
+      <td id="T_cabeb_row2_col0" class="data row2 col0" >14168</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row3" class="row_heading level0 row3" >HAL</th>
+      <td id="T_cabeb_row3_col0" class="data row3 col0" >11552</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
+      <td id="T_cabeb_row4_col0" class="data row4 col0" >10720</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
+      <td id="T_cabeb_row5_col0" class="data row5 col0" >9358</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
+      <td id="T_cabeb_row6_col0" class="data row6 col0" >5118</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row7" class="row_heading level0 row7" >The World Bank</th>
+      <td id="T_cabeb_row7_col0" class="data row7 col0" >4689</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row8" class="row_heading level0 row8" >CESifo</th>
+      <td id="T_cabeb_row8_col0" class="data row8 col0" >4104</td>
+    </tr>
+    <tr>
+      <th id="T_cabeb_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
+      <td id="T_cabeb_row9_col0" class="data row9 col0" >3864</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="myslides start-dis col-12 slide-container docutils">
+<style type="text/css">
+</style>
+<table id="T_76b8c_">
+  <caption>Top 10 authors by published papers</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >count</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >author__aid</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_76b8c_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
+      <td id="T_76b8c_row0_col0" class="data row0 col0" >1490</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row1" class="row_heading level0 row1" >Fund International Monetary</th>
+      <td id="T_76b8c_row1_col0" class="data row1 col0" >909</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row2" class="row_heading level0 row2" >Bank World</th>
+      <td id="T_76b8c_row2_col0" class="data row2 col0" >828</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row3" class="row_heading level0 row3" >Gupta Rangan</th>
+      <td id="T_76b8c_row3_col0" class="data row3 col0" >757</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row4" class="row_heading level0 row4" >Mcaleer Michael</th>
+      <td id="T_76b8c_row4_col0" class="data row4 col0" >648</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row5" class="row_heading level0 row5" >Oecd</th>
+      <td id="T_76b8c_row5_col0" class="data row5 col0" >466</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
+      <td id="T_76b8c_row6_col0" class="data row6 col0" >385</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
+      <td id="T_76b8c_row7_col0" class="data row7 col0" >330</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row8" class="row_heading level0 row8" >Chang Chia-Lin</th>
+      <td id="T_76b8c_row8_col0" class="data row8 col0" >306</td>
+    </tr>
+    <tr>
+      <th id="T_76b8c_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
+      <td id="T_76b8c_row9_col0" class="data row9 col0" >305</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="myslides start-dis col-12 slide-container docutils">
+<style type="text/css">
+</style>
+<table id="T_43e2b_">
+  <caption>Top 10 authors affilieated with the most institution</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >institution</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >author__aid</th>
+      <th class="blank col0" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_43e2b_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
+      <td id="T_43e2b_row0_col0" class="data row0 col0" >47</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
+      <td id="T_43e2b_row1_col0" class="data row1 col0" >40</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row2" class="row_heading level0 row2" >Ottaviano Gianmarco</th>
+      <td id="T_43e2b_row2_col0" class="data row2 col0" >39</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row3" class="row_heading level0 row3" >Devereux Michael</th>
+      <td id="T_43e2b_row3_col0" class="data row3 col0" >39</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row4" class="row_heading level0 row4" >Eichengreen Barry</th>
+      <td id="T_43e2b_row4_col0" class="data row4 col0" >39</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row5" class="row_heading level0 row5" >Verdier Thierry</th>
+      <td id="T_43e2b_row5_col0" class="data row5 col0" >37</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row6" class="row_heading level0 row6" >Clark Andrew</th>
+      <td id="T_43e2b_row6_col0" class="data row6 col0" >37</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
+      <td id="T_43e2b_row7_col0" class="data row7 col0" >37</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
+      <td id="T_43e2b_row8_col0" class="data row8 col0" >36</td>
+    </tr>
+    <tr>
+      <th id="T_43e2b_level0_row9" class="row_heading level0 row9" >Spagnolo Giancarlo</th>
+      <td id="T_43e2b_row9_col0" class="data row9 col0" >35</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="card-body docutils">
@@ -966,7 +1145,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="../datasets/repec_via_nep/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Check Head</p>
+        <p class="prev-next-title">Papers Analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

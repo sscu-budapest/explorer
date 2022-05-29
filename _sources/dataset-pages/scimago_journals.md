@@ -64,7 +64,7 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row
 
 ```{div} col-4
-**Check Basics**
+**Field Analysis**
 ```
 
 ```{div} col-5
@@ -95,22 +95,17 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-3.html
+```{include} ../datasets/scimago_journals/intro/assets/out-5.html
 ```
 :::
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-6.html
+```{include} ../datasets/scimago_journals/intro/assets/out-7.html
 ```
 :::
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-8.html
-```
-:::
-
-:::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-11.html
+```{include} ../datasets/scimago_journals/intro/assets/out-10.html
 ```
 :::
 
