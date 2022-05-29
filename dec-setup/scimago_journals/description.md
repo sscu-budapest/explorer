@@ -1,1 +1,1 @@
-A dataset of 1 table
+A dataset of Scimago journal ratings.
