@@ -19,6 +19,10 @@ jobs:
       run: git config --global init.defaultBranch main;git config --global user.email
         "leo@dumbartonserum.com";git config --global user.name "Leo Dumbarton";git
         pull --tags
+    - name: Setup ipython
+      run: ipython profile create; 
+        printf 'c = get_config()\nc.IPKernelApp.matplotlib = "inline"' > 
+        ~/.ipython/profile_default/ipython_kernel_config.py
     - name: Build the book
       run: dz load-explorer-data && dz build-explorer
       env:
