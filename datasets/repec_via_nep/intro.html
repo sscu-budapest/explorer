@@ -4,11 +4,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Papers Analysis &#8212; Data Catalog</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,22 +20,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tables.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -41,13 +39,14 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/buttons.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -67,7 +66,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -76,9 +89,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
       
@@ -180,8 +194,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -189,78 +208,134 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/datasets/repec_via_nep/intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/datasets/repec_via_nep/intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/datasets/repec_via_nep/intro.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/datasets/repec_via_nep/intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
 </div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
     </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Papers Analysis</h1>
@@ -271,11 +346,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="papers-analysis">
-<h1>Papers Analysis<a class="headerlink" href="#papers-analysis" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="papers-analysis">
+<h1>Papers Analysis<a class="headerlink" href="#papers-analysis" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -342,7 +418,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_f4506_">
+<table id="T_57c00_">
   <caption>Top 10 institutions by published papers</caption>
   <thead>
     <tr>
@@ -356,44 +432,44 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_f4506_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
-      <td id="T_f4506_row0_col0" class="data row0 col0" >30244</td>
+      <th id="T_57c00_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
+      <td id="T_57c00_row0_col0" class="data row0 col0" >30244</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
-      <td id="T_f4506_row1_col0" class="data row1 col0" >20013</td>
+      <th id="T_57c00_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
+      <td id="T_57c00_row1_col0" class="data row1 col0" >20013</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
-      <td id="T_f4506_row2_col0" class="data row2 col0" >14176</td>
+      <th id="T_57c00_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
+      <td id="T_57c00_row2_col0" class="data row2 col0" >14176</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row3" class="row_heading level0 row3" >HAL</th>
-      <td id="T_f4506_row3_col0" class="data row3 col0" >11608</td>
+      <th id="T_57c00_level0_row3" class="row_heading level0 row3" >HAL</th>
+      <td id="T_57c00_row3_col0" class="data row3 col0" >11608</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
-      <td id="T_f4506_row4_col0" class="data row4 col0" >10720</td>
+      <th id="T_57c00_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
+      <td id="T_57c00_row4_col0" class="data row4 col0" >10720</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
-      <td id="T_f4506_row5_col0" class="data row5 col0" >9386</td>
+      <th id="T_57c00_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
+      <td id="T_57c00_row5_col0" class="data row5 col0" >9386</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
-      <td id="T_f4506_row6_col0" class="data row6 col0" >5118</td>
+      <th id="T_57c00_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
+      <td id="T_57c00_row6_col0" class="data row6 col0" >5118</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row7" class="row_heading level0 row7" >The World Bank</th>
-      <td id="T_f4506_row7_col0" class="data row7 col0" >4689</td>
+      <th id="T_57c00_level0_row7" class="row_heading level0 row7" >The World Bank</th>
+      <td id="T_57c00_row7_col0" class="data row7 col0" >4689</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row8" class="row_heading level0 row8" >CESifo</th>
-      <td id="T_f4506_row8_col0" class="data row8 col0" >4135</td>
+      <th id="T_57c00_level0_row8" class="row_heading level0 row8" >CESifo</th>
+      <td id="T_57c00_row8_col0" class="data row8 col0" >4135</td>
     </tr>
     <tr>
-      <th id="T_f4506_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
-      <td id="T_f4506_row9_col0" class="data row9 col0" >3869</td>
+      <th id="T_57c00_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
+      <td id="T_57c00_row9_col0" class="data row9 col0" >3869</td>
     </tr>
   </tbody>
 </table>
@@ -422,7 +498,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_abe3c_">
+<table id="T_e14bf_">
   <caption>Top 10 authors by published papers</caption>
   <thead>
     <tr>
@@ -436,44 +512,44 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_abe3c_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
-      <td id="T_abe3c_row0_col0" class="data row0 col0" >1491</td>
+      <th id="T_e14bf_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
+      <td id="T_e14bf_row0_col0" class="data row0 col0" >1491</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row1" class="row_heading level0 row1" >Fund International Monetary</th>
-      <td id="T_abe3c_row1_col0" class="data row1 col0" >926</td>
+      <th id="T_e14bf_level0_row1" class="row_heading level0 row1" >Fund International Monetary</th>
+      <td id="T_e14bf_row1_col0" class="data row1 col0" >926</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row2" class="row_heading level0 row2" >Bank World</th>
-      <td id="T_abe3c_row2_col0" class="data row2 col0" >828</td>
+      <th id="T_e14bf_level0_row2" class="row_heading level0 row2" >Bank World</th>
+      <td id="T_e14bf_row2_col0" class="data row2 col0" >828</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row3" class="row_heading level0 row3" >Gupta Rangan</th>
-      <td id="T_abe3c_row3_col0" class="data row3 col0" >757</td>
+      <th id="T_e14bf_level0_row3" class="row_heading level0 row3" >Gupta Rangan</th>
+      <td id="T_e14bf_row3_col0" class="data row3 col0" >757</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row4" class="row_heading level0 row4" >Mcaleer Michael</th>
-      <td id="T_abe3c_row4_col0" class="data row4 col0" >648</td>
+      <th id="T_e14bf_level0_row4" class="row_heading level0 row4" >Mcaleer Michael</th>
+      <td id="T_e14bf_row4_col0" class="data row4 col0" >648</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row5" class="row_heading level0 row5" >Oecd</th>
-      <td id="T_abe3c_row5_col0" class="data row5 col0" >466</td>
+      <th id="T_e14bf_level0_row5" class="row_heading level0 row5" >Oecd</th>
+      <td id="T_e14bf_row5_col0" class="data row5 col0" >466</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
-      <td id="T_abe3c_row6_col0" class="data row6 col0" >385</td>
+      <th id="T_e14bf_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
+      <td id="T_e14bf_row6_col0" class="data row6 col0" >385</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
-      <td id="T_abe3c_row7_col0" class="data row7 col0" >330</td>
+      <th id="T_e14bf_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
+      <td id="T_e14bf_row7_col0" class="data row7 col0" >330</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row8" class="row_heading level0 row8" >Chang Chia-Lin</th>
-      <td id="T_abe3c_row8_col0" class="data row8 col0" >306</td>
+      <th id="T_e14bf_level0_row8" class="row_heading level0 row8" >Chang Chia-Lin</th>
+      <td id="T_e14bf_row8_col0" class="data row8 col0" >306</td>
     </tr>
     <tr>
-      <th id="T_abe3c_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
-      <td id="T_abe3c_row9_col0" class="data row9 col0" >305</td>
+      <th id="T_e14bf_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
+      <td id="T_e14bf_row9_col0" class="data row9 col0" >305</td>
     </tr>
   </tbody>
 </table>
@@ -525,7 +601,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_71e17_">
+<table id="T_cda51_">
   <caption>Top 10 authors affilieated with the most institution</caption>
   <thead>
     <tr>
@@ -539,50 +615,50 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_71e17_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
-      <td id="T_71e17_row0_col0" class="data row0 col0" >47</td>
+      <th id="T_cda51_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
+      <td id="T_cda51_row0_col0" class="data row0 col0" >47</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
-      <td id="T_71e17_row1_col0" class="data row1 col0" >40</td>
+      <th id="T_cda51_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
+      <td id="T_cda51_row1_col0" class="data row1 col0" >40</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row2" class="row_heading level0 row2" >Eichengreen Barry</th>
-      <td id="T_71e17_row2_col0" class="data row2 col0" >39</td>
+      <th id="T_cda51_level0_row2" class="row_heading level0 row2" >Eichengreen Barry</th>
+      <td id="T_cda51_row2_col0" class="data row2 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row3" class="row_heading level0 row3" >Ottaviano Gianmarco</th>
-      <td id="T_71e17_row3_col0" class="data row3 col0" >39</td>
+      <th id="T_cda51_level0_row3" class="row_heading level0 row3" >Ottaviano Gianmarco</th>
+      <td id="T_cda51_row3_col0" class="data row3 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row4" class="row_heading level0 row4" >Devereux Michael</th>
-      <td id="T_71e17_row4_col0" class="data row4 col0" >39</td>
+      <th id="T_cda51_level0_row4" class="row_heading level0 row4" >Devereux Michael</th>
+      <td id="T_cda51_row4_col0" class="data row4 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row5" class="row_heading level0 row5" >Clark Andrew</th>
-      <td id="T_71e17_row5_col0" class="data row5 col0" >37</td>
+      <th id="T_cda51_level0_row5" class="row_heading level0 row5" >Clark Andrew</th>
+      <td id="T_cda51_row5_col0" class="data row5 col0" >37</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row6" class="row_heading level0 row6" >Verdier Thierry</th>
-      <td id="T_71e17_row6_col0" class="data row6 col0" >37</td>
+      <th id="T_cda51_level0_row6" class="row_heading level0 row6" >Verdier Thierry</th>
+      <td id="T_cda51_row6_col0" class="data row6 col0" >37</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
-      <td id="T_71e17_row7_col0" class="data row7 col0" >37</td>
+      <th id="T_cda51_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
+      <td id="T_cda51_row7_col0" class="data row7 col0" >37</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
-      <td id="T_71e17_row8_col0" class="data row8 col0" >36</td>
+      <th id="T_cda51_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
+      <td id="T_cda51_row8_col0" class="data row8 col0" >36</td>
     </tr>
     <tr>
-      <th id="T_71e17_level0_row9" class="row_heading level0 row9" >Zenou Yves</th>
-      <td id="T_71e17_row9_col0" class="data row9 col0" >35</td>
+      <th id="T_cda51_level0_row9" class="row_heading level0 row9" >Zenou Yves</th>
+      <td id="T_cda51_row9_col0" class="data row9 col0" >35</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -606,9 +682,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../../dataset-pages/repec_via_nep.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -624,24 +702,28 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By DataZimmer<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By DataZimmer<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
