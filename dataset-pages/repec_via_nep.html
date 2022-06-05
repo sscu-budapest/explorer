@@ -434,8 +434,8 @@ title="Print to PDF"
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
-  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_inclusion ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
+  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_issue ||--|{ nep : &quot;nep__nid -&gt; nid&quot;
         </div></section>
 <section id="exploratory-data-analysis-eda">
