@@ -1,4 +1,5 @@
 remote: sscub-public-explorer
+analytics_id: G-8SMZ9X5ZLW
 datasets:
   - name: Covid Victims
     project: dabble
