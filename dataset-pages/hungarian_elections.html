@@ -469,9 +469,9 @@ title="Print to PDF"
     VARCHAR vid PK 
   }
   affiliation ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
-  district_hierarchy ||--|{ geographical_unit : &quot;parent -&gt; unit_id; child -&gt; unit_id&quot;
-  election_precinct ||--|{ geographical_unit : &quot;geo_unit_id -&gt; unit_id&quot;
+  district_hierarchy ||--|{ geographical_unit : &quot;child -&gt; unit_id; parent -&gt; unit_id&quot;
   election_precinct ||--|{ election : &quot;election_id -&gt; election_id&quot;
+  election_precinct ||--|{ geographical_unit : &quot;geo_unit_id -&gt; unit_id&quot;
   vote_record ||--|{ election_precinct : &quot;precinct_id -&gt; precinct_id&quot;
   vote_record ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
         </div></section>
