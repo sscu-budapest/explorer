@@ -1,4 +1,4 @@
-datazimmer[explorer]
+datazimmer[explorer]>=0.3.7
 aswan
 requests
 beautifulsoup4
