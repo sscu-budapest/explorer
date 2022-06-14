@@ -470,10 +470,10 @@ title="Print to PDF"
   }
   affiliation ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
   district_hierarchy ||--|{ geographical_unit : &quot;child -&gt; unit_id; parent -&gt; unit_id&quot;
-  election_precinct ||--|{ election : &quot;election_id -&gt; election_id&quot;
   election_precinct ||--|{ geographical_unit : &quot;geo_unit_id -&gt; unit_id&quot;
-  vote_record ||--|{ election_precinct : &quot;precinct_id -&gt; precinct_id&quot;
+  election_precinct ||--|{ election : &quot;election_id -&gt; election_id&quot;
   vote_record ||--|{ nominating_organization : &quot;organization -&gt; nid&quot;
+  vote_record ||--|{ election_precinct : &quot;precinct_id -&gt; precinct_id&quot;
         </div></section>
 <section id="exploratory-data-analysis-eda">
 <h2>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">#</a></h2>
