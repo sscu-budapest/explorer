@@ -47,4 +47,7 @@
         hungarian_elections([Hungarian Elections]) --- hungarian_elections_vote_record[Vote Record]
         click hungarian_elections_vote_record href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/hungarian_elections/vote_record-profile.html" "Profile"
         
+        facebook_pages_of_breweries([Facebook Pages of Breweries]) --- facebook_pages_of_breweries_post_export[Post Export]
+        click facebook_pages_of_breweries_post_export href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/facebook_pages_of_breweries/post_export-profile.html" "Profile"
+        
 ```

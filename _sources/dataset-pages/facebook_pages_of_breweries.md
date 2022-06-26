@@ -1,6 +1,6 @@
-# Covid Victims
+# Facebook Pages of Breweries
 
-```{include} ../datasets/covid_victims/description.md
+```{include} ../datasets/facebook_pages_of_breweries/description.md
 ```
 
 ## Entity Relationship Diagram (ERD)
@@ -21,22 +21,17 @@ An entity set may have got a **foreign key (FK)**. It means that the table is co
 
 ```{mermaid}
 erDiagram
-  covid_victim {    
-    INTEGER age      
-    BOOLEAN condition__blood_pressure      
-    BOOLEAN condition__diabetes      
-    BOOLEAN condition__heart      
-    BOOLEAN condition__lungs      
-    BOOLEAN condition__obesity      
-    DATETIME estimated_date      
-    BOOLEAN is_male      
-    INTEGER people_fully_vaccinated      
-    INTEGER people_vaccinated      
-    FLOAT positive_rate      
-    VARCHAR raw_conditions      
-    INTEGER total_boosters      
-    INTEGER total_vaccinations      
-    INTEGER serial PK 
+  post_export {    
+    INTEGER comments      
+    VARCHAR link      
+    INTEGER page_followers      
+    INTEGER page_likes      
+    VARCHAR page_name      
+    VARCHAR post_id      
+    DATETIME posted      
+    INTEGER reactions      
+    DATETIME recorded      
+    INTEGER shares  
   }
 ```
 
@@ -60,11 +55,11 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row
 
 ```{div} col-4
-**Explore Waves and Conditions**
+**First look at stats of pages**
 ```
 
 ```{div} col-5
- <a href="../datasets/covid_victims/intro.html">{badge}`Open Notebook,badge-success`</a>
+ <a href="../datasets/facebook_pages_of_breweries/init.html">{badge}`Open Notebook,badge-success`</a>
 ```
 
 
@@ -88,25 +83,10 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 ::::{div} row 
 
 
-```{image} ../datasets/covid_victims/intro/assets/out-6.png
-:class: myslides start-dis 
-:align: center
-```
-
-```{image} ../datasets/covid_victims/intro/assets/out-9.png
-:class: myslides start-dis 
-:align: center
-```
-
 
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/covid_victims/intro/assets/out-8.html
-```
-:::
-
-:::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/covid_victims/intro/assets/out-11.html
+```{include} ../datasets/facebook_pages_of_breweries/init/assets/out-3.html
 ```
 :::
 
@@ -150,7 +130,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm** 
+> There is 1 table
 
 
 
@@ -160,15 +140,15 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Covid Victim Table**
+**Post Export Table**
 ```
 
 ```{div} col-5
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim.csv">{badge}`Download CSV,badge-primary`</a>
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/facebook_pages_of_breweries/post_export.csv">{badge}`Download CSV,badge-primary`</a>
 ```
 
 ```{div} col-3
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html">{badge}`Open Table Profile,badge-success`</a>
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/facebook_pages_of_breweries/post_export-profile.html">{badge}`Open Table Profile,badge-success`</a>
 ```
 
 ::::
@@ -177,11 +157,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 46266 × 15 (6.14 MB)
+**Size**: 31496 × 10 (5.81 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-26 19:01
+**Last Changed**: 2022-06-26 17:54
 ```
 
 ```{div} col-3
@@ -209,113 +189,83 @@ Some datasets are updated periodically. In this case, you can check the updating
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>serial</th>
-      <th>age</th>
-      <th>condition__blood_pressure</th>
-      <th>condition__diabetes</th>
-      <th>condition__heart</th>
-      <th>condition__lungs</th>
-      <th>condition__obesity</th>
-      <th>estimated_date</th>
-      <th>is_male</th>
-      <th>people_fully_vaccinated</th>
-      <th>people_vaccinated</th>
-      <th>positive_rate</th>
-      <th>raw_conditions</th>
-      <th>total_boosters</th>
-      <th>total_vaccinations</th>
+      <th>comments</th>
+      <th>link</th>
+      <th>page_followers</th>
+      <th>page_likes</th>
+      <th>page_name</th>
+      <th>post_id</th>
+      <th>posted</th>
+      <th>reactions</th>
+      <th>recorded</th>
+      <th>shares</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
+      <td>/story.php?story_fbid=984840285496223&amp;id=17553...</td>
+      <td>1655</td>
+      <td>1590</td>
+      <td>972 Brewpub</td>
+      <td>984840285496223</td>
+      <td>2022-04-15 16:22:00</td>
+      <td>9</td>
+      <td>2022-06-23</td>
       <td>1</td>
-      <td>76</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>2020-03-20</td>
-      <td>False</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0307</td>
-      <td>szív és érrendszeri</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>65</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>2020-03-20</td>
-      <td>False</td>
       <td>0</td>
-      <td>0</td>
-      <td>0.0307</td>
-      <td>rosszindulatú daganat</td>
-      <td>0</td>
+      <td>/story.php?story_fbid=944277216219197&amp;id=17553...</td>
+      <td>1655</td>
+      <td>1590</td>
+      <td>972 Brewpub</td>
+      <td>944277216219197</td>
+      <td>2022-02-04 17:57:00</td>
+      <td>7</td>
+      <td>2022-06-23</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>0</td>
+      <td>/story.php?story_fbid=904718363508416&amp;id=17553...</td>
+      <td>1655</td>
+      <td>1590</td>
+      <td>972 Brewpub</td>
+      <td>904718363508416</td>
+      <td>2021-11-25 16:39:00</td>
       <td>3</td>
-      <td>74</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>2020-03-20</td>
-      <td>True</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0307</td>
-      <td>szív és érrendszeri</td>
-      <td>0</td>
+      <td>2022-06-23</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>79</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>2020-03-22</td>
-      <td>True</td>
       <td>0</td>
-      <td>0</td>
-      <td>0.0309</td>
-      <td>szív és érrendszeri</td>
-      <td>0</td>
+      <td>/story.php?story_fbid=880503095929943&amp;id=17553...</td>
+      <td>1655</td>
+      <td>1590</td>
+      <td>972 Brewpub</td>
+      <td>880503095929943</td>
+      <td>2021-10-14 15:56:00</td>
+      <td>1</td>
+      <td>2022-06-23</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>68</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>2020-03-22</td>
-      <td>True</td>
       <td>0</td>
-      <td>0</td>
-      <td>0.0309</td>
-      <td>szív és érrendszeri</td>
-      <td>0</td>
-      <td>0</td>
+      <td>/story.php?story_fbid=879360716044181&amp;id=17553...</td>
+      <td>1655</td>
+      <td>1590</td>
+      <td>972 Brewpub</td>
+      <td>879360716044181</td>
+      <td>2021-10-12 19:15:00</td>
+      <td>3</td>
+      <td>2022-06-23</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -325,10 +275,5 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ## Sources
 
-- project url: https://github.com/sscu-budapest/dabble
-- data downloaded from
-  - https://koronavirus.gov.hu/elhunytak
-  - https://covid.ourworldindata.org
-  - https://www.worldometers.info/coronavirus/country/hungary/
-
+- project url: https://github.com/sscu-budapest/socialmedia
 
