@@ -58,3 +58,11 @@ datasets:
       election:
         eid: election_id
     env: complete
+  - name: Facebook Pages of Breweries
+    project: socialmedia
+    namespace: facebook_exports
+    minimal: true
+    col_renamer:
+      post__pid: post_id
+      post__posted: posted
+    env: complete
