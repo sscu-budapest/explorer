@@ -49,8 +49,8 @@ erDiagram
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : "paper__pid -> pid"
-  nep_inclusion ||--|{ paper : "paper__pid -> pid"
   nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
+  nep_inclusion ||--|{ paper : "paper__pid -> pid"
   nep_issue ||--|{ nep : "nep__nid -> nid"
 ```
 
@@ -196,11 +196,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 762641 × 2 (24.12 MB)
+**Size**: 766552 × 2 (24.25 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:17
+**Last Changed**: 2022-07-01 15:13
 ```
 
 ```{div} col-3
@@ -235,28 +235,28 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>zhao:yu</td>
-      <td>arxpapers/2202.03874</td>
+      <td>agarwal:sumit</td>
+      <td>prieconom/2020-1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>coulombe:philippe goulet</td>
-      <td>arxpapers/2202.04146</td>
+      <td>daoud:adel</td>
+      <td>arxpapers/2202.00109</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>harding:matthew</td>
-      <td>arxpapers/2202.04218</td>
+      <td>wang:jia</td>
+      <td>arxpapers/2202.03158</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>goldfarb:avi</td>
-      <td>nbrnberwo/29767</td>
+      <td>puga:german</td>
+      <td>adlwinewp/2021-07</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>dumitrescu:elena ivona</td>
-      <td>haljournl/hal-03331114</td>
+      <td>hofert:marius</td>
+      <td>arxpapers/2202.03406</td>
     </tr>
   </tbody>
 </table>
@@ -287,11 +287,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 1071664 × 3 (39.84 MB)
+**Size**: 1077661 × 3 (40.07 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:17
+**Last Changed**: 2022-07-01 15:13
 ```
 
 ```{div} col-3
@@ -384,11 +384,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 81505 × 3 (2.95 MB)
+**Size**: 81791 × 3 (2.96 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:17
+**Last Changed**: 2022-07-01 15:14
 ```
 
 ```{div} col-3
@@ -485,7 +485,7 @@ Some datasets are updated periodically. In this case, you can check the updating
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:17
+**Last Changed**: 2022-07-01 15:14
 ```
 
 ```{div} col-3
@@ -578,11 +578,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 382414 × 6 (116.61 MB)
+**Size**: 384281 × 6 (117.17 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:17
+**Last Changed**: 2022-07-01 15:14
 ```
 
 ```{div} col-3
@@ -621,47 +621,47 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>arxpapers/2202.03874</td>
-      <td>Bankruptcy risk prediction for Small and Mediu...</td>
-      <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.03874.htm</td>
-      <td>Bankruptcy Prediction via Mixing Intra-Risk an...</td>
-      <td>2022.0</td>
+      <td>prieconom/2020-1</td>
+      <td>We study the interaction of search and applica...</td>
+      <td>Princeton University. Economics Department.</td>
+      <td>/paper/prieconom/2020-1.htm</td>
+      <td>Searching for Approval</td>
+      <td>2020.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>arxpapers/2202.04146</td>
-      <td>Many problems plague the estimation of Phillip...</td>
+      <td>arxpapers/2202.00109</td>
+      <td>The application of deep learning methods to su...</td>
       <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.04146.htm</td>
-      <td>A Neural Phillips Curve and a Deep Output Gap</td>
-      <td>2022.0</td>
+      <td>/paper/arxpapers/2202.00109.htm</td>
+      <td>Using satellites and artificial intelligence t...</td>
+      <td>2021.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>arxpapers/2202.04218</td>
-      <td>We use machine learning techniques to investig...</td>
+      <td>arxpapers/2202.03158</td>
+      <td>It is a challenging task to predict financial ...</td>
       <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.04218.htm</td>
-      <td>Managers versus Machines: Do Algorithms Replic...</td>
+      <td>/paper/arxpapers/2202.03158.htm</td>
+      <td>Dual-CLVSA: a Novel Deep Learning Approach to ...</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>nbrnberwo/29767</td>
-      <td>General purpose technologies (GPTs) push out t...</td>
-      <td>National Bureau of Economic Research, Inc</td>
-      <td>/paper/nbrnberwo/29767.htm</td>
-      <td>Could Machine Learning be a General Purpose Te...</td>
-      <td>2022.0</td>
+      <td>adlwinewp/2021-07</td>
+      <td>Cross-sectional models are useful for quantify...</td>
+      <td>University of Adelaide, Wine Economics Researc...</td>
+      <td>/paper/adlwinewp/2021-07.htm</td>
+      <td>The impact of growing season temperature on gr...</td>
+      <td>2021.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>haljournl/hal-03331114</td>
-      <td>In the context of credit scoring, ensemble met...</td>
-      <td>HAL</td>
-      <td>/paper/haljournl/hal-03331114.htm</td>
-      <td>Machine Learning for Credit Scoring: Improving...</td>
+      <td>arxpapers/2202.03406</td>
+      <td>Neural networks are suggested for learning a m...</td>
+      <td>arXiv.org</td>
+      <td>/paper/arxpapers/2202.03406.htm</td>
+      <td>Dependence model assessment and selection with...</td>
       <td>2022.0</td>
     </tr>
   </tbody>
