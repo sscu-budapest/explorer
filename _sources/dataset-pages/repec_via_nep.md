@@ -49,8 +49,8 @@ erDiagram
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : "paper__pid -> pid"
-  nep_inclusion ||--|{ paper : "paper__pid -> pid"
   nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
+  nep_inclusion ||--|{ paper : "paper__pid -> pid"
   nep_issue ||--|{ nep : "nep__nid -> nid"
 ```
 
@@ -169,7 +169,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There are 5 tables and the [sources](#sources) are **checked for updates at 00:00 am, on day 1 of the month** 
+> There are 5 tables and the [sources](#sources) are **checked for updates at 12:00 am, on day 1 of the month** 
 
 
 
