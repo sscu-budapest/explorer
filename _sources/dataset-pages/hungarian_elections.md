@@ -61,8 +61,8 @@ erDiagram
   district_hierarchy ||--|{ geographical_unit : "parent -> unit_id; child -> unit_id"
   election_precinct ||--|{ election : "election_id -> election_id"
   election_precinct ||--|{ geographical_unit : "geo_unit_id -> unit_id"
-  vote_record ||--|{ nominating_organization : "organization -> nid"
   vote_record ||--|{ election_precinct : "precinct_id -> precinct_id"
+  vote_record ||--|{ nominating_organization : "organization -> nid"
 ```
 
 
