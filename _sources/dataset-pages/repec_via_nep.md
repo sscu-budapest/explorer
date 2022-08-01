@@ -196,11 +196,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 766552 × 2 (24.25 MB)
+**Size**: 770697 × 2 (24.38 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-07-01 15:13
+**Last Changed**: 2022-08-01 15:15
 ```
 
 ```{div} col-3
@@ -287,11 +287,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 1077661 × 3 (40.07 MB)
+**Size**: 1083018 × 3 (40.27 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-07-01 15:13
+**Last Changed**: 2022-08-01 15:16
 ```
 
 ```{div} col-3
@@ -384,11 +384,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 81791 × 3 (2.96 MB)
+**Size**: 82091 × 3 (2.97 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-07-01 15:14
+**Last Changed**: 2022-08-01 15:16
 ```
 
 ```{div} col-3
@@ -578,11 +578,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 384281 × 6 (117.17 MB)
+**Size**: 386212 × 6 (117.78 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-07-01 15:14
+**Last Changed**: 2022-08-01 15:16
 ```
 
 ```{div} col-3
