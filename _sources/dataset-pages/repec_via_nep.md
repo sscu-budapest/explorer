@@ -196,11 +196,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 770697 × 2 (24.38 MB)
+**Size**: 776558 × 2 (24.57 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-08-01 15:15
+**Last Changed**: 2022-09-01 15:14
 ```
 
 ```{div} col-3
@@ -287,11 +287,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 1083018 × 3 (40.27 MB)
+**Size**: 1090132 × 3 (40.54 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-08-01 15:16
+**Last Changed**: 2022-09-01 15:14
 ```
 
 ```{div} col-3
@@ -384,11 +384,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 82091 × 3 (2.97 MB)
+**Size**: 82434 × 3 (2.99 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-08-01 15:16
+**Last Changed**: 2022-09-01 15:14
 ```
 
 ```{div} col-3
@@ -481,11 +481,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 97 × 3 (8.37 kB)
+**Size**: 97 × 3 (8.38 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-07-01 15:14
+**Last Changed**: 2022-09-01 15:14
 ```
 
 ```{div} col-3
@@ -521,33 +521,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
+      <td>nep-ias</td>
+      <td>Soumitra K. Mallick, Indian Institute of Socia...</td>
+      <td>Insurance Economics</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>nep-mac</td>
+      <td>Soumitra K Mallick, Indian Institute of Social...</td>
+      <td>Macroeconomics</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>nep-acc</td>
       <td>Alexander Harin, Modern University for the Hum...</td>
       <td>Accounting and Auditing</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>3</th>
       <td>nep-afr</td>
       <td>Sam Sarpong, Xiamen University Malaysia Campus...</td>
       <td>Africa</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>4</th>
       <td>nep-age</td>
       <td>Claudia Villosio, LABORatorio R. Revelli, Italy</td>
       <td>Economics of Ageing</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>nep-agr</td>
-      <td>Angelo Zago, Università degli Studi di Verona,...</td>
-      <td>Agricultural Economics</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>nep-ara</td>
-      <td>Paul Makdissi, Université d’Ottawa, Canada</td>
-      <td>MENA - Middle East and North Africa [blog]</td>
     </tr>
   </tbody>
 </table>
@@ -578,11 +578,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 386212 × 6 (117.78 MB)
+**Size**: 388805 × 6 (118.54 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-08-01 15:16
+**Last Changed**: 2022-09-01 15:14
 ```
 
 ```{div} col-3
