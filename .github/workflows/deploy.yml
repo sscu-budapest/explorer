@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v1
+    - uses: actions/setup-python@v4
       with:
-        python-version: 3.x
+        python-version: '3.10'
     - name: Install dependencies
       run: python -m pip install --upgrade pip; pip install -r requirements.txt
     - name: Setup Git
@@ -22,8 +22,12 @@ jobs:
     - name: Build the book
       run: dz load-explorer-data && dz build-explorer
       env:
-        ZIMMER_FULL_AUTH: ${{ secrets.ZIMMER_FULL_AUTH }}
+        ZIMMER_AUTH_HEX: ${{ secrets.ZIMMER_AUTH_HEX }}
+        ZIMMER_PHRASE: ${{ secrets.ZIMMER_PHRASE }}
         GIT_HTTPS_TOKEN: ${{ secrets.GIT_HTTPS_TOKEN }}
+        ASWAN_AUTH_PASS: ${{ secrets.ASWAN_AUTH_PASS }}
+        ASWAN_AUTH_HEX: ${{ secrets.ASWAN_AUTH_HEX }}
+        ASWAN_REMOTE: ${{ secrets.ASWAN_REMOTE }}
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3
       with:
