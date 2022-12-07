@@ -150,7 +150,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm** 
+> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm, only on monday** 
 
 
 
@@ -177,11 +177,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 46266 × 15 (6.14 MB)
+**Size**: 46264 × 15 (6.44 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-10-24 15:17
+**Last Changed**: 2022-12-07 17:09
 ```
 
 ```{div} col-3

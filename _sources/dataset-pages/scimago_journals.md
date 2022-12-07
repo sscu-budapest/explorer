@@ -149,7 +149,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There is 1 table
+> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm, only on monday** 
 
 
 
@@ -176,11 +176,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 34664 × 20 (8.75 MB)
+**Size**: 27339 × 19 (6.81 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:14
+**Last Changed**: 2022-12-07 17:09
 ```
 
 ```{div} col-3
@@ -209,142 +209,136 @@ Some datasets are updated periodically. In this case, you can check the updating
     <tr style="text-align: right;">
       <th></th>
       <th>sourceid</th>
-      <th>rank</th>
-      <th>title</th>
-      <th>type</th>
-      <th>issn</th>
-      <th>h_index</th>
-      <th>total_docs_2020</th>
-      <th>ref_per_doc</th>
-      <th>sjr_best_quartile</th>
-      <th>total_docs_3years</th>
-      <th>total_refs</th>
-      <th>total_cites_3years</th>
+      <th>categories</th>
       <th>citable_docs_3years</th>
       <th>country</th>
-      <th>region</th>
-      <th>publisher</th>
       <th>coverage</th>
+      <th>h_index</th>
+      <th>issn</th>
       <th>journal_rating</th>
-      <th>categories</th>
+      <th>publisher</th>
+      <th>rank</th>
+      <th>ref_per_doc</th>
+      <th>region</th>
+      <th>sjr_best_quartile</th>
+      <th>title</th>
+      <th>total_cites_3years</th>
       <th>total_docs_2021</th>
+      <th>total_docs_3years</th>
+      <th>total_refs</th>
+      <th>type</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>21100939709</td>
-      <td>392</td>
-      <td>Proceedings of the 8th USENIX Symposium on Ope...</td>
-      <td>conference and proceedings</td>
-      <td>-</td>
-      <td>4</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>-</td>
-      <td>6</td>
-      <td>0</td>
-      <td>224</td>
-      <td>5</td>
+      <td>28773</td>
+      <td>Hematology (Q1); Oncology (Q1)</td>
+      <td>78</td>
       <td>United States</td>
+      <td>1950-2021</td>
+      <td>182</td>
+      <td>15424863, 00079235</td>
+      <td>56.204</td>
+      <td>Wiley-Blackwell</td>
+      <td>1</td>
+      <td>97.71</td>
       <td>Northern America</td>
-      <td>None</td>
-      <td>2019</td>
-      <td>3.972</td>
-      <td>Computer Networks and Communications; Hardware...</td>
-      <td>NaN</td>
+      <td>Q1</td>
+      <td>Ca-A Cancer Journal for Clinicians</td>
+      <td>17959</td>
+      <td>41</td>
+      <td>121</td>
+      <td>4006</td>
+      <td>journal</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>21100842169</td>
-      <td>659</td>
-      <td>AISec 2017 - Proceedings of the 10th ACM Works...</td>
-      <td>conference and proceedings</td>
-      <td>-</td>
-      <td>9</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>-</td>
-      <td>16</td>
-      <td>0</td>
-      <td>745</td>
-      <td>14</td>
-      <td>United States</td>
-      <td>Northern America</td>
-      <td>None</td>
-      <td>2017</td>
-      <td>2.953</td>
-      <td>Artificial Intelligence</td>
-      <td>NaN</td>
+      <td>20315</td>
+      <td>Cell Biology (Q1); Molecular Biology (Q1)</td>
+      <td>161</td>
+      <td>United Kingdom</td>
+      <td>2000-2021</td>
+      <td>452</td>
+      <td>14710072, 14710080</td>
+      <td>33.213</td>
+      <td>Nature Publishing Group</td>
+      <td>2</td>
+      <td>81.31</td>
+      <td>Western Europe</td>
+      <td>Q1</td>
+      <td>Nature Reviews Molecular Cell Biology</td>
+      <td>13797</td>
+      <td>111</td>
+      <td>338</td>
+      <td>9025</td>
+      <td>journal</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>22882</td>
-      <td>661</td>
-      <td>Proceedings - Annual IEEE Symposium on Foundat...</td>
-      <td>conference and proceedings</td>
-      <td>02725428</td>
-      <td>97</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>-</td>
-      <td>92</td>
-      <td>0</td>
-      <td>1005</td>
-      <td>90</td>
-      <td>United States</td>
-      <td>Northern America</td>
-      <td>None</td>
-      <td>1982, 1983, 1984, 1985, 1986, 1987, 1988, 1991...</td>
-      <td>2.949</td>
-      <td>Computer Science (miscellaneous); Hardware and...</td>
-      <td>NaN</td>
+      <td>29431</td>
+      <td>Economics and Econometrics (Q1)</td>
+      <td>110</td>
+      <td>United Kingdom</td>
+      <td>1886-2021</td>
+      <td>272</td>
+      <td>00335533, 15314650</td>
+      <td>31.348</td>
+      <td>Oxford University Press</td>
+      <td>3</td>
+      <td>70.96</td>
+      <td>Western Europe</td>
+      <td>Q1</td>
+      <td>Quarterly Journal of Economics</td>
+      <td>2241</td>
+      <td>48</td>
+      <td>111</td>
+      <td>3406</td>
+      <td>journal</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>21100830485</td>
-      <td>799</td>
-      <td>SIGCOMM 2017 -  Proceedings of the 2017 Confer...</td>
-      <td>conference and proceedings</td>
-      <td>-</td>
-      <td>27</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>-</td>
-      <td>37</td>
-      <td>0</td>
-      <td>931</td>
-      <td>35</td>
+      <td>18434</td>
+      <td>Biochemistry, Genetics and Molecular Biology (...</td>
+      <td>1639</td>
       <td>United States</td>
+      <td>1974-2021</td>
+      <td>814</td>
+      <td>00928674, 10974172</td>
+      <td>25.716</td>
+      <td>Cell Press</td>
+      <td>4</td>
+      <td>65.10</td>
       <td>Northern America</td>
-      <td>None</td>
-      <td>2017</td>
-      <td>2.668</td>
-      <td>Communication; Computer Networks and Communica...</td>
-      <td>NaN</td>
+      <td>Q1</td>
+      <td>Cell</td>
+      <td>73240</td>
+      <td>517</td>
+      <td>1727</td>
+      <td>33658</td>
+      <td>journal</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>13244</td>
-      <td>854</td>
-      <td>Evidence-Based Medicine</td>
-      <td>journal</td>
-      <td>14736810, 13565524</td>
-      <td>28</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>19434</td>
+      <td>Epidemiology (Q1); Health Information Manageme...</td>
+      <td>17</td>
+      <td>United States</td>
+      <td>1990-2021</td>
+      <td>148</td>
+      <td>10575987, 15458601</td>
+      <td>25.045</td>
+      <td>Centers for Disease Control and Prevention (CDC)</td>
+      <td>5</td>
+      <td>23.39</td>
+      <td>Northern America</td>
       <td>Q1</td>
-      <td>145</td>
-      <td>0</td>
-      <td>320</td>
-      <td>32</td>
-      <td>United Kingdom</td>
-      <td>Western Europe</td>
-      <td>BMJ Publishing Group</td>
-      <td>1996-2018</td>
-      <td>2.587</td>
-      <td>Medicine (miscellaneous) (Q1)</td>
-      <td>NaN</td>
+      <td>MMWR Recommendations and Reports</td>
+      <td>663</td>
+      <td>124</td>
+      <td>17</td>
+      <td>2900</td>
+      <td>journal</td>
     </tr>
   </tbody>
 </table>

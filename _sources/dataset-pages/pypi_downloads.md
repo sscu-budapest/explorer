@@ -182,11 +182,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 69586 × 15 (9.22 MB)
+**Size**: 69586 × 15 (9.85 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:15
+**Last Changed**: 2022-11-03 10:35
 ```
 
 ```{div} col-3
@@ -214,113 +214,113 @@ Some datasets are updated periodically. In this case, you can check the updating
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>timestamp</th>
       <th>country_code</th>
-      <th>project_name</th>
-      <th>package_version</th>
+      <th>cpu</th>
       <th>distribution_type</th>
       <th>installer_name</th>
       <th>installer_version</th>
+      <th>openssl_version</th>
+      <th>package_version</th>
+      <th>project_name</th>
       <th>python_implementation_name</th>
       <th>python_implementation_version</th>
-      <th>sys_name</th>
+      <th>setuptools_version</th>
       <th>sys_distro_name</th>
       <th>sys_distro_version</th>
-      <th>cpu</th>
-      <th>openssl_version</th>
-      <th>setuptools_version</th>
+      <th>sys_name</th>
+      <th>timestamp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2021-11-11 03:01:34</td>
       <td>CN</td>
-      <td>scikit-mobility</td>
-      <td>1.2.2</td>
+      <td>None</td>
       <td>sdist</td>
       <td>Browser</td>
       <td>None</td>
       <td>None</td>
+      <td>1.2.2</td>
+      <td>scikit-mobility</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
-      <td>None</td>
+      <td>2021-11-11 03:01:34</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2021-11-11 08:25:11</td>
       <td>CN</td>
-      <td>scikit-mobility</td>
-      <td>1.2.2</td>
+      <td>None</td>
       <td>sdist</td>
       <td>Browser</td>
       <td>None</td>
       <td>None</td>
+      <td>1.2.2</td>
+      <td>scikit-mobility</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
-      <td>None</td>
+      <td>2021-11-11 08:25:11</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2021-11-11 20:10:37</td>
       <td>CA</td>
-      <td>scikit-mobility</td>
-      <td>1.2.2</td>
+      <td>arm64</td>
       <td>sdist</td>
       <td>pip</td>
       <td>21.3.1</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>1.2.2</td>
+      <td>scikit-mobility</td>
       <td>CPython</td>
       <td>3.9.7</td>
-      <td>Darwin</td>
+      <td>57.4.0</td>
       <td>macOS</td>
       <td>12.0.1</td>
-      <td>arm64</td>
-      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
-      <td>57.4.0</td>
+      <td>Darwin</td>
+      <td>2021-11-11 20:10:37</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2021-11-11 15:08:19</td>
       <td>US</td>
-      <td>scikit-mobility</td>
-      <td>1.1.2</td>
+      <td>x86_64</td>
       <td>bdist_wheel</td>
       <td>pip</td>
       <td>20.1.1</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>1.1.2</td>
+      <td>scikit-mobility</td>
       <td>CPython</td>
       <td>3.7.10</td>
-      <td>Linux</td>
+      <td>47.3.1.post20200616</td>
       <td>Ubuntu</td>
       <td>20.04</td>
-      <td>x86_64</td>
-      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
-      <td>47.3.1.post20200616</td>
+      <td>Linux</td>
+      <td>2021-11-11 15:08:19</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2021-11-11 14:57:51</td>
       <td>US</td>
-      <td>scikit-mobility</td>
-      <td>1.1.2</td>
+      <td>x86_64</td>
       <td>bdist_wheel</td>
       <td>pip</td>
       <td>20.1.1</td>
+      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
+      <td>1.1.2</td>
+      <td>scikit-mobility</td>
       <td>CPython</td>
       <td>3.7.10</td>
-      <td>Linux</td>
+      <td>47.3.1.post20200616</td>
       <td>Ubuntu</td>
       <td>20.04</td>
-      <td>x86_64</td>
-      <td>OpenSSL 1.1.1l  24 Aug 2021</td>
-      <td>47.3.1.post20200616</td>
+      <td>Linux</td>
+      <td>2021-11-11 14:57:51</td>
     </tr>
   </tbody>
 </table>

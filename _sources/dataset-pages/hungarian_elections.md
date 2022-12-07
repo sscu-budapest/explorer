@@ -61,8 +61,8 @@ erDiagram
   district_hierarchy ||--|{ geographical_unit : "parent -> unit_id; child -> unit_id"
   election_precinct ||--|{ election : "election_id -> election_id"
   election_precinct ||--|{ geographical_unit : "geo_unit_id -> unit_id"
-  vote_record ||--|{ election_precinct : "precinct_id -> precinct_id"
   vote_record ||--|{ nominating_organization : "organization -> nid"
+  vote_record ||--|{ election_precinct : "precinct_id -> precinct_id"
 ```
 
 
@@ -192,11 +192,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 257 × 2 (6.92 kB)
+**Size**: 276 × 2 (7.66 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -224,35 +224,35 @@ Some datasets are updated periodically. In this case, you can check the updating
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>party</th>
       <th>organization</th>
+      <th>party</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>MSZDP</td>
-      <td>MSZDP</td>
+      <td>MUNKÁSPÁRT</td>
+      <td>MUNKÁSPÁRT</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>MSZP</td>
-      <td>MSZP</td>
+      <td>MIÉP</td>
+      <td>MIÉP</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>SZDSZ</td>
-      <td>SZDSZ</td>
+      <td>FKGP</td>
+      <td>FKGP</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>FÜGGETLEN</td>
-      <td>FÜGGETLEN</td>
+      <td>SZDSZ</td>
+      <td>SZDSZ</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>MDF</td>
-      <td>MDF</td>
+      <td>MSZP</td>
+      <td>MSZP</td>
     </tr>
   </tbody>
 </table>
@@ -283,11 +283,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 219 × 1 (3.07 kB)
+**Size**: 226 × 1 (3.25 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -321,23 +321,23 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>MSZDP</td>
+      <td>MUNKÁSPÁRT</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>MSZP</td>
+      <td>MIÉP</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>SZDSZ</td>
+      <td>FKGP</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>FÜGGETLEN</td>
+      <td>SZDSZ</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>MDF</td>
+      <td>MSZP</td>
     </tr>
   </tbody>
 </table>
@@ -368,11 +368,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 28 × 3 (0.95 kB)
+**Size**: 30 × 3 (1.04 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -408,33 +408,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>hun-1990-indiv-1</td>
+      <td>hun-1994-indiv-2</td>
       <td>True</td>
-      <td>1990-03-25</td>
+      <td>1994-05-29</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>hun-1990-party-1</td>
+      <td>hun-1994-party-2</td>
       <td>False</td>
-      <td>1990-03-25</td>
+      <td>1994-05-29</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>hun-1990-indiv-2</td>
-      <td>True</td>
-      <td>1990-04-08</td>
+      <td>hun-2018-party-1</td>
+      <td>False</td>
+      <td>2018-04-08</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>hun-1990-party-2</td>
-      <td>False</td>
-      <td>1990-04-08</td>
+      <td>hun-2018-indiv-1</td>
+      <td>True</td>
+      <td>2018-04-08</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>hun-1994-indiv-1</td>
+      <td>hun-2010-indiv-1</td>
       <td>True</td>
-      <td>1994-05-08</td>
+      <td>2010-04-11</td>
     </tr>
   </tbody>
 </table>
@@ -465,11 +465,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 3224 × 2 (125.95 kB)
+**Size**: 3284 × 2 (131.37 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -497,35 +497,35 @@ Some datasets are updated periodically. In this case, you can check the updating
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>parent</th>
       <th>child</th>
+      <th>parent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>hun-main5845270075</td>
       <td>hun-region313509025f</td>
-      <td>hun-main4f04c03969</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>hun-mainc6e666f370</td>
       <td>hun-region313509025f</td>
-      <td>hun-main7a10a1d71e</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>hun-main8b71c9dd4c</td>
       <td>hun-region313509025f</td>
-      <td>hun-maince30d532ee</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>hun-main4a5da7a6b4</td>
       <td>hun-region313509025f</td>
-      <td>hun-mainc6e666f370</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>hun-main7a10a1d71e</td>
       <td>hun-region313509025f</td>
-      <td>hun-mainb399cbef78</td>
     </tr>
   </tbody>
 </table>
@@ -556,11 +556,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 3229 × 3 (128.04 kB)
+**Size**: 3230 × 3 (131.16 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -589,40 +589,40 @@ Some datasets are updated periodically. In this case, you can check the updating
     <tr style="text-align: right;">
       <th></th>
       <th>unit_id</th>
-      <th>name</th>
       <th>level_info</th>
+      <th>name</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>hun-region313509025f</td>
-      <td>BUDAPEST</td>
       <td>settlement</td>
+      <td>BUDAPEST</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>hun-regionb1bd8046e2</td>
-      <td>FEJÉR</td>
+      <td>hun-regionfc808a644f</td>
       <td>county</td>
+      <td>BÉKÉS</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>hun-regiond54715d396</td>
-      <td>JÁSZ-NAGYKUN-SZOLNOK</td>
+      <td>hun-regiond8ddf70a43</td>
       <td>county</td>
+      <td>BORSOD-ABAÚJ-ZEMPLÉN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>hun-region93e2b0688c</td>
-      <td>BARANYA</td>
+      <td>hun-regiond44a6ca42c</td>
       <td>county</td>
+      <td>GYŐR-MOSON-SOPRON</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>hun-regionfe72b78f8e</td>
-      <td>HEVES</td>
+      <td>hun-regionca12c5749e</td>
       <td>county</td>
+      <td>BÁCS-KISKUN</td>
     </tr>
   </tbody>
 </table>
@@ -653,11 +653,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 272194 × 7 (25.87 MB)
+**Size**: 292680 × 7 (53.05 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:18
+**Last Changed**: 2022-12-07 17:12
 ```
 
 ```{div} col-3
@@ -686,64 +686,64 @@ Some datasets are updated periodically. In this case, you can check the updating
     <tr style="text-align: right;">
       <th></th>
       <th>precinct_id</th>
-      <th>name</th>
-      <th>geo_info</th>
+      <th>election_id</th>
       <th>eligible_voters</th>
       <th>external_votes</th>
+      <th>geo_info</th>
       <th>geo_unit_id</th>
-      <th>election_id</th>
+      <th>name</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1031</td>
-      <td>BUDAPEST I-001</td>
-      <td>BUDAPEST          01</td>
-      <td>806.0</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>hun-1994-indiv-2</td>
+      <td>1088.0</td>
       <td>False</td>
-      <td>hun-main4f04c03969</td>
-      <td>hun-1990-indiv-1</td>
+      <td>DÉVÉNY U.62. ÁLT.ISKOLA</td>
+      <td>hun-main5845270075</td>
+      <td>BUDAPEST XXII-027</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>137128</td>
-      <td>BUDAPEST I-001</td>
-      <td>BUDAPEST          01</td>
-      <td>811.0</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>hun-1994-party-2</td>
+      <td>0.0</td>
       <td>False</td>
-      <td>hun-main4f04c03969</td>
-      <td>hun-1990-party-1</td>
+      <td>DÉVÉNY U.62. ÁLT.ISKOLA</td>
+      <td>hun-main5845270075</td>
+      <td>BUDAPEST XXII-027</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1032</td>
-      <td>BUDAPEST I-002</td>
-      <td>BUDAPEST          01</td>
-      <td>814.0</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>hun-1994-indiv-2</td>
+      <td>585.0</td>
       <td>False</td>
-      <td>hun-main4f04c03969</td>
-      <td>hun-1990-indiv-1</td>
+      <td>ANNA UTCA 13. BNA GIMNÁZIUM</td>
+      <td>hun-main5845270075</td>
+      <td>BUDAPEST XXII-005</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>137129</td>
-      <td>BUDAPEST I-002</td>
-      <td>BUDAPEST          01</td>
-      <td>820.0</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>hun-1994-party-2</td>
+      <td>0.0</td>
       <td>False</td>
-      <td>hun-main4f04c03969</td>
-      <td>hun-1990-party-1</td>
+      <td>ANNA UTCA 13. BNA GIMNÁZIUM</td>
+      <td>hun-main5845270075</td>
+      <td>BUDAPEST XXII-005</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1033</td>
-      <td>BUDAPEST I-003</td>
-      <td>BUDAPEST          01</td>
-      <td>632.0</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>hun-1994-party-2</td>
+      <td>0.0</td>
       <td>False</td>
-      <td>hun-main4f04c03969</td>
-      <td>hun-1990-indiv-1</td>
+      <td>TOMPA U 2-4. ÁLT.ISKOLA</td>
+      <td>hun-main5845270075</td>
+      <td>BUDAPEST XXII-007</td>
     </tr>
   </tbody>
 </table>
@@ -774,11 +774,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 1996280 × 4 (49.57 MB)
+**Size**: 2069424 × 4 (236.94 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-06-07 15:19
+**Last Changed**: 2022-12-07 17:13
 ```
 
 ```{div} col-3
@@ -805,48 +805,48 @@ Some datasets are updated periodically. In this case, you can check the updating
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>variable</th>
+      <th></th>
       <th>vid</th>
-      <th>vote_count</th>
       <th>organization</th>
       <th>precinct_id</th>
+      <th>vote_count</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>vi-0000000000</td>
+      <td>MUNKÁSPÁRT</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
       <td>19</td>
-      <td>MSZDP</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
-      <td>45</td>
-      <td>MSZP</td>
-      <td>0</td>
+      <td>vi-0000000001</td>
+      <td>MIÉP</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
-      <td>163</td>
-      <td>SZDSZ</td>
-      <td>0</td>
+      <td>vi-0000000002</td>
+      <td>FKGP</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>51</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
-      <td>28</td>
-      <td>FÜGGETLEN</td>
-      <td>0</td>
+      <td>vi-0000000003</td>
+      <td>SZDSZ</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>27</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
-      <td>201</td>
-      <td>MDF</td>
-      <td>0</td>
+      <td>vi-0000000004</td>
+      <td>MSZP</td>
+      <td>https://valtor.valasztas.hu/valtort/jsp/szavjk...</td>
+      <td>75</td>
     </tr>
   </tbody>
 </table>

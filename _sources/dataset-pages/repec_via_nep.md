@@ -169,7 +169,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There are 5 tables and the [sources](#sources) are **checked for updates at 12:00 am, on day 1 of the month** 
+> There are 5 tables and the [sources](#sources) are **checked for updates at 04:00 pm, only on monday** 
 
 
 
@@ -196,11 +196,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 776558 × 2 (24.57 MB)
+**Size**: 767535 × 2 (25.42 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-09-01 15:14
+**Last Changed**: 2022-12-07 17:10
 ```
 
 ```{div} col-3
@@ -235,28 +235,28 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>agarwal:sumit</td>
-      <td>prieconom/2020-1</td>
+      <td>nitsch:volker</td>
+      <td>darwpaper/132782</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>daoud:adel</td>
-      <td>arxpapers/2202.00109</td>
+      <td>prem:mounu</td>
+      <td>hicwpaper/360</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>wang:jia</td>
-      <td>arxpapers/2202.03158</td>
+      <td>marchenko:maria</td>
+      <td>wiwwus005/8641</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>puga:german</td>
-      <td>adlwinewp/2021-07</td>
+      <td>dhingra:swati</td>
+      <td>cepcepcvd/cepcovid-19-022</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>hofert:marius</td>
-      <td>arxpapers/2202.03406</td>
+      <td>chareyron:sylvain</td>
+      <td>teptepprr/rr22-04</td>
     </tr>
   </tbody>
 </table>
@@ -287,11 +287,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 1090132 × 3 (40.54 MB)
+**Size**: 824061 × 3 (31.14 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-09-01 15:14
+**Last Changed**: 2022-12-07 17:10
 ```
 
 ```{div} col-3
@@ -328,32 +328,32 @@ Some datasets are updated periodically. In this case, you can check the updating
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>nep-big-2022-03-21</td>
-      <td>arxpapers/2202.03874</td>
+      <td>nepban-2022-03-21</td>
+      <td>pramprapa/111899</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>nep-big-2022-03-21</td>
-      <td>arxpapers/2202.04146</td>
+      <td>nepban-2022-03-21</td>
+      <td>osfosfxxx/27mtw</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>nep-big-2022-03-21</td>
-      <td>arxpapers/2202.04218</td>
+      <td>5</td>
+      <td>nepban-2022-03-21</td>
+      <td>osfosfxxx/2k3vn</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>nep-big-2022-03-21</td>
-      <td>nbrnberwo/29767</td>
+      <td>7</td>
+      <td>nepban-2022-03-21</td>
+      <td>osfosfxxx/39ke6</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>nep-big-2022-03-21</td>
-      <td>haljournl/hal-03250484</td>
+      <td>1</td>
+      <td>nepdem-2022-07-18</td>
+      <td>nbrnberwo/30130</td>
     </tr>
   </tbody>
 </table>
@@ -384,11 +384,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 82434 × 3 (2.99 MB)
+**Size**: 81433 × 3 (2.93 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-09-01 15:14
+**Last Changed**: 2022-12-07 17:10
 ```
 
 ```{div} col-3
@@ -424,33 +424,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>nep-big-2022-03-21</td>
-      <td>nep-big</td>
+      <td>nepban-2022-03-21</td>
+      <td>nepban</td>
       <td>2022-03-21</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>nep-big-2022-03-14</td>
-      <td>nep-big</td>
-      <td>2022-03-14</td>
+      <td>nepdem-2022-07-18</td>
+      <td>nepdem</td>
+      <td>2022-07-18</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>nep-big-2022-03-07</td>
-      <td>nep-big</td>
-      <td>2022-03-07</td>
+      <td>nepger-2015-08-30</td>
+      <td>nepger</td>
+      <td>2015-08-30</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>nep-big-2022-02-28</td>
-      <td>nep-big</td>
-      <td>2022-02-28</td>
+      <td>nepisf-2021-08-30</td>
+      <td>nepisf</td>
+      <td>2021-08-30</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>nep-big-2022-02-21</td>
-      <td>nep-big</td>
-      <td>2022-02-21</td>
+      <td>nepgen-2020-05-11</td>
+      <td>nepgen</td>
+      <td>2020-05-11</td>
     </tr>
   </tbody>
 </table>
@@ -481,11 +481,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 97 × 3 (8.38 kB)
+**Size**: 95 × 3 (10.89 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-09-01 15:14
+**Last Changed**: 2022-12-07 17:10
 ```
 
 ```{div} col-3
@@ -521,33 +521,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>nep-ias</td>
-      <td>Soumitra K. Mallick, Indian Institute of Socia...</td>
-      <td>Insurance Economics</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>nep-mac</td>
-      <td>Soumitra K Mallick, Indian Institute of Social...</td>
-      <td>Macroeconomics</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>nep-acc</td>
       <td>Alexander Harin, Modern University for the Hum...</td>
       <td>Accounting and Auditing</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>1</th>
       <td>nep-afr</td>
       <td>Sam Sarpong, Xiamen University Malaysia Campus...</td>
       <td>Africa</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>2</th>
       <td>nep-age</td>
-      <td>Claudia Villosio, LABORatorio R. Revelli, Italy</td>
+      <td>Claudia Villosio, LABORatorio R. Revelli, Ital...</td>
       <td>Economics of Ageing</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>nep-agr</td>
+      <td>Angelo Zago, Università degli Studi di Verona,...</td>
+      <td>Agricultural Economics</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>nep-ara</td>
+      <td>Paul Makdissi, Université d’Ottawa, Canada, 21...</td>
+      <td>MENA - Middle East and North Africa</td>
     </tr>
   </tbody>
 </table>
@@ -578,11 +578,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 388805 × 6 (118.54 MB)
+**Size**: 383674 × 7 (158.12 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-09-01 15:14
+**Last Changed**: 2022-12-07 17:11
 ```
 
 ```{div} col-3
@@ -613,6 +613,7 @@ Some datasets are updated periodically. In this case, you can check the updating
       <th>pid</th>
       <th>abstract</th>
       <th>institution</th>
+      <th>keywords</th>
       <th>link</th>
       <th>title</th>
       <th>year</th>
@@ -621,47 +622,52 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>prieconom/2020-1</td>
-      <td>We study the interaction of search and applica...</td>
-      <td>Princeton University. Economics Department.</td>
-      <td>/paper/prieconom/2020-1.htm</td>
-      <td>Searching for Approval</td>
-      <td>2020.0</td>
+      <td>darwpaper/132782</td>
+      <td>The impact of the Covid-19 pandemic on interna...</td>
+      <td>Darmstadt Technical University, Department of ...</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/darwpaper/1...</td>
+      <td>Covid-19 and International Trade: Evidence fro...</td>
+      <td>2022.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>arxpapers/2202.00109</td>
-      <td>The application of deep learning methods to su...</td>
-      <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.00109.htm</td>
-      <td>Using satellites and artificial intelligence t...</td>
+      <td>hicwpaper/360</td>
+      <td>Anti-personnel landmines are one of the main c...</td>
+      <td>Households in Conflict Network</td>
+      <td>Landmines; demining; conflict; peace; local de...</td>
+      <td>https://econpapers.repec.org/paper/hicwpaper/3...</td>
+      <td>Landmines: The Local Effects of Demining</td>
       <td>2021.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>arxpapers/2202.03158</td>
-      <td>It is a challenging task to predict financial ...</td>
-      <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.03158.htm</td>
-      <td>Dual-CLVSA: a Novel Deep Learning Approach to ...</td>
+      <td>wiwwus005/8641</td>
+      <td>This paper studies the determinants of the vol...</td>
+      <td>WU Vienna University of Economics and Business</td>
+      <td>fanfiction; user-generated content; online pub...</td>
+      <td>https://econpapers.repec.org/paper/wiwwus005/8...</td>
+      <td>The Never Ending Book: The role of external st...</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>adlwinewp/2021-07</td>
-      <td>Cross-sectional models are useful for quantify...</td>
-      <td>University of Adelaide, Wine Economics Researc...</td>
-      <td>/paper/adlwinewp/2021-07.htm</td>
-      <td>The impact of growing season temperature on gr...</td>
+      <td>cepcepcvd/cepcovid-19-022</td>
+      <td>This report provides key findings from a new f...</td>
+      <td>Centre for Economic Performance, LSE</td>
+      <td>Covid-19; Urban India; unemployment</td>
+      <td>https://econpapers.repec.org/paper/cepcepcvd/c...</td>
+      <td>City of dreams no more, a year on: worklessnes...</td>
       <td>2021.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>arxpapers/2202.03406</td>
-      <td>Neural networks are suggested for learning a m...</td>
-      <td>arXiv.org</td>
-      <td>/paper/arxpapers/2202.03406.htm</td>
-      <td>Dependence model assessment and selection with...</td>
+      <td>teptepprr/rr22-04</td>
+      <td>None</td>
+      <td>TEPP</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/teptepprr/r...</td>
+      <td>Discrimination dans l'accès aux masters: une é...</td>
       <td>2022.0</td>
     </tr>
   </tbody>
