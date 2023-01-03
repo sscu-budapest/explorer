@@ -303,9 +303,9 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Papers Analysis<a class="headerlink" href="#papers-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -313,7 +313,7 @@ import matplotlib.pyplot as plt
 <p>Setting <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> parameters</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.rcParams[&quot;figure.figsize&quot;] = [12, 6]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -321,24 +321,24 @@ import matplotlib.pyplot as plt
 <p>Read the data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_paper = pd.read_csv(&quot;paper.csv&quot;, lineterminator=&quot;\n&quot;)
-df_nep = pd.read_csv(&quot;nep.csv&quot;)
-df_nep_inclusion = pd.read_csv(&quot;nep_inclusion.csv&quot;)
-df_nep_issue = pd.read_csv(&quot;nep_issue.csv&quot;)
-df_authorship = pd.read_csv(&quot;authorship.csv&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_paper</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;paper.csv&quot;</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">df_nep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep.csv&quot;</span><span class="p">)</span>
+<span class="n">df_nep_inclusion</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_inclusion.csv&quot;</span><span class="p">)</span>
+<span class="n">df_nep_issue</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;nep_issue.csv&quot;</span><span class="p">)</span>
+<span class="n">df_authorship</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;authorship.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>min_year = 2000
-max_year = 2022
-sns.histplot(data=df_paper.year[df_paper.year.between(min_year, max_year)], discrete=1)
-plt.title(&quot;Research papers by year&quot;)
-plt.xlabel(&quot;Year&quot;)
-plt.xticks(range(min_year, max_year + 1, 1), rotation=45)
-plt.show()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_year</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">max_year</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_paper</span><span class="o">.</span><span class="n">year</span><span class="p">[</span><span class="n">df_paper</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">min_year</span><span class="p">,</span> <span class="n">max_year</span><span class="p">)],</span> <span class="n">discrete</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Research papers by year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">min_year</span><span class="p">,</span> <span class="n">max_year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -348,26 +348,26 @@ plt.show()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(
-    pd.DataFrame(
-        df_paper.groupby(&quot;institution&quot;).count().title.sort_values(ascending=False)
-    )
-    .rename(columns={&quot;title&quot;: &quot;count&quot;})
-    .head(10)
-    .style.set_caption(&quot;Top 10 institutions by published papers&quot;)
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">df_paper</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;institution&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;count&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Top 10 institutions by published papers&quot;</span><span class="p">)</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_c9c68">
+<table id="T_c24ce">
   <caption>Top 10 institutions by published papers</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c9c68_level0_col0" class="col_heading level0 col0" >count</th>
+      <th id="T_c24ce_level0_col0" class="col_heading level0 col0" >count</th>
     </tr>
     <tr>
       <th class="index_name level0" >institution</th>
@@ -376,44 +376,44 @@ plt.show()
   </thead>
   <tbody>
     <tr>
-      <th id="T_c9c68_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
-      <td id="T_c9c68_row0_col0" class="data row0 col0" >29619</td>
+      <th id="T_c24ce_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
+      <td id="T_c24ce_row0_col0" class="data row0 col0" >29619</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
-      <td id="T_c9c68_row1_col0" class="data row1 col0" >20096</td>
+      <th id="T_c24ce_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
+      <td id="T_c24ce_row1_col0" class="data row1 col0" >20096</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
-      <td id="T_c9c68_row2_col0" class="data row2 col0" >14497</td>
+      <th id="T_c24ce_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
+      <td id="T_c24ce_row2_col0" class="data row2 col0" >14497</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row3" class="row_heading level0 row3" >HAL</th>
-      <td id="T_c9c68_row3_col0" class="data row3 col0" >12176</td>
+      <th id="T_c24ce_level0_row3" class="row_heading level0 row3" >HAL</th>
+      <td id="T_c24ce_row3_col0" class="data row3 col0" >12176</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
-      <td id="T_c9c68_row4_col0" class="data row4 col0" >10372</td>
+      <th id="T_c24ce_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
+      <td id="T_c24ce_row4_col0" class="data row4 col0" >10372</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
-      <td id="T_c9c68_row5_col0" class="data row5 col0" >10245</td>
+      <th id="T_c24ce_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
+      <td id="T_c24ce_row5_col0" class="data row5 col0" >10245</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
-      <td id="T_c9c68_row6_col0" class="data row6 col0" >5514</td>
+      <th id="T_c24ce_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
+      <td id="T_c24ce_row6_col0" class="data row6 col0" >5514</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row7" class="row_heading level0 row7" >The World Bank</th>
-      <td id="T_c9c68_row7_col0" class="data row7 col0" >5058</td>
+      <th id="T_c24ce_level0_row7" class="row_heading level0 row7" >The World Bank</th>
+      <td id="T_c24ce_row7_col0" class="data row7 col0" >5058</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row8" class="row_heading level0 row8" >CESifo</th>
-      <td id="T_c9c68_row8_col0" class="data row8 col0" >4297</td>
+      <th id="T_c24ce_level0_row8" class="row_heading level0 row8" >CESifo</th>
+      <td id="T_c24ce_row8_col0" class="data row8 col0" >4297</td>
     </tr>
     <tr>
-      <th id="T_c9c68_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
-      <td id="T_c9c68_row9_col0" class="data row9 col0" >3924</td>
+      <th id="T_c24ce_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
+      <td id="T_c24ce_row9_col0" class="data row9 col0" >3924</td>
     </tr>
   </tbody>
 </table>
@@ -421,34 +421,34 @@ plt.show()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>df_pa = df_paper.merge(df_authorship, left_on=&quot;pid&quot;, right_on=&quot;paper__pid&quot;, how=&quot;left&quot;)
-df_pa.author__aid = df_pa.author__aid.str.replace(&quot;:&quot;, &quot; &quot;).str.title()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pa</span> <span class="o">=</span> <span class="n">df_paper</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_authorship</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;pid&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;paper__pid&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">df_pa</span><span class="o">.</span><span class="n">author__aid</span> <span class="o">=</span> <span class="n">df_pa</span><span class="o">.</span><span class="n">author__aid</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(
-    pd.DataFrame(
-        df_pa.groupby(&quot;author__aid&quot;).count().title.sort_values(ascending=False)
-    )
-    .rename(columns={&quot;title&quot;: &quot;count&quot;})
-    .head(10)
-    .style.set_caption(&quot;Top 10 authors by published papers&quot;)
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">df_pa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;author__aid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;count&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Top 10 authors by published papers&quot;</span><span class="p">)</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_4e2ba">
+<table id="T_965c5">
   <caption>Top 10 authors by published papers</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_4e2ba_level0_col0" class="col_heading level0 col0" >count</th>
+      <th id="T_965c5_level0_col0" class="col_heading level0 col0" >count</th>
     </tr>
     <tr>
       <th class="index_name level0" >author__aid</th>
@@ -457,44 +457,44 @@ df_pa.author__aid = df_pa.author__aid.str.replace(&quot;:&quot;, &quot; &quot;).
   </thead>
   <tbody>
     <tr>
-      <th id="T_4e2ba_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
-      <td id="T_4e2ba_row0_col0" class="data row0 col0" >1523</td>
+      <th id="T_965c5_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
+      <td id="T_965c5_row0_col0" class="data row0 col0" >1523</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row1" class="row_heading level0 row1" >Bank World</th>
-      <td id="T_4e2ba_row1_col0" class="data row1 col0" >900</td>
+      <th id="T_965c5_level0_row1" class="row_heading level0 row1" >Bank World</th>
+      <td id="T_965c5_row1_col0" class="data row1 col0" >900</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row2" class="row_heading level0 row2" >Gupta Rangan</th>
-      <td id="T_4e2ba_row2_col0" class="data row2 col0" >741</td>
+      <th id="T_965c5_level0_row2" class="row_heading level0 row2" >Gupta Rangan</th>
+      <td id="T_965c5_row2_col0" class="data row2 col0" >741</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row3" class="row_heading level0 row3" >Mcaleer Michael</th>
-      <td id="T_4e2ba_row3_col0" class="data row3 col0" >644</td>
+      <th id="T_965c5_level0_row3" class="row_heading level0 row3" >Mcaleer Michael</th>
+      <td id="T_965c5_row3_col0" class="data row3 col0" >644</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row4" class="row_heading level0 row4" >Fund International Monetary</th>
-      <td id="T_4e2ba_row4_col0" class="data row4 col0" >538</td>
+      <th id="T_965c5_level0_row4" class="row_heading level0 row4" >Fund International Monetary</th>
+      <td id="T_965c5_row4_col0" class="data row4 col0" >538</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row5" class="row_heading level0 row5" >Oecd</th>
-      <td id="T_4e2ba_row5_col0" class="data row5 col0" >483</td>
+      <th id="T_965c5_level0_row5" class="row_heading level0 row5" >Oecd</th>
+      <td id="T_965c5_row5_col0" class="data row5 col0" >483</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
-      <td id="T_4e2ba_row6_col0" class="data row6 col0" >395</td>
+      <th id="T_965c5_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
+      <td id="T_965c5_row6_col0" class="data row6 col0" >395</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
-      <td id="T_4e2ba_row7_col0" class="data row7 col0" >350</td>
+      <th id="T_965c5_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
+      <td id="T_965c5_row7_col0" class="data row7 col0" >350</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row8" class="row_heading level0 row8" >Van Reenen John</th>
-      <td id="T_4e2ba_row8_col0" class="data row8 col0" >311</td>
+      <th id="T_965c5_level0_row8" class="row_heading level0 row8" >Van Reenen John</th>
+      <td id="T_965c5_row8_col0" class="data row8 col0" >311</td>
     </tr>
     <tr>
-      <th id="T_4e2ba_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
-      <td id="T_4e2ba_row9_col0" class="data row9 col0" >305</td>
+      <th id="T_965c5_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
+      <td id="T_965c5_row9_col0" class="data row9 col0" >305</td>
     </tr>
   </tbody>
 </table>
@@ -502,28 +502,28 @@ df_pa.author__aid = df_pa.author__aid.str.replace(&quot;:&quot;, &quot; &quot;).
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>num_authors = (
-    pd.DataFrame(df_pa.groupby(&quot;pid&quot;).count().title.sort_values(ascending=False))
-    .rename(columns={&quot;title&quot;: &quot;count&quot;})
-    .value_counts()
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_authors</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_pa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;pid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;count&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>num_top = 5
-height = list(num_authors[:num_top].values) + [num_authors[num_top:].sum()]
-bars = list(range(1, num_top + 1)) + [f&quot;&gt;{num_top}&quot;]
-y_pos = range(len(bars))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_top</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">height</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">num_authors</span><span class="p">[:</span><span class="n">num_top</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">num_authors</span><span class="p">[</span><span class="n">num_top</span><span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">()]</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_top</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;&gt;</span><span class="si">{</span><span class="n">num_top</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+<span class="n">y_pos</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bars</span><span class="p">))</span>
 
-plt.bar(y_pos, height)
-plt.xticks(y_pos, bars)
-plt.title(&quot;Research papers by number of authors&quot;)
-plt.xlabel(&quot;Number of authors&quot;)
-plt.ylabel(&quot;Count&quot;)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">y_pos</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">y_pos</span><span class="p">,</span> <span class="n">bars</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Research papers by number of authors&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of authors&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -533,24 +533,24 @@ plt.show()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.DataFrame(
-    df_pa.groupby(&quot;author__aid&quot;)
-    .institution.nunique()
-    .sort_values(ascending=False)
-    .head(10)
-).style.set_caption(&quot;Top 10 authors affilieated with the most institution&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">df_pa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;author__aid&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">institution</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Top 10 authors affilieated with the most institution&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_f6c37">
+<table id="T_1cf9c">
   <caption>Top 10 authors affilieated with the most institution</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f6c37_level0_col0" class="col_heading level0 col0" >institution</th>
+      <th id="T_1cf9c_level0_col0" class="col_heading level0 col0" >institution</th>
     </tr>
     <tr>
       <th class="index_name level0" >author__aid</th>
@@ -559,44 +559,44 @@ plt.show()
   </thead>
   <tbody>
     <tr>
-      <th id="T_f6c37_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
-      <td id="T_f6c37_row0_col0" class="data row0 col0" >45</td>
+      <th id="T_1cf9c_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
+      <td id="T_1cf9c_row0_col0" class="data row0 col0" >45</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
-      <td id="T_f6c37_row1_col0" class="data row1 col0" >39</td>
+      <th id="T_1cf9c_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
+      <td id="T_1cf9c_row1_col0" class="data row1 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row2" class="row_heading level0 row2" >Clark Andrew</th>
-      <td id="T_f6c37_row2_col0" class="data row2 col0" >39</td>
+      <th id="T_1cf9c_level0_row2" class="row_heading level0 row2" >Clark Andrew</th>
+      <td id="T_1cf9c_row2_col0" class="data row2 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row3" class="row_heading level0 row3" >Ottaviano Gianmarco</th>
-      <td id="T_f6c37_row3_col0" class="data row3 col0" >39</td>
+      <th id="T_1cf9c_level0_row3" class="row_heading level0 row3" >Ottaviano Gianmarco</th>
+      <td id="T_1cf9c_row3_col0" class="data row3 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row4" class="row_heading level0 row4" >Devereux Michael</th>
-      <td id="T_f6c37_row4_col0" class="data row4 col0" >38</td>
+      <th id="T_1cf9c_level0_row4" class="row_heading level0 row4" >Devereux Michael</th>
+      <td id="T_1cf9c_row4_col0" class="data row4 col0" >38</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row5" class="row_heading level0 row5" >Verdier Thierry</th>
-      <td id="T_f6c37_row5_col0" class="data row5 col0" >38</td>
+      <th id="T_1cf9c_level0_row5" class="row_heading level0 row5" >Verdier Thierry</th>
+      <td id="T_1cf9c_row5_col0" class="data row5 col0" >38</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row6" class="row_heading level0 row6" >Eichengreen Barry</th>
-      <td id="T_f6c37_row6_col0" class="data row6 col0" >37</td>
+      <th id="T_1cf9c_level0_row6" class="row_heading level0 row6" >Eichengreen Barry</th>
+      <td id="T_1cf9c_row6_col0" class="data row6 col0" >37</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
-      <td id="T_f6c37_row7_col0" class="data row7 col0" >36</td>
+      <th id="T_1cf9c_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
+      <td id="T_1cf9c_row7_col0" class="data row7 col0" >36</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
-      <td id="T_f6c37_row8_col0" class="data row8 col0" >36</td>
+      <th id="T_1cf9c_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
+      <td id="T_1cf9c_row8_col0" class="data row8 col0" >36</td>
     </tr>
     <tr>
-      <th id="T_f6c37_level0_row9" class="row_heading level0 row9" >Zenou Yves</th>
-      <td id="T_f6c37_row9_col0" class="data row9 col0" >35</td>
+      <th id="T_1cf9c_level0_row9" class="row_heading level0 row9" >Zenou Yves</th>
+      <td id="T_1cf9c_row9_col0" class="data row9 col0" >35</td>
     </tr>
   </tbody>
 </table>
