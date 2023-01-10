@@ -177,11 +177,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 46264 × 15 (6.44 MB)
+**Size**: 51 × 15 (6.28 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:09
+**Last Changed**: 2023-01-10 15:16
 ```
 
 ```{div} col-3
@@ -229,26 +229,26 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>76</td>
-      <td>False</td>
-      <td>False</td>
+      <td>46217</td>
+      <td>90</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
-      <td>2020-03-20</td>
       <td>False</td>
+      <td>False</td>
+      <td>2020-03-20</td>
+      <td>True</td>
       <td>0</td>
       <td>0</td>
-      <td>0.0307</td>
-      <td>szív és érrendszeri</td>
+      <td>0.0</td>
+      <td>magasvérnyomás-betegség</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>65</td>
+      <td>46218</td>
+      <td>87</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -258,62 +258,62 @@ Some datasets are updated periodically. In this case, you can check the updating
       <td>False</td>
       <td>0</td>
       <td>0</td>
-      <td>0.0307</td>
-      <td>rosszindulatú daganat</td>
+      <td>0.0</td>
+      <td>agyi infraktus</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>74</td>
-      <td>False</td>
+      <td>46219</td>
+      <td>62</td>
       <td>False</td>
       <td>True</td>
+      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>2020-03-20</td>
-      <td>True</td>
+      <td>False</td>
       <td>0</td>
       <td>0</td>
-      <td>0.0307</td>
-      <td>szív és érrendszeri</td>
+      <td>0.0</td>
+      <td>cukorbetegség, hasi tályog</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>79</td>
+      <td>46220</td>
+      <td>68</td>
+      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>True</td>
-      <td>False</td>
       <td>False</td>
       <td>2020-03-22</td>
       <td>True</td>
       <td>0</td>
       <td>0</td>
-      <td>0.0309</td>
-      <td>szív és érrendszeri</td>
+      <td>0.0</td>
+      <td>tüdő rosszindulatú daganata, májbetegség</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>68</td>
-      <td>False</td>
+      <td>46221</td>
+      <td>64</td>
       <td>False</td>
       <td>True</td>
       <td>False</td>
+      <td>True</td>
       <td>False</td>
       <td>2020-03-22</td>
       <td>True</td>
       <td>0</td>
       <td>0</td>
-      <td>0.0309</td>
-      <td>szív és érrendszeri</td>
+      <td>0.0</td>
+      <td>tüdőfibrózis, cukorbetegség</td>
       <td>0</td>
       <td>0</td>
     </tr>
