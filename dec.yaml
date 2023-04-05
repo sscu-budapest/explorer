@@ -4,27 +4,27 @@ datasets:
   - name: Covid Victims
     project: dabble
     namespace: covid_patients
-    tables: 
+    tables:
       - covid_victim
     env: complete
   - name: Scimago Journals
-    project: dabble
+    project: metascience
     namespace: scimagojr
-    tables: 
+    tables:
       - journal
     env: complete
   - name: Pypi Downloads
     project: softwaredata
     namespace: pypi
-    tables: 
+    tables:
       - package_download
     env: complete
   - name: RePEc via NEP
-    project: articles
+    project: metascience
     namespace: repec
     env: minimal
     minimal: true
-    tables: 
+    tables:
       - paper
       - nep
       - nep_inclusion
