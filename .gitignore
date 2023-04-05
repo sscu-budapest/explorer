@@ -5,3 +5,4 @@ __pycache__/
 _build
 book/
 cc_base.yaml
+.vscode
