@@ -12,6 +12,8 @@ datasets:
     namespace: scimagojr
     tables:
       - journal
+      - journal_area
+      - journal_record
     env: complete
   - name: Pypi Downloads
     project: softwaredata
