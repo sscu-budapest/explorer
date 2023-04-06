@@ -22,26 +22,36 @@ An entity set may have got a **foreign key (FK)**. It means that the table is co
 ```{mermaid}
 erDiagram
   journal {    
-    VARCHAR categories      
-    INTEGER citable_docs_3years      
     VARCHAR country      
     VARCHAR coverage      
-    INTEGER h_index      
     VARCHAR issn      
-    FLOAT journal_rating      
     VARCHAR publisher      
-    INTEGER rank      
-    FLOAT ref_per_doc      
     VARCHAR region      
-    VARCHAR sjr_best_quartile      
     VARCHAR title      
-    INTEGER total_cites_3years      
-    INTEGER total_docs_2021      
-    INTEGER total_docs_3years      
-    INTEGER total_refs      
     VARCHAR type      
     INTEGER sourceid PK 
   }
+  journal_area {    
+    VARCHAR area      
+    INTEGER journal__sourceid FK 
+  }
+  journal_record {    
+    VARCHAR categories      
+    INTEGER citable_docs_3years      
+    INTEGER h_index      
+    FLOAT journal_rating      
+    INTEGER rank      
+    FLOAT ref_per_doc      
+    VARCHAR sjr_best_quartile      
+    INTEGER total_cites_3years      
+    INTEGER total_docs      
+    INTEGER total_docs_3years      
+    INTEGER total_refs      
+    INTEGER journal__sourceid PK     
+    INTEGER year PK 
+  }
+  journal_area ||--|{ journal : "journal__sourceid -> sourceid"
+  journal_record ||--|{ journal : "journal__sourceid -> sourceid"
 ```
 
 
@@ -95,17 +105,17 @@ The exploration notebooks can be checked by clicking on the {badge}`Open Noteboo
 
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-5.html
-```
-:::
-
-:::{div} myslides start-dis col-12 slide-container
 ```{include} ../datasets/scimago_journals/intro/assets/out-7.html
 ```
 :::
 
 :::{div} myslides start-dis col-12 slide-container
-```{include} ../datasets/scimago_journals/intro/assets/out-10.html
+```{include} ../datasets/scimago_journals/intro/assets/out-9.html
+```
+:::
+
+:::{div} myslides start-dis col-12 slide-container
+```{include} ../datasets/scimago_journals/intro/assets/out-12.html
 ```
 :::
 
@@ -149,7 +159,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There is 1 table and the [sources](#sources) are **checked for updates at 04:00 pm, only on monday** 
+> There are 3 tables
 
 
 
@@ -159,15 +169,15 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Journal Table**
+**Journal Area Table**
 ```
 
 ```{div} col-5
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv">{badge}`Download CSV,badge-primary`</a>
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_area.csv">{badge}`Download CSV,badge-primary`</a>
 ```
 
 ```{div} col-3
- <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`Open Table Profile,badge-success`</a>
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_area-profile.html">{badge}`Open Table Profile,badge-success`</a>
 ```
 
 ::::
@@ -176,11 +186,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 27339 × 19 (6.81 MB)
+**Size**: 121234 × 2 (3.24 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2023-01-10 15:16
+**Last Changed**: 2023-04-06 17:25
 ```
 
 ```{div} col-3
@@ -208,136 +218,318 @@ Some datasets are updated periodically. In this case, you can check the updating
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sourceid</th>
+      <th>area</th>
+      <th>journal__sourceid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Biochemistry</td>
+      <td>16801</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Genetics and Molecular Biology</td>
+      <td>16801</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Biochemistry</td>
+      <td>18434</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Genetics and Molecular Biology</td>
+      <td>18434</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Immunology and Microbiology</td>
+      <td>20651</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
+
+
+
+:::::{panels} :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Journal Record Table**
+```
+
+```{div} col-5
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_record.csv">{badge}`Download CSV,badge-primary`</a>
+```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_record-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
+::::
+
+^^^
+::::{div} row
+
+```{div} col-4
+**Size**: 620540 × 13 (74.24 MB)
+```
+
+```{div} col-5
+**Last Changed**: 2023-04-06 17:26
+```
+
+```{div} col-3
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 1)">First 5 rows</button>
+```
+::::
+:::::
+
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>journal__sourceid</th>
+      <th>year</th>
       <th>categories</th>
       <th>citable_docs_3years</th>
-      <th>country</th>
-      <th>coverage</th>
       <th>h_index</th>
-      <th>issn</th>
       <th>journal_rating</th>
-      <th>publisher</th>
       <th>rank</th>
       <th>ref_per_doc</th>
-      <th>region</th>
       <th>sjr_best_quartile</th>
-      <th>title</th>
       <th>total_cites_3years</th>
-      <th>total_docs_2021</th>
+      <th>total_docs</th>
       <th>total_docs_3years</th>
       <th>total_refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16801</td>
+      <td>1999</td>
+      <td>Biochemistry (Q1)</td>
+      <td>80</td>
+      <td>305</td>
+      <td>50.518</td>
+      <td>1</td>
+      <td>197.10</td>
+      <td>Q1</td>
+      <td>3513</td>
+      <td>30</td>
+      <td>80</td>
+      <td>5913</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18434</td>
+      <td>1999</td>
+      <td>Biochemistry, Genetics and Molecular Biology (...</td>
+      <td>1332</td>
+      <td>814</td>
+      <td>43.449</td>
+      <td>2</td>
+      <td>45.48</td>
+      <td>Q1</td>
+      <td>48292</td>
+      <td>351</td>
+      <td>1340</td>
+      <td>15964</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20651</td>
+      <td>1999</td>
+      <td>Immunology (Q1); Immunology and Allergy (Q1)</td>
+      <td>81</td>
+      <td>309</td>
+      <td>43.020</td>
+      <td>3</td>
+      <td>180.55</td>
+      <td>Q1</td>
+      <td>4116</td>
+      <td>29</td>
+      <td>81</td>
+      <td>5236</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18395</td>
+      <td>1999</td>
+      <td>Cell Biology (Q1); Developmental Biology (Q1)</td>
+      <td>60</td>
+      <td>226</td>
+      <td>35.051</td>
+      <td>4</td>
+      <td>165.36</td>
+      <td>Q1</td>
+      <td>1815</td>
+      <td>25</td>
+      <td>61</td>
+      <td>4134</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14181</td>
+      <td>1999</td>
+      <td>Neuroscience (miscellaneous) (Q1)</td>
+      <td>60</td>
+      <td>248</td>
+      <td>25.760</td>
+      <td>5</td>
+      <td>162.81</td>
+      <td>Q1</td>
+      <td>1631</td>
+      <td>21</td>
+      <td>60</td>
+      <td>3419</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+::::
+
+
+
+:::::{panels} :column: col-12
+
+::::{div} row
+
+```{div} col-4
+**Journal Table**
+```
+
+```{div} col-5
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal.csv">{badge}`Download CSV,badge-primary`</a>
+```
+
+```{div} col-3
+ <a href="https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html">{badge}`Open Table Profile,badge-success`</a>
+```
+
+::::
+
+^^^
+::::{div} row
+
+```{div} col-4
+**Size**: 70227 × 8 (10.99 MB)
+```
+
+```{div} col-5
+**Last Changed**: 2023-04-06 15:10
+```
+
+```{div} col-3
+<button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 2)">First 5 rows</button>
+```
+::::
+:::::
+
+::::{div} head-dataframe start-dis col-12 slide-container
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sourceid</th>
+      <th>country</th>
+      <th>coverage</th>
+      <th>issn</th>
+      <th>publisher</th>
+      <th>region</th>
+      <th>title</th>
       <th>type</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>28773</td>
-      <td>Hematology (Q1); Oncology (Q1)</td>
-      <td>78</td>
+      <td>12000</td>
       <td>United States</td>
-      <td>1950-2021</td>
-      <td>182</td>
-      <td>15424863, 00079235</td>
-      <td>56.204</td>
-      <td>Wiley-Blackwell</td>
-      <td>1</td>
-      <td>97.71</td>
+      <td>1999-2003, 2005, 2008</td>
+      <td>15276228</td>
+      <td>Columbus State University</td>
       <td>Northern America</td>
-      <td>Q1</td>
-      <td>Ca-A Cancer Journal for Clinicians</td>
-      <td>17959</td>
-      <td>41</td>
-      <td>121</td>
-      <td>4006</td>
+      <td>Journal of Technology in Counseling</td>
       <td>journal</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>20315</td>
-      <td>Cell Biology (Q1); Molecular Biology (Q1)</td>
-      <td>161</td>
-      <td>United Kingdom</td>
-      <td>2000-2021</td>
-      <td>452</td>
-      <td>14710072, 14710080</td>
-      <td>33.213</td>
-      <td>Nature Publishing Group</td>
-      <td>2</td>
-      <td>81.31</td>
-      <td>Western Europe</td>
-      <td>Q1</td>
-      <td>Nature Reviews Molecular Cell Biology</td>
-      <td>13797</td>
-      <td>111</td>
-      <td>338</td>
-      <td>9025</td>
+      <td>12001</td>
+      <td>United States</td>
+      <td>1958-2021</td>
+      <td>00225002, 19383711</td>
+      <td>Wiley-Blackwell</td>
+      <td>Northern America</td>
+      <td>Journal of the Experimental Analysis of Behavior</td>
       <td>journal</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>29431</td>
-      <td>Economics and Econometrics (Q1)</td>
-      <td>110</td>
-      <td>United Kingdom</td>
-      <td>1886-2021</td>
-      <td>272</td>
-      <td>00335533, 15314650</td>
-      <td>31.348</td>
-      <td>Oxford University Press</td>
-      <td>3</td>
-      <td>70.96</td>
-      <td>Western Europe</td>
-      <td>Q1</td>
-      <td>Quarterly Journal of Economics</td>
-      <td>2241</td>
-      <td>48</td>
-      <td>111</td>
-      <td>3406</td>
+      <td>12002</td>
+      <td>United States</td>
+      <td>1969-2021</td>
+      <td>00225061, 15206696</td>
+      <td>John Wiley &amp;amp; Sons Inc.</td>
+      <td>Northern America</td>
+      <td>Journal of the History of the Behavioral Sciences</td>
       <td>journal</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>18434</td>
-      <td>Biochemistry, Genetics and Molecular Biology (...</td>
-      <td>1639</td>
+      <td>12004</td>
       <td>United States</td>
-      <td>1974-2021</td>
-      <td>814</td>
-      <td>00928674, 10974172</td>
-      <td>25.716</td>
-      <td>Cell Press</td>
-      <td>4</td>
-      <td>65.10</td>
+      <td>2000-2021</td>
+      <td>15299740, 15299732</td>
+      <td>Routledge</td>
       <td>Northern America</td>
-      <td>Q1</td>
-      <td>Cell</td>
-      <td>73240</td>
-      <td>517</td>
-      <td>1727</td>
-      <td>33658</td>
+      <td>Journal of Trauma and Dissociation</td>
       <td>journal</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>19434</td>
-      <td>Epidemiology (Q1); Health Information Manageme...</td>
-      <td>17</td>
+      <td>12005</td>
       <td>United States</td>
-      <td>1990-2021</td>
-      <td>148</td>
-      <td>10575987, 15458601</td>
-      <td>25.045</td>
-      <td>Centers for Disease Control and Prevention (CDC)</td>
-      <td>5</td>
-      <td>23.39</td>
+      <td>1988-2021</td>
+      <td>15736598, 08949867</td>
+      <td>Wiley-Blackwell</td>
       <td>Northern America</td>
-      <td>Q1</td>
-      <td>MMWR Recommendations and Reports</td>
-      <td>663</td>
-      <td>124</td>
-      <td>17</td>
-      <td>2900</td>
+      <td>Journal of Traumatic Stress</td>
       <td>journal</td>
     </tr>
   </tbody>
@@ -348,5 +540,8 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ## Sources
 
-- project url: https://github.com/sscu-budapest/dabble
+- project url: https://github.com/sscu-budapest/metascience
+- data downloaded from
+  - https://www.scimagojr.com/journalrank.php
+
 

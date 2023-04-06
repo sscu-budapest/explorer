@@ -363,6 +363,7 @@ const thebe_selector_output = ".output, .cell_output"
   paper {    
     VARCHAR abstract      
     VARCHAR institution      
+    VARCHAR keywords      
     VARCHAR link      
     VARCHAR title      
     FLOAT year      
@@ -384,8 +385,8 @@ const thebe_selector_output = ".output, .cell_output"
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
-  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_inclusion ||--|{ paper : &quot;paper__pid -&gt; pid&quot;
+  nep_inclusion ||--|{ nep_issue : &quot;issue__neid -&gt; neid&quot;
   nep_issue ||--|{ nep : &quot;nep__nid -&gt; nid&quot;
         </div></div>
 <div class="section" id="exploratory-data-analysis-eda">
@@ -428,12 +429,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="myslides start-dis col-12 slide-container docutils">
 <style type="text/css">
 </style>
-<table id="T_f79d7">
+<table id="T_5e958">
   <caption>Top 10 institutions by published papers</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f79d7_level0_col0" class="col_heading level0 col0" >count</th>
+      <th id="T_5e958_level0_col0" class="col_heading level0 col0" >count</th>
     </tr>
     <tr>
       <th class="index_name level0" >institution</th>
@@ -442,44 +443,44 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_f79d7_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
-      <td id="T_f79d7_row0_col0" class="data row0 col0" >29619</td>
+      <th id="T_5e958_level0_row0" class="row_heading level0 row0" >University Library of Munich, Germany</th>
+      <td id="T_5e958_row0_col0" class="data row0 col0" >30027</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
-      <td id="T_f79d7_row1_col0" class="data row1 col0" >20096</td>
+      <th id="T_5e958_level0_row1" class="row_heading level0 row1" >National Bureau of Economic Research, Inc</th>
+      <td id="T_5e958_row1_col0" class="data row1 col0" >20463</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
-      <td id="T_f79d7_row2_col0" class="data row2 col0" >14497</td>
+      <th id="T_5e958_level0_row2" class="row_heading level0 row2" >Institute of Labor Economics (IZA)</th>
+      <td id="T_5e958_row2_col0" class="data row2 col0" >14808</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row3" class="row_heading level0 row3" >HAL</th>
-      <td id="T_f79d7_row3_col0" class="data row3 col0" >12176</td>
+      <th id="T_5e958_level0_row3" class="row_heading level0 row3" >HAL</th>
+      <td id="T_5e958_row3_col0" class="data row3 col0" >13249</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row4" class="row_heading level0 row4" >C.E.P.R. Discussion Papers</th>
-      <td id="T_f79d7_row4_col0" class="data row4 col0" >10372</td>
+      <th id="T_5e958_level0_row4" class="row_heading level0 row4" >arXiv.org</th>
+      <td id="T_5e958_row4_col0" class="data row4 col0" >10906</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row5" class="row_heading level0 row5" >arXiv.org</th>
-      <td id="T_f79d7_row5_col0" class="data row5 col0" >10245</td>
+      <th id="T_5e958_level0_row5" class="row_heading level0 row5" >C.E.P.R. Discussion Papers</th>
+      <td id="T_5e958_row5_col0" class="data row5 col0" >10373</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
-      <td id="T_f79d7_row6_col0" class="data row6 col0" >5514</td>
+      <th id="T_5e958_level0_row6" class="row_heading level0 row6" >Agricultural and Applied Economics Association</th>
+      <td id="T_5e958_row6_col0" class="data row6 col0" >5529</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row7" class="row_heading level0 row7" >The World Bank</th>
-      <td id="T_f79d7_row7_col0" class="data row7 col0" >5058</td>
+      <th id="T_5e958_level0_row7" class="row_heading level0 row7" >The World Bank</th>
+      <td id="T_5e958_row7_col0" class="data row7 col0" >5236</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row8" class="row_heading level0 row8" >CESifo</th>
-      <td id="T_f79d7_row8_col0" class="data row8 col0" >4297</td>
+      <th id="T_5e958_level0_row8" class="row_heading level0 row8" >CESifo</th>
+      <td id="T_5e958_row8_col0" class="data row8 col0" >4575</td>
     </tr>
     <tr>
-      <th id="T_f79d7_level0_row9" class="row_heading level0 row9" >OECD Publishing</th>
-      <td id="T_f79d7_row9_col0" class="data row9 col0" >3924</td>
+      <th id="T_5e958_level0_row9" class="row_heading level0 row9" >Center for Open Science</th>
+      <td id="T_5e958_row9_col0" class="data row9 col0" >4359</td>
     </tr>
   </tbody>
 </table>
@@ -487,12 +488,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="myslides start-dis col-12 slide-container docutils">
 <style type="text/css">
 </style>
-<table id="T_0f63f">
+<table id="T_56b44">
   <caption>Top 10 authors by published papers</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_0f63f_level0_col0" class="col_heading level0 col0" >count</th>
+      <th id="T_56b44_level0_col0" class="col_heading level0 col0" >count</th>
     </tr>
     <tr>
       <th class="index_name level0" >author__aid</th>
@@ -501,44 +502,44 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_0f63f_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
-      <td id="T_0f63f_row0_col0" class="data row0 col0" >1523</td>
+      <th id="T_56b44_level0_row0" class="row_heading level0 row0" >Asongu Simplice</th>
+      <td id="T_56b44_row0_col0" class="data row0 col0" >1559</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row1" class="row_heading level0 row1" >Bank World</th>
-      <td id="T_0f63f_row1_col0" class="data row1 col0" >900</td>
+      <th id="T_56b44_level0_row1" class="row_heading level0 row1" >Bank World</th>
+      <td id="T_56b44_row1_col0" class="data row1 col0" >907</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row2" class="row_heading level0 row2" >Gupta Rangan</th>
-      <td id="T_0f63f_row2_col0" class="data row2 col0" >741</td>
+      <th id="T_56b44_level0_row2" class="row_heading level0 row2" >Gupta Rangan</th>
+      <td id="T_56b44_row2_col0" class="data row2 col0" >748</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row3" class="row_heading level0 row3" >Mcaleer Michael</th>
-      <td id="T_0f63f_row3_col0" class="data row3 col0" >644</td>
+      <th id="T_56b44_level0_row3" class="row_heading level0 row3" >Mcaleer Michael</th>
+      <td id="T_56b44_row3_col0" class="data row3 col0" >644</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row4" class="row_heading level0 row4" >Fund International Monetary</th>
-      <td id="T_0f63f_row4_col0" class="data row4 col0" >538</td>
+      <th id="T_56b44_level0_row4" class="row_heading level0 row4" >Fund International Monetary</th>
+      <td id="T_56b44_row4_col0" class="data row4 col0" >622</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row5" class="row_heading level0 row5" >Oecd</th>
-      <td id="T_0f63f_row5_col0" class="data row5 col0" >483</td>
+      <th id="T_56b44_level0_row5" class="row_heading level0 row5" >Oecd</th>
+      <td id="T_56b44_row5_col0" class="data row5 col0" >508</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
-      <td id="T_0f63f_row6_col0" class="data row6 col0" >395</td>
+      <th id="T_56b44_level0_row6" class="row_heading level0 row6" >Tol Richard</th>
+      <td id="T_56b44_row6_col0" class="data row6 col0" >397</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
-      <td id="T_0f63f_row7_col0" class="data row7 col0" >350</td>
+      <th id="T_56b44_level0_row7" class="row_heading level0 row7" >Odhiambo Nicholas</th>
+      <td id="T_56b44_row7_col0" class="data row7 col0" >358</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row8" class="row_heading level0 row8" >Van Reenen John</th>
-      <td id="T_0f63f_row8_col0" class="data row8 col0" >311</td>
+      <th id="T_56b44_level0_row8" class="row_heading level0 row8" >Van Reenen John</th>
+      <td id="T_56b44_row8_col0" class="data row8 col0" >316</td>
     </tr>
     <tr>
-      <th id="T_0f63f_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
-      <td id="T_0f63f_row9_col0" class="data row9 col0" >305</td>
+      <th id="T_56b44_level0_row9" class="row_heading level0 row9" >Yogyakarta Perpustakaan Stipram</th>
+      <td id="T_56b44_row9_col0" class="data row9 col0" >305</td>
     </tr>
   </tbody>
 </table>
@@ -546,12 +547,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="myslides start-dis col-12 slide-container docutils">
 <style type="text/css">
 </style>
-<table id="T_82592">
+<table id="T_b9699">
   <caption>Top 10 authors affilieated with the most institution</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_82592_level0_col0" class="col_heading level0 col0" >institution</th>
+      <th id="T_b9699_level0_col0" class="col_heading level0 col0" >institution</th>
     </tr>
     <tr>
       <th class="index_name level0" >author__aid</th>
@@ -560,44 +561,44 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th id="T_82592_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
-      <td id="T_82592_row0_col0" class="data row0 col0" >45</td>
+      <th id="T_b9699_level0_row0" class="row_heading level0 row0" >Ongena Steven</th>
+      <td id="T_b9699_row0_col0" class="data row0 col0" >46</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row1" class="row_heading level0 row1" >Peri Giovanni</th>
-      <td id="T_82592_row1_col0" class="data row1 col0" >39</td>
+      <th id="T_b9699_level0_row1" class="row_heading level0 row1" >Ottaviano Gianmarco</th>
+      <td id="T_b9699_row1_col0" class="data row1 col0" >40</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row2" class="row_heading level0 row2" >Clark Andrew</th>
-      <td id="T_82592_row2_col0" class="data row2 col0" >39</td>
+      <th id="T_b9699_level0_row2" class="row_heading level0 row2" >Peri Giovanni</th>
+      <td id="T_b9699_row2_col0" class="data row2 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row3" class="row_heading level0 row3" >Ottaviano Gianmarco</th>
-      <td id="T_82592_row3_col0" class="data row3 col0" >39</td>
+      <th id="T_b9699_level0_row3" class="row_heading level0 row3" >Clark Andrew</th>
+      <td id="T_b9699_row3_col0" class="data row3 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row4" class="row_heading level0 row4" >Devereux Michael</th>
-      <td id="T_82592_row4_col0" class="data row4 col0" >38</td>
+      <th id="T_b9699_level0_row4" class="row_heading level0 row4" >Eichengreen Barry</th>
+      <td id="T_b9699_row4_col0" class="data row4 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row5" class="row_heading level0 row5" >Verdier Thierry</th>
-      <td id="T_82592_row5_col0" class="data row5 col0" >38</td>
+      <th id="T_b9699_level0_row5" class="row_heading level0 row5" >Verdier Thierry</th>
+      <td id="T_b9699_row5_col0" class="data row5 col0" >39</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row6" class="row_heading level0 row6" >Eichengreen Barry</th>
-      <td id="T_82592_row6_col0" class="data row6 col0" >37</td>
+      <th id="T_b9699_level0_row6" class="row_heading level0 row6" >Devereux Michael</th>
+      <td id="T_b9699_row6_col0" class="data row6 col0" >38</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row7" class="row_heading level0 row7" >Pesaran M</th>
-      <td id="T_82592_row7_col0" class="data row7 col0" >36</td>
+      <th id="T_b9699_level0_row7" class="row_heading level0 row7" >Cabrales Antonio</th>
+      <td id="T_b9699_row7_col0" class="data row7 col0" >37</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row8" class="row_heading level0 row8" >Cabrales Antonio</th>
-      <td id="T_82592_row8_col0" class="data row8 col0" >36</td>
+      <th id="T_b9699_level0_row8" class="row_heading level0 row8" >Schularick Moritz</th>
+      <td id="T_b9699_row8_col0" class="data row8 col0" >36</td>
     </tr>
     <tr>
-      <th id="T_82592_level0_row9" class="row_heading level0 row9" >Zenou Yves</th>
-      <td id="T_82592_row9_col0" class="data row9 col0" >35</td>
+      <th id="T_b9699_level0_row9" class="row_heading level0 row9" >Spagnolo Giancarlo</th>
+      <td id="T_b9699_row9_col0" class="data row9 col0" >36</td>
     </tr>
   </tbody>
 </table>
@@ -633,7 +634,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.</p>
 </div>
 <blockquote>
-<div><p>There are 5 tables and the <a class="reference external" href="#sources">sources</a> are <strong>checked for updates at 04:00 pm, only on monday</strong></p>
+<div><p>There are 5 tables</p>
 </div></blockquote>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -655,10 +656,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 767535 × 2 (25.42 MB)</p>
+<p class="card-text"><strong>Size</strong>: 789715 × 2 (26.18 MB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-12-07 17:10</p>
+<p class="card-text"><strong>Last Changed</strong>: 2023-04-06 15:10</p>
 </div>
 <div class="col-3 docutils">
 <p class="card-text"><button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 0)">First 5 rows</button></p>
@@ -696,28 +697,28 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>nitsch:volker</td>
-      <td>darwpaper/132782</td>
+      <td>kakizawa:hisanobu</td>
+      <td>ospwpaper/22j004</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>prem:mounu</td>
-      <td>hicwpaper/360</td>
+      <td>morgan:peter</td>
+      <td>risadbiwp/1312</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>marchenko:maria</td>
-      <td>wiwwus005/8641</td>
+      <td>marouani:mohamed</td>
+      <td>ergwpaper/sprr20222</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>dhingra:swati</td>
-      <td>cepcepcvd/cepcovid-19-022</td>
+      <td>krafft:caroline</td>
+      <td>ergwpaper/swp20225</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>chareyron:sylvain</td>
-      <td>teptepprr/rr22-04</td>
+      <td>green:colin</td>
+      <td>nstsamfok/19422</td>
     </tr>
   </tbody>
 </table>
@@ -743,10 +744,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 824061 × 3 (31.14 MB)</p>
+<p class="card-text"><strong>Size</strong>: 844213 × 3 (31.92 MB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-12-07 17:10</p>
+<p class="card-text"><strong>Last Changed</strong>: 2023-04-06 15:10</p>
 </div>
 <div class="col-3 docutils">
 <p class="card-text"><button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 1)">First 5 rows</button></p>
@@ -785,33 +786,33 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>nepban-2022-03-21</td>
-      <td>pramprapa/111899</td>
+      <td>22</td>
+      <td>nepenv-2022-12-05</td>
+      <td>bdrborrec/1218</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/27mtw</td>
+      <td>23</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedhwp/95078</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/2k3vn</td>
+      <td>24</td>
+      <td>nepenv-2022-12-05</td>
+      <td>cesceswps/_5f10053</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>7</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/39ke6</td>
+      <td>25</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedgfe/2022-73</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
-      <td>nepdem-2022-07-18</td>
-      <td>nbrnberwo/30130</td>
+      <td>26</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedgfe/2022-68</td>
     </tr>
   </tbody>
 </table>
@@ -837,10 +838,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 81433 × 3 (2.93 MB)</p>
+<p class="card-text"><strong>Size</strong>: 82992 × 3 (2.99 MB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-12-07 17:10</p>
+<p class="card-text"><strong>Last Changed</strong>: 2023-04-06 15:10</p>
 </div>
 <div class="col-3 docutils">
 <p class="card-text"><button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 2)">First 5 rows</button></p>
@@ -879,33 +880,33 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>nepban-2022-03-21</td>
-      <td>nepban</td>
-      <td>2022-03-21</td>
+      <td>nepenv-2022-12-05</td>
+      <td>nepenv</td>
+      <td>2022-12-05</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>nepdem-2022-07-18</td>
-      <td>nepdem</td>
-      <td>2022-07-18</td>
+      <td>nepure-2022-10-31</td>
+      <td>nepure</td>
+      <td>2022-10-31</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>nepger-2015-08-30</td>
-      <td>nepger</td>
-      <td>2015-08-30</td>
+      <td>nepure-2023-01-09</td>
+      <td>nepure</td>
+      <td>2023-01-09</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>nepisf-2021-08-30</td>
-      <td>nepisf</td>
-      <td>2021-08-30</td>
+      <td>nepenv-2023-01-16</td>
+      <td>nepenv</td>
+      <td>2023-01-16</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>nepgen-2020-05-11</td>
-      <td>nepgen</td>
-      <td>2020-05-11</td>
+      <td>nepenv-2022-11-21</td>
+      <td>nepenv</td>
+      <td>2022-11-21</td>
     </tr>
   </tbody>
 </table>
@@ -931,10 +932,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 95 × 3 (10.89 kB)</p>
+<p class="card-text"><strong>Size</strong>: 95 × 3 (11.11 kB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-12-07 17:10</p>
+<p class="card-text"><strong>Last Changed</strong>: 2023-04-06 15:10</p>
 </div>
 <div class="col-3 docutils">
 <p class="card-text"><button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 3)">First 5 rows</button></p>
@@ -1025,10 +1026,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="card-body docutils">
 <div class="row docutils">
 <div class="col-4 docutils">
-<p class="card-text"><strong>Size</strong>: 383674 × 7 (158.12 MB)</p>
+<p class="card-text"><strong>Size</strong>: 393543 × 7 (162.22 MB)</p>
 </div>
 <div class="col-5 docutils">
-<p class="card-text"><strong>Last Changed</strong>: 2022-12-07 17:11</p>
+<p class="card-text"><strong>Last Changed</strong>: 2023-04-06 15:11</p>
 </div>
 <div class="col-3 docutils">
 <p class="card-text"><button class = "sphinx-bs badge badge-success" onclick="hideReveal('head-dataframe', 4)">First 5 rows</button></p>
@@ -1071,53 +1072,53 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>darwpaper/132782</td>
-      <td>The impact of the Covid-19 pandemic on interna...</td>
-      <td>Darmstadt Technical University, Department of ...</td>
-      <td>None</td>
-      <td>https://econpapers.repec.org/paper/darwpaper/1...</td>
-      <td>Covid-19 and International Trade: Evidence fro...</td>
+      <td>ospwpaper/22j004</td>
+      <td>This study aims to describe the extent to whic...</td>
+      <td>Osaka School of International Public Policy, O...</td>
+      <td>class size; deviation value; panel data</td>
+      <td>https://econpapers.repec.org/paper/ospwpaper/2...</td>
+      <td>The Effects of Class Size on Primary and Secon...</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>hicwpaper/360</td>
-      <td>Anti-personnel landmines are one of the main c...</td>
-      <td>Households in Conflict Network</td>
-      <td>Landmines; demining; conflict; peace; local de...</td>
-      <td>https://econpapers.repec.org/paper/hicwpaper/3...</td>
-      <td>Landmines: The Local Effects of Demining</td>
-      <td>2021.0</td>
+      <td>risadbiwp/1312</td>
+      <td>The outbreak of the COVID-19 virus and the res...</td>
+      <td>Asian Development Bank Institute</td>
+      <td>COVID-19; ASEAN; household income; employment;...</td>
+      <td>https://econpapers.repec.org/paper/risadbiwp/1...</td>
+      <td>Impacts of COVID-19 on Households in ASEAN Cou...</td>
+      <td>2022.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>wiwwus005/8641</td>
-      <td>This paper studies the determinants of the vol...</td>
-      <td>WU Vienna University of Economics and Business</td>
-      <td>fanfiction; user-generated content; online pub...</td>
-      <td>https://econpapers.repec.org/paper/wiwwus005/8...</td>
-      <td>The Never Ending Book: The role of external st...</td>
+      <td>ergwpaper/sprr20222</td>
+      <td>Morocco adopted a very stringent lockdown regi...</td>
+      <td>Economic Research Forum</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/ergwpaper/s...</td>
+      <td>Morocco COVID-19 Country Case Study</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>cepcepcvd/cepcovid-19-022</td>
-      <td>This report provides key findings from a new f...</td>
-      <td>Centre for Economic Performance, LSE</td>
-      <td>Covid-19; Urban India; unemployment</td>
-      <td>https://econpapers.repec.org/paper/cepcepcvd/c...</td>
-      <td>City of dreams no more, a year on: worklessnes...</td>
-      <td>2021.0</td>
+      <td>ergwpaper/swp20225</td>
+      <td>The COVID-19 pandemic has been accompanied by ...</td>
+      <td>Economic Research Forum</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/ergwpaper/s...</td>
+      <td>The Impact of the COVID-19 Pandemic on Women’s...</td>
+      <td>2022.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>teptepprr/rr22-04</td>
-      <td>None</td>
-      <td>TEPP</td>
-      <td>None</td>
-      <td>https://econpapers.repec.org/paper/teptepprr/r...</td>
-      <td>Discrimination dans l'accès aux masters: une é...</td>
-      <td>2022.0</td>
+      <td>nstsamfok/19422</td>
+      <td>How much young children should be tested and g...</td>
+      <td>Department of Economics, Norwegian University ...</td>
+      <td>student assessment; testing; student achievement</td>
+      <td>https://econpapers.repec.org/paper/nstsamfok/1...</td>
+      <td>How does testing young children influence educ...</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -1127,7 +1128,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="sources">
 <h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>project url: <a class="reference external" href="https://github.com/sscu-budapest/articledata">https://github.com/sscu-budapest/articledata</a></p></li>
+<li><p>project url: <a class="reference external" href="https://github.com/sscu-budapest/metascience">https://github.com/sscu-budapest/metascience</a></p></li>
 <li><p>data downloaded from</p>
 <ul>
 <li><p><a class="reference external" href="https://econpapers.repec.org">https://econpapers.repec.org</a></p></li>

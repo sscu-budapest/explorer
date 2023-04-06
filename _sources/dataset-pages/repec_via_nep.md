@@ -28,6 +28,7 @@ erDiagram
   paper {    
     VARCHAR abstract      
     VARCHAR institution      
+    VARCHAR keywords      
     VARCHAR link      
     VARCHAR title      
     FLOAT year      
@@ -49,8 +50,8 @@ erDiagram
     VARCHAR neid PK 
   }
   authorship ||--|{ paper : "paper__pid -> pid"
-  nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
   nep_inclusion ||--|{ paper : "paper__pid -> pid"
+  nep_inclusion ||--|{ nep_issue : "issue__neid -> neid"
   nep_issue ||--|{ nep : "nep__nid -> nid"
 ```
 
@@ -169,7 +170,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There are 5 tables and the [sources](#sources) are **checked for updates at 04:00 pm, only on monday** 
+> There are 5 tables
 
 
 
@@ -196,11 +197,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 767535 × 2 (25.42 MB)
+**Size**: 789715 × 2 (26.18 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:10
+**Last Changed**: 2023-04-06 15:10
 ```
 
 ```{div} col-3
@@ -235,28 +236,28 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>nitsch:volker</td>
-      <td>darwpaper/132782</td>
+      <td>kakizawa:hisanobu</td>
+      <td>ospwpaper/22j004</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>prem:mounu</td>
-      <td>hicwpaper/360</td>
+      <td>morgan:peter</td>
+      <td>risadbiwp/1312</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>marchenko:maria</td>
-      <td>wiwwus005/8641</td>
+      <td>marouani:mohamed</td>
+      <td>ergwpaper/sprr20222</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>dhingra:swati</td>
-      <td>cepcepcvd/cepcovid-19-022</td>
+      <td>krafft:caroline</td>
+      <td>ergwpaper/swp20225</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>chareyron:sylvain</td>
-      <td>teptepprr/rr22-04</td>
+      <td>green:colin</td>
+      <td>nstsamfok/19422</td>
     </tr>
   </tbody>
 </table>
@@ -287,11 +288,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 824061 × 3 (31.14 MB)
+**Size**: 844213 × 3 (31.92 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:10
+**Last Changed**: 2023-04-06 15:10
 ```
 
 ```{div} col-3
@@ -327,33 +328,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>nepban-2022-03-21</td>
-      <td>pramprapa/111899</td>
+      <td>22</td>
+      <td>nepenv-2022-12-05</td>
+      <td>bdrborrec/1218</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/27mtw</td>
+      <td>23</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedhwp/95078</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/2k3vn</td>
+      <td>24</td>
+      <td>nepenv-2022-12-05</td>
+      <td>cesceswps/_5f10053</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>7</td>
-      <td>nepban-2022-03-21</td>
-      <td>osfosfxxx/39ke6</td>
+      <td>25</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedgfe/2022-73</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
-      <td>nepdem-2022-07-18</td>
-      <td>nbrnberwo/30130</td>
+      <td>26</td>
+      <td>nepenv-2022-12-05</td>
+      <td>fipfedgfe/2022-68</td>
     </tr>
   </tbody>
 </table>
@@ -384,11 +385,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 81433 × 3 (2.93 MB)
+**Size**: 82992 × 3 (2.99 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:10
+**Last Changed**: 2023-04-06 15:10
 ```
 
 ```{div} col-3
@@ -424,33 +425,33 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>nepban-2022-03-21</td>
-      <td>nepban</td>
-      <td>2022-03-21</td>
+      <td>nepenv-2022-12-05</td>
+      <td>nepenv</td>
+      <td>2022-12-05</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>nepdem-2022-07-18</td>
-      <td>nepdem</td>
-      <td>2022-07-18</td>
+      <td>nepure-2022-10-31</td>
+      <td>nepure</td>
+      <td>2022-10-31</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>nepger-2015-08-30</td>
-      <td>nepger</td>
-      <td>2015-08-30</td>
+      <td>nepure-2023-01-09</td>
+      <td>nepure</td>
+      <td>2023-01-09</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>nepisf-2021-08-30</td>
-      <td>nepisf</td>
-      <td>2021-08-30</td>
+      <td>nepenv-2023-01-16</td>
+      <td>nepenv</td>
+      <td>2023-01-16</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>nepgen-2020-05-11</td>
-      <td>nepgen</td>
-      <td>2020-05-11</td>
+      <td>nepenv-2022-11-21</td>
+      <td>nepenv</td>
+      <td>2022-11-21</td>
     </tr>
   </tbody>
 </table>
@@ -481,11 +482,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 95 × 3 (10.89 kB)
+**Size**: 95 × 3 (11.11 kB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:10
+**Last Changed**: 2023-04-06 15:10
 ```
 
 ```{div} col-3
@@ -578,11 +579,11 @@ Some datasets are updated periodically. In this case, you can check the updating
 ::::{div} row
 
 ```{div} col-4
-**Size**: 383674 × 7 (158.12 MB)
+**Size**: 393543 × 7 (162.22 MB)
 ```
 
 ```{div} col-5
-**Last Changed**: 2022-12-07 17:11
+**Last Changed**: 2023-04-06 15:11
 ```
 
 ```{div} col-3
@@ -622,53 +623,53 @@ Some datasets are updated periodically. In this case, you can check the updating
   <tbody>
     <tr>
       <th>0</th>
-      <td>darwpaper/132782</td>
-      <td>The impact of the Covid-19 pandemic on interna...</td>
-      <td>Darmstadt Technical University, Department of ...</td>
-      <td>None</td>
-      <td>https://econpapers.repec.org/paper/darwpaper/1...</td>
-      <td>Covid-19 and International Trade: Evidence fro...</td>
+      <td>ospwpaper/22j004</td>
+      <td>This study aims to describe the extent to whic...</td>
+      <td>Osaka School of International Public Policy, O...</td>
+      <td>class size; deviation value; panel data</td>
+      <td>https://econpapers.repec.org/paper/ospwpaper/2...</td>
+      <td>The Effects of Class Size on Primary and Secon...</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>hicwpaper/360</td>
-      <td>Anti-personnel landmines are one of the main c...</td>
-      <td>Households in Conflict Network</td>
-      <td>Landmines; demining; conflict; peace; local de...</td>
-      <td>https://econpapers.repec.org/paper/hicwpaper/3...</td>
-      <td>Landmines: The Local Effects of Demining</td>
-      <td>2021.0</td>
+      <td>risadbiwp/1312</td>
+      <td>The outbreak of the COVID-19 virus and the res...</td>
+      <td>Asian Development Bank Institute</td>
+      <td>COVID-19; ASEAN; household income; employment;...</td>
+      <td>https://econpapers.repec.org/paper/risadbiwp/1...</td>
+      <td>Impacts of COVID-19 on Households in ASEAN Cou...</td>
+      <td>2022.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>wiwwus005/8641</td>
-      <td>This paper studies the determinants of the vol...</td>
-      <td>WU Vienna University of Economics and Business</td>
-      <td>fanfiction; user-generated content; online pub...</td>
-      <td>https://econpapers.repec.org/paper/wiwwus005/8...</td>
-      <td>The Never Ending Book: The role of external st...</td>
+      <td>ergwpaper/sprr20222</td>
+      <td>Morocco adopted a very stringent lockdown regi...</td>
+      <td>Economic Research Forum</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/ergwpaper/s...</td>
+      <td>Morocco COVID-19 Country Case Study</td>
       <td>2022.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>cepcepcvd/cepcovid-19-022</td>
-      <td>This report provides key findings from a new f...</td>
-      <td>Centre for Economic Performance, LSE</td>
-      <td>Covid-19; Urban India; unemployment</td>
-      <td>https://econpapers.repec.org/paper/cepcepcvd/c...</td>
-      <td>City of dreams no more, a year on: worklessnes...</td>
-      <td>2021.0</td>
+      <td>ergwpaper/swp20225</td>
+      <td>The COVID-19 pandemic has been accompanied by ...</td>
+      <td>Economic Research Forum</td>
+      <td>None</td>
+      <td>https://econpapers.repec.org/paper/ergwpaper/s...</td>
+      <td>The Impact of the COVID-19 Pandemic on Women’s...</td>
+      <td>2022.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>teptepprr/rr22-04</td>
-      <td>None</td>
-      <td>TEPP</td>
-      <td>None</td>
-      <td>https://econpapers.repec.org/paper/teptepprr/r...</td>
-      <td>Discrimination dans l'accès aux masters: une é...</td>
-      <td>2022.0</td>
+      <td>nstsamfok/19422</td>
+      <td>How much young children should be tested and g...</td>
+      <td>Department of Economics, Norwegian University ...</td>
+      <td>student assessment; testing; student achievement</td>
+      <td>https://econpapers.repec.org/paper/nstsamfok/1...</td>
+      <td>How does testing young children influence educ...</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -678,7 +679,7 @@ Some datasets are updated periodically. In this case, you can check the updating
 
 ## Sources
 
-- project url: https://github.com/sscu-budapest/articledata
+- project url: https://github.com/sscu-budapest/metascience
 - data downloaded from
   - https://econpapers.repec.org
   - http://nep.repec.org/

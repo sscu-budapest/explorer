@@ -5,6 +5,12 @@
         covid_victims([Covid Victims]) --- covid_victims_covid_victim[Covid Victim]
         click covid_victims_covid_victim href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/covid_victims/covid_victim-profile.html" "Profile"
         
+        scimago_journals([Scimago Journals]) --- scimago_journals_journal_area[Journal Area]
+        click scimago_journals_journal_area href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_area-profile.html" "Profile"
+        
+        scimago_journals([Scimago Journals]) --- scimago_journals_journal_record[Journal Record]
+        click scimago_journals_journal_record href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal_record-profile.html" "Profile"
+        
         scimago_journals([Scimago Journals]) --- scimago_journals_journal[Journal]
         click scimago_journals_journal href "https://s3.eu-de.cloud-object-storage.appdomain.cloud/sscub-public-explorer/scimago_journals/journal-profile.html" "Profile"
         
