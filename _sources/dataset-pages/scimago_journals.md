@@ -159,7 +159,7 @@ The table data can be downloaded in CSV format with {badge}`Download CSV,badge-p
 Some datasets are updated periodically. In this case, you can check the updating period at the top of this section.
 ```
 
-> There are 3 tables
+> There are 3 tables and the [sources](#sources) are **checked for updates at 08:00 am, only on tuesday** 
 
 
 
